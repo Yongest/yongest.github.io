@@ -1,0 +1,87 @@
+ body,ul,ol,li,img {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+        #box {
+            width: 500px;
+            height: 260px;
+            padding: 7px;
+            /*background-color: red;*/
+            border: 1px solid #ccc;
+            margin: 100px auto;
+            position: relative;
+        }
+        .ad {
+            width: 500px;
+            height: 260px;
+            position: relative;
+            overflow: hidden;
+        }
+        #box img {
+            width: 500px;
+            height: 260px;
+        }
+        .ad ul li{
+            width: 500px;
+            height: 260px;
+            overflow: hidden;
+            float: left;
+        }
+        .ad ul {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 3000px;/*如果图片更多这个地方需要更改为更大,做好越大越好**/
+        }
+        .ad ul li.current {
+            background: yellow;
+        }
+         .ad ol {
+            position: absolute;
+            right: 10px;
+            bottom: 10px;
+            line-height: 20px;
+            text-align: center;
+        }
+        .ad ol li {
+            float: left;
+            width: 20px;
+            height: 20px;
+            background: #fff;
+            border: 1px solid #ccc;
+            margin-left: 10px;
+            cursor: pointer;
+        }
+        .ad ol li.current {
+            background: yellow;
+        }
+
+        #arr {
+            display: none;
+        }
+        #arr span {
+            width: 40px;
+            height: 40px;
+            line-height: 40px;
+            position: absolute;
+            /*left: 5px;*/
+            top: 50%;
+            margin-top: -20px;
+            background-color: #000;
+            cursor: pointer;
+            text-align: center;
+            font-weight: bold;
+            font-family: '黑体';
+            font-size: 30px;
+            color: #fff;
+            opacity: 0.3;
+            border: 1px solid #fff;
+        }
+        #arr #left{
+            left: 5px;
+        }
+        #arr #right {
+            right: 5px;
+            /*left: auto;*/
+        }
