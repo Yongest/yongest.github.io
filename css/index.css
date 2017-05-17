@@ -85,3 +85,23 @@
             right: 5px;
             /*left: auto;*/
         }
+
+        #getmore {
+            position: absolute;
+            right: 30px;
+            top:30px;
+            background-color: yellowgreen;
+            border-radius: 50%;
+            width: 70px;
+            height: 70px;
+            text-align: center;
+        }
+        #getmore a {
+            text-decoration: none;
+             color: #fff;
+             font-size: 18px;
+             display: block;
+             width: 70px;
+             height: 70px;
+             line-height: 70px;
+        }

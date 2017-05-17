@@ -15,24 +15,42 @@ function $(sel) {
   }
 }
 
+
+ /**
+       * 封装了一个兼容版本的获取当前对象内嵌属性的函数
+       * @param obj
+       * @param attr
+       * @returns {*}
+       */
+      function getStyle(obj,attr){
+        // 能力检测 ，就是要看当前的浏览器是否支持此对象的属性和方法
+        if(obj.currentStyle){  //IE浏览器支持的属性
+          return obj.currentStyle[attr];
+        }else { // 谷歌和火狐  IE9+
+          return  window.getComputedStyle(obj,false)[attr];
+        }
+      }
+
+    
 /**
  * 封装了一个匀速移动的动画函数
  * @param obj
  * @param target
  */
-function animate(obj, target) {
-  clearInterval(obj.timerId); // 保证当前标签对象运动的时候，只会开启一个定时器
-  var step, leader;
-  obj.timerId = setInterval(function () {  // 开启定时器
-    step = 20;//定义一个步长
-    leader = obj.offsetLeft; //获取标签对象的当前的位置
-    step = leader < target ? step : -step; //判断步长是正还是负
-    if (Math.abs(leader - target) > Math.abs(step)) { //修改判断条件
-      leader = leader + step;//在当前的位置加上步长
-      obj.style.left = leader + 'px';
-    } else {
-      clearInterval(obj.timerId); //清除当前对象的定时器
-      obj.style.left = target + 'px'; //最后不足一个步长的时候，不用迈那一步了，直接设置成目标位置即可
-    }
-  }, 15);
-}
+  function animate(obj,attr,target){
+        clearInterval(obj.timerId);
+        obj.timerId= setInterval(function (){
+          // 获取对象的当前位置
+//          var leader = obj.offsetLeft; // 只能获得当前的位置，不合适了
+          var leader = parseInt(getStyle(obj,attr))||0;
+          console.log(leader);
+          var step =(target-leader)/10 ;  //63.15  0.9  0  1
+          step= step>0?Math.ceil(step):Math.floor(step);
+          leader = leader + step;
+          obj.style[attr] = leader + 'px';
+          if(leader==target){
+            clearInterval(obj.timerId);
+          }
+        },15)
+
+      }
