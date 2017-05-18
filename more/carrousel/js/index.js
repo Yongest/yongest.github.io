@@ -1,5 +1,5 @@
 /**
- * Created by Administrator on 2016/12/14.
+ * Created by Administrator on 2016/1/14.
  */
 window.onload = function (){
     var config = [
@@ -72,13 +72,15 @@ window.onload = function (){
     wrap.onmouseover = function (){
            animate(arr,{
                opacity:1
-           })
+           });
+           clearInterval(timerId);
     }
     // 4. 鼠标离开的时候，要隐藏左右按钮
     wrap.onmouseout = function (){
            animate(arr,{
                opacity:0
-           })
+           });
+           timerId = setInterval(autoPlay,2500);
     }
     // 5. 给右侧按钮注册事件
     right.onclick = function (){
@@ -90,13 +92,20 @@ window.onload = function (){
 
         //var b = config.shift();
         //config.push(b);
-        if(flag){
+        autoPlay();
+
+    }
+    
+
+    //7.开启定时器
+    var timerId = setInterval(autoPlay,2500);
+    function autoPlay(){
+         if(flag){
             flag = false;
             config.push(config.shift());
             // 需要按照新的配置单重新生成li标签的样式
             assign();//
         }
-
     }
     // 6. 给左侧按钮注册事件
     left.onclick = function (){
