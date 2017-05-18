@@ -38,17 +38,20 @@ window.onload = function () {
                 pic = square = this.index;
                 //3.移入相应的小方块,让ul移动到相应的位置
                 var target = -this.index * imgWidth;
-                animate(ul,'left',target);
+                // animate(ul,'left',target);
+                animate(ul,{'left':target});
             }
         }
         //4/鼠标移入的时候,让箭头显示,鼠标移除的时候,让箭头隐藏
         box.onmouseenter = function () {
-            arr.style.display = 'block';
+            // arr.style.display = 'block';
+            animate(arr,{'opacity':'1'});
             //9.清除定时器
             clearInterval(timer);
         }
         box.onmouseleave = function () {
-            arr.style.display = 'none';
+            // arr.style.display = 'none';
+            animate(arr,{'opacity':'0'});
             //9.离开时开启定时器
             timer = setInterval(autoLeft, 2000)
         }
@@ -71,7 +74,8 @@ window.onload = function () {
             }
             pic--;
             var target = -imgWidth * pic;
-            animate(ul,'left',target);
+            // animate(ul,'left',target);
+            animate(ul,{'left':target});
             //7改变小方块颜色
             square > 0 ? square-- : square = olLis.length - 1;
             empty();
@@ -88,7 +92,8 @@ window.onload = function () {
             }
             pic++;
             var target = -imgWidth * pic;
-            animate(ul,'left',target);
+            // animate(ul,'left',target);
+            animate(ul,{'left':target});
             //7改变小方块颜色
             square < olLis.length - 1 ? square++ : square = 0;
             empty();

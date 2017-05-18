@@ -32,7 +32,7 @@
             position: absolute;
             left: 0;
             top: 0;
-            width: 30000px;/*如果图片更多这个地方需要更改为更大,做好越大越好**/
+            width: 3000px;/*如果图片更多这个地方需要更改为更大,做好越大越好**/
         }
         .ad ul li.current {
             background: yellow;
@@ -58,7 +58,8 @@
         }
 
         #arr {
-            display: none;
+            /*display: none;*/
+            opacity: 0;
         }
         #arr span {
             width: 40px;
