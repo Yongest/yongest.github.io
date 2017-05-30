@@ -5,13 +5,14 @@
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <title>Document</title>
     <style>
-        .box {
+.box {
             width: 200px;
             height: 200px;
             margin: 200px auto 0;
             position: relative;
             /*border: 1px solid #000;*/
-            transform-style: preserve-3d;
+            -webkit-transform-style: preserve-3d;
+                    transform-style: preserve-3d;
             /*background: rgba(0, 255, 255, .8)*/
             background:url('imgs/fox.jpg');
             /*border-radius: 20px;*/
@@ -27,46 +28,62 @@
         }
         .slide:nth-child(1){
             background-color:pink;
-            transform: rotateY(0deg) translateZ(100px);
+            -webkit-transform: rotateY(0deg) translateZ(100px);
+                    transform: rotateY(0deg) translateZ(100px);
         }
         .slide:nth-child(2){
             background-color:skyblue;
-            transform: rotateY(180deg) translateZ(100px);
+            -webkit-transform: rotateY(180deg) translateZ(100px);
+                    transform: rotateY(180deg) translateZ(100px);
         }
         .slide:nth-child(3){
             background-color:yellowgreen;
-            transform: rotateY(90deg) translateZ(100px);
+            -webkit-transform: rotateY(90deg) translateZ(100px);
+                    transform: rotateY(90deg) translateZ(100px);
         }
         .slide:nth-child(4){
             background-color:rebeccapurple;
-            transform: rotateY(-90deg) translateZ(100px);
+            -webkit-transform: rotateY(-90deg) translateZ(100px);
+                    transform: rotateY(-90deg) translateZ(100px);
         }
         .slide:nth-child(5){
             background-color:peachpuff;
-            transform: rotateX(-90deg) translateZ(100px);
+            -webkit-transform: rotateX(-90deg) translateZ(100px);
+                    transform: rotateX(-90deg) translateZ(100px);
         }
         .slide:nth-child(6){
             background-color:lawngreen;
-            transform: rotateX(90deg) translateZ(100px);
+            -webkit-transform: rotateX(90deg) translateZ(100px);
+                    transform: rotateX(90deg) translateZ(100px);
         }
         /*.box:hover {
             transition:all 2s;
             transform:rotateY(45deg) rotateZ(45deg);
         }*/
+        @-webkit-keyframes autoPlay{
+            from {}
+            to{
+                -webkit-transform: rotateY(360deg) rotateZ(360deg) rotateX(360deg);
+                        transform: rotateY(360deg) rotateZ(360deg) rotateX(360deg);
+            }
+        }
         @keyframes autoPlay{
             from {}
             to{
-                transform: rotateY(360deg) rotateZ(360deg) rotateX(360deg);
+                -webkit-transform: rotateY(360deg) rotateZ(360deg) rotateX(360deg);
+                        transform: rotateY(360deg) rotateZ(360deg) rotateX(360deg);
             }
         }
         .autoPlay {
-            animation: autoPlay 10s linear infinite;
+            -webkit-animation: autoPlay 10s linear infinite;
+                    animation: autoPlay 10s linear infinite;
         }
         .box div {
             opacity: .5;
         }
         .box:hover {
-            animation-play-state: paused;
+            -webkit-animation-play-state: paused;
+                    animation-play-state: paused;
         }
     </style>
 </head>
