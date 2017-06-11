@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>查看历史价</title>
+    <link href="favicon.ico" rel="shortcut icon" type="image/x-icon">
+    <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/history.css">
+    <!--下面导入自己的css-->
+
+</head>
+<body>
+
+<!--头部-->
+<div class="index_header">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-10">
+                <a href="index.html"><img src="images/header_logo.png" alt="" class="index_img1" /></a>
+            </div>
+            <div class="col-xs-2">
+                <a href="http://a.app.qq.com/o/simple.jsp?pkgname=com.manmanbuy.bijia"><img src="images/header_app.png" alt="" class="index_img2" /></a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="lijg-box">
+    <p class="t">
+        商品链接</p>
+    <form action="">
+    <div class="input">
+        <!--<div class="textarea" contenteditable="true" onblur="if($(this).text()=='')$(this).text('请通过购物App中使用分享或浏览器打开商品页面获取商品链接');this.style.color='#c9c9c9'" onfocus="this.style.color='#A9A9A9'" onclick="if($(this).text()=='请通过购物App中使用分享或浏览器打开商品页面获取商品链接')$(this).text('');this.style.color='#000';" onkeydown="if($(this).text()=='请通过购物App中使用分享或浏览器打开商品页面获取商品链接')$(this).text('');this.style.color='#000';">请通过购物App中使用分享或浏览器打开商品页面获取商品链接</div>-->
+        <div class="textarea">
+            <input type="text" placeholder="请输入要查询的商品链接">
+        </div>
+        
+    </div>
+    <div class="btn_1">
+        <input class="btn btn-default" type="submit" onclick="gethistory();" value="查询历史价格">
+        <input class="btn btn-default" type="reset" value="重置">
+    </div>
+    </form>
+    <div class="notice">
+        <div class="hd">两步操作即可识别商品真假促销</div>
+        <div class="bd">
+            <p>1.打开购物APP（如手机淘宝）复制商品链接</p>
+            <p>2.打开慢慢买APP，系统自动识别查历史价</p>
+        </div>
+    </div>
+
+    <div class="spinfo">
+    </div>
+    <div class="result" style="width: 100%; height: 250px; position: relative;">
+        <!--显示历史价格-->
+        <div id="container" style="width: 100%; height: 100%; margin: 0 auto; font-size: 12px;">
+        </div>
+    </div>
+    <div class="gotosite">
+    </div>
+
+</div>
+
+
+<div class="app-promotion-bar"> <a class="closefix glyphicon glyphicon-remove-circle" href="javascript:;"></a>
+    <div class="icon"></div>
+    <p class="titlefix">慢慢买</p>
+    <p class="describe">全网比价，查历史价格</p>
+    <a class="download-btn" href="http://m.manmanbuy.com/?o=download" >立即打开</a>
+</div>
+
+</body>
+</html>
+<script src="lib/bootstrap/js/jquery-1.12.2.min.js"></script>
+<script src="lib/bootstrap/js/bootstrap.min.js"></script>
+<script src="lib/template/template.js"></script>
+<script src="js/base.js"></script>
+<!--下面导入自己的js-->

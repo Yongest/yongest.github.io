@@ -1,0 +1,67 @@
+header {
+  background: #ff841d;
+  width: 100%;
+  height: 2.34667rem;
+  text-align: center;
+  color: #FFFFFF;
+}
+header h1 {
+  line-height: 2.34667rem;
+  font-weight: bold;
+  font-size: 1.06667rem;
+}
+header a {
+  display: block;
+  height: 100%;
+  width: 2.66667rem;
+}
+header a:hover {
+  text-decoration: none;
+}
+header .glyphicon {
+  top: 0;
+}
+header .header_left {
+  font-size: 1.49333rem;
+  line-height: 2.34667rem;
+  color: #FFFFFF;
+}
+header .header_right {
+  background: url("../images/header_app.png") no-repeat;
+  background-size: 1.70667rem;
+  background-position: center;
+}
+
+.main_contain {
+  padding: 10px 30px;
+}
+.main_contain ul li {
+  height: 39px;
+  margin-right: 10px;
+  margin-bottom: 3px;
+  display: block;
+  float: left;
+}
+.main_contain ul li a {
+  text-decoration: none;
+  display: block;
+  background: #f4f4f4;
+  border: 1px solid #bfbfbf;
+  padding: 5px 10px;
+  border-radius: 10px;
+}
+
+.bottom_nav {
+  width: 100%;
+  height: 1.92rem;
+  background: linear-gradient(to bottom, #ffffff, #dadada);
+  border-top: #999;
+  border-bottom: #999;
+  font-size: 0.74667rem;
+  padding-left: 0.42667rem;
+  line-height: 1.92rem;
+}
+.bottom_nav a {
+  line-height: 1.92rem;
+  color: #999;
+}

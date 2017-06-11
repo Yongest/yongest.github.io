@@ -1,0 +1,113 @@
+$r:375/20;
+.head{
+  background: #ff841d;
+  color: #FFFFFF;
+  height: 45rem/$r;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  .back{
+    width: 50rem/$r;
+    height: 45rem/$r;
+    position: relative;
+    a{
+      display: block;
+      text-align: center;
+      width: 50rem/$r;
+      height: 45rem/$r;
+      font-size: 17rem/$r;
+      line-height: 45rem/$r;
+      text-decoration: none;
+      color: #FFFFFF;
+    }
+  }
+  h1{
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+  }
+  .home{
+    height: 45rem/$r;
+    width: 50rem/$r;
+    a{
+      display: block;
+      height: 45rem/$r;
+      width: 50rem/$r;
+      img{
+        display: block;
+        position: absolute;
+        height: 30rem/$r;
+        width: 30rem/$r;
+        top: 10rem/$r;
+      }
+    }
+  }
+}
+.container{
+  max-width: 960px;
+  margin: 0px auto;
+  .cu-content{
+    padding: 4px 10px;
+    background: #FFFFFF;
+    h3{
+      font-size: 18px;
+      margin: 10px auto 5px auto;
+      font-weight: 800;
+      text-align: left;
+      text-align-last: left;
+      word-break: break-all;
+      color: #5a5a5a;
+      line-height: normal;
+    }
+    h4{
+      color: #ff6c00;
+      display: block;
+      font-size: 15px;
+    }
+    .info{
+      margin: 12px auto;
+      color: #999999;
+      font-size: 12px;
+      line-height: 24px;
+    }
+    .content{
+      .picwrap{
+        width: 120px;
+        float: right;
+        margin: 12px auto auto 10px;
+        overflow: hidden;
+        img{
+          width: 120px;
+          height: 120px;
+          background: pink;
+        }
+      }
+      .conn{
+        p{
+          ine-height: 24px;
+          color: #606060;
+          word-break: break-all;
+          margin: 6px auto;
+        }
+      }
+    }
+    .golink{
+      a{
+        height: 40px;
+        display: block;
+        margin: 20px 10px;
+        background: #FF9000;
+        border-radius: 4px;
+        line-height: 40px;
+        text-align: center;
+        font-size: 14px;
+        color: #ffffff;
+      }
+    }
+
+  }
+
+  //从这里开始写哦
+
+ }

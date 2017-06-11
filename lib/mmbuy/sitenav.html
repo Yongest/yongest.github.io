@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>商城导航</title>
+    <link href="favicon.ico" rel="shortcut icon" type="image/x-icon">
+    <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/sitenav.css">
+    <!--下面导入自己的css-->
+
+</head>
+<script id="getData" type="text/html">
+{{each result as value index}}
+ <li><a href="{{#value.navHref}}"><img src="{{#value.navImg}}" alt="">{{#value.navTitle}}</a></li>
+ 
+
+
+{{/each}}
+</script>
+
+
+
+<body>
+    <!--头部-->
+    <header>
+        <a class="header_left fl glyphicon glyphicon-menu-left" href="index.html"></a>
+        <a class="header_right fr" href="javascript:void(0)"></a>
+        <h1>商城导航</h1>
+    </header>
+   <div class="main_contain">
+       <ul class="clearfix">
+          
+       </ul>
+   </div>
+
+
+
+
+
+
+
+    <!--底部导航-->
+    <div class="bottom_nav">
+        <a href="index.html">首页</a>><a href="javascript:">商城导航</a>
+    </div>
+    <!--底部导航-->
+    <!--底部登录-->
+    <!--footer 开始-->
+    <footer class="container-fluid">
+        <div class="row handle">
+            <div class="col-xs-4"><a href="login.html">登陆</a></div>
+            <div class="col-xs-4"><a href="enroll.html">注册</a></div>
+            <div class="col-xs-4"><span></span>返回顶部</div>
+        </div>
+        <div>
+            <p><a href="javascript:;">手机APP下载</a>慢慢买手机版-掌上比价平台</p>
+            <p>m.manmanbuy.com</p>
+        </div>
+    </footer>
+    <!--footer 结束-->
+    <!--底部登录-->
+
+</body>
+
+</html>
+<script src="lib/bootstrap/js/jquery-1.12.2.min.js"></script>
+<script src="lib/bootstrap/js/bootstrap.min.js"></script>
+<script src="lib/template/template.js"></script>
+<script src="js/base.js"></script>
+<script src="js/sitenav.js"></script>
+<!--下面导入自己的js-->

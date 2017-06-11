@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>凑单品</title>
+    <link href="favicon.ico" rel="shortcut icon" type="image/x-icon">
+    <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/base.css">
+    <!--下面导入自己的css-->
+    <link rel="stylesheet" href="css/gsproduct.css"/>
+</head>
+<script id='drop1' type="text/html">
+    {{each result as value index}}
+    <li>{{value.shopName}}</li>
+    {{/each}}
+</script>
+<script id='drop2' type="text/html">
+    {{each result as value index}}
+    <li>{{value.areaName}}</li>
+    {{/each}}
+</script>
+<script id='drop3' type='text/html'>
+    {{each result as value index}}
+    <div class="col-xs-6 gsproduct_product_box">
+        <img src="{{value.productImg}}"
+             alt=""/>
+
+        <div>{{value.productName}}</div>
+        <div>{{value.productPrice}}</div>
+    </div>
+    {{/each}}
+</script>
+
+<body>
+<!--gsproduct  header开始-->
+<header>
+    <div class='gsproduct_hd1 fl'>
+        <a href="index.html">
+            <div class="glyphicon glyphicon-menu-left"></div>
+        </a>
+    </div>
+    <div class='gsproduct_hd2 fl'>
+        <h1>凑单品</h1>
+    </div>
+</header>
+<!--gsproduct  search开始-->
+<div class="gsproduct_search">
+    <div class="container_fluid">
+        <div class="row gsproduct_search_all">
+            <div class="col-xs-4 fl sp_jd_prt">
+                <a href="javascript:void(0)" class='a_jd a_jd_1'><span class='sp_jd'>京东</span>
+                    <i class="glyphicon glyphicon-triangle-bottom"></i>
+                </a>
+            </div>
+            <ul class="drop_ul_1 hide a_jd_ul">
+                <!--//填入模板 drop1-->
+            </ul>
+            <div class="col-xs-4 fl"><a href="javascript:void(0)" class='a_area a_jd_1'><span class="sp_area">华北</span><i
+                    class="glyphicon glyphicon-triangle-bottom"></i></a></div>
+            <ul class="drop_ul_1 hide a_area_ul">
+                <!--//填入模板 drop2-->
+            </ul>
+            <div class="col-xs-4 fl sp_money_prt">
+                <a href="javascript:void(0)" class='a_money a_jd_1'><span class="sp_money">全部价格</span>
+                    <i class="glyphicon glyphicon-triangle-bottom"></i>
+                </a>
+            </div>
+            <ul class="drop_ul_2 hide a_money_ul drop_ul_1">
+                <li class="current">全部价格</li>
+                <li>1-3元</li>
+                <li>3-5元</li>
+                <li>5-10元</li>
+                <li>10-15元</li>
+                <li>15元+</li>
+            </ul>
+            <div class="fr gsproduct_search_logo"><b class="glyphicon glyphicon-search"></b></div>
+        </div>
+    </div>
+</div>
+<!--gsproduct  product开始-->
+<div class="gsproduct_product" id="gsproduct_product">
+    <div class="container-fluid">
+        <div class="row" id='product_row'>
+            <!--填入模板 drop3-->
+        </div>
+    </div>
+</div>
+<!--加载-->
+<div class="gsproduct_footer_banner">&nbsp;&nbsp;&nbsp;<span>点击加载更多</span></div>
+<!--footer 开始-->
+<footer class="container-fluid">
+    <div class="row handle">
+        <div class="col-xs-4"><a href="login.html">登陆</a></div>
+        <div class="col-xs-4"><a href="enroll.html">注册</a></div>
+        <div class="col-xs-4"><span></span>返回顶部</div>
+    </div>
+    <div>
+        <p><a href="javascript:;">手机APP下载</a>慢慢买手机版-掌上比价平台</p>
+        <p>m.manmanbuy.com</p>
+    </div>
+</footer>
+<!--footer 结束-->
+</body>
+</html>
+<script src="lib/bootstrap/js/jquery-1.12.2.min.js"></script>
+<script src="lib/bootstrap/js/bootstrap.min.js"></script>
+<script src="lib/template/template.js"></script>
+<script src="js/base.js"></script>
+<!--下面导入自己的js-->
+<script src="js/gsproduct.js"></script>

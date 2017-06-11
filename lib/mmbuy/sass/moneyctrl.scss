@@ -1,0 +1,251 @@
+/*省钱控制部分*/
+$rem:18.75;
+.save {
+    a:hover {
+        text-decoration: none;
+    }
+    header {
+        // height: 44px;
+        width: 100%;
+        padding-left: (50rem/$rem);
+        padding-right: (50rem/$rem);
+        background: #ff841d;
+        position: relative;
+        text-align: center;
+        line-height: (44rem/$rem);
+        .save-back{
+            position: absolute;
+            left: 0;
+            top: 0;
+             a {
+                 display: block;
+                 width: (50rem/$rem);
+                 height: (44rem/$rem);
+                 color: white;
+                 font-size: (23rem/$rem);
+                 font-family: '隶书';
+                 font-weight: 900;
+            }
+        }
+        h1 {
+            width: 100%;
+            height: (44rem/$rem);
+            color: white;
+            line-height: (44rem/$rem);
+            font-size: (20rem/$rem);
+            font-weight: bold;
+        }
+        .save-home {
+            position: absolute;
+            right:0;
+            top: 0;
+             a {
+                 display: block;
+                 width: (50rem/$rem);
+                 height: (44rem/$rem);
+                //  background-color: green;
+                img {
+                    width: (32rem/$rem);
+                    height: (32rem/$rem);
+                }
+            }
+        }
+    }
+
+    .save-content {
+        
+        li {
+            padding: (14rem/$rem) (8rem/$rem);
+            // height: (100rem/$rem);
+            a {
+                display: block;
+                padding-left: (110rem/$rem);
+                position: relative;
+                 .sc-img {
+                position: absolute;
+                left: 0;
+                top: 0;
+                width: (110rem/$rem);
+                font-size: (14rem/$rem);
+                line-height: (24rem/$rem);
+                // height: 100px;
+                img {
+                    width: (100rem/$rem);
+                    height: (100rem/$rem);
+                }
+             }
+
+                .sc-txt {
+                height: (100rem/$rem);
+                overflow: hidden;
+               
+                .sc-txt-top {
+                     font-size: (15rem/$rem);
+                     color: #333333;
+                     line-height: (19rem/$rem);
+                    height: (57rem/$rem);
+                     text-align: left;
+                     font-weight: normal;
+                    span {
+                        color: #ff6c00;
+                        font-size: (15rem/$rem);
+                    }
+                }
+                .sc-txt-bottom {
+                    font-size: (12rem/$rem);
+                    color: #a1a1a1;
+                    line-height: 24px;
+                    margin-top: (8rem/$rem);
+                    i {
+                        display: inline-block;
+                        width: (15rem/$rem);
+                        height: (15rem/$rem);
+                        //background: url('../images/little.bmp') no-repeat center;
+                        //background-size:    (15rem/$rem);
+                        vertical-align: middle;
+
+                    }
+                }
+                }
+            }
+           
+        }
+
+        .sc-btn {
+            margin-top: (20rem/$rem);
+            padding: 0 (8rem/$rem);
+            display: flex;
+            justify-content: space-between;
+            a {
+                display: inline-block;
+                background-color: #d4d4d4;
+                background: -webkit-gradient(linear,0 0,0 100%,from(#f1f1f1),to(#d4d4d4));
+                border-bottom: 1px solid #bababa;
+                box-shadow: 0 0 1px #666;
+                border-radius: (5rem/$rem);
+                text-align: center;
+                // font-size: (14rem/$rem);
+                line-height: (32rem/$rem);
+                // padding: (8rem/$rem) (20rem/$rem);
+                padding: (0rem/$rem) (20rem/$rem);
+                color: #000;
+                box-sizing: border-box;
+            }
+            select {
+                    border: 1px solid #bababa;
+                    font-size: (16rem/$rem);
+                    padding: (16rem/$rem)(15rem/$rem) ;
+                     height: (32rem/$rem)
+            }
+           
+        }
+    }
+
+}
+//分页部分css
+//    footer {
+        //margin-top: (20rem/$rem);
+        
+    .sc-f-top {
+        padding: 0 (8rem/$rem);
+        height: (36rem/$rem);
+         background-color: #ebebeb;
+         background: -webkit-gradient(linear,0 0,0 100%,from(#ffffff),to(#ebebeb));
+         background: -moz-linear-gradient(top, #ffffff, #ebebeb);
+         background: -o-linear-gradient(top,#ffffff, #ebebeb);
+         border-top: solid 1px #ebebeb;
+         border-bottom: 1px solid #ccc;
+         line-height: (36rem/$rem);
+      a{
+        color: #000;
+      }
+    }
+    footer{
+      padding-top: 0;
+    }
+//    .sc-f-center {
+//            background: #efefef;
+//            border-top: 1px solid #c4c4c4;
+//            border-bottom: 1px solid #c4c4c4;
+//            height: (34rem/$rem);
+//            line-height: (34rem/$rem);
+//            margin-top: (25rem/$rem);
+//            display: flex;
+//            justify-content: space-around;
+//            // padding: 0 (8rem/$rem);
+//            a {
+//                color: black;
+//                flex: 1;
+//                text-align: center;
+//                border-right: 1px solid #c4c4c4;
+//            }
+//            a:last-child {
+//                border:none;
+//            }
+//    }
+//    .sc-f-bottom{
+//        text-align: center;
+//        background: #efefef;
+//        text-align: center;
+//        font-size: (12rem/$rem);
+//        padding: (15rem/$rem) 0;
+//        color: #666;
+//        p{
+//            a:first-child {
+//                color: red;
+//            }
+//            a:last-of-type {
+//                color: #000;
+//            }
+//        }
+//    }
+//}
+//#page{
+//  div{
+//    //background: #F2F2F2;
+//    height: 74rem/$rem;
+//    display: flex;
+//    justify-content: center;
+//    align-items: center;
+//    //input{
+//    //  width: 91rem/$r;
+//    //  height: 34rem/$r;
+//    //}
+//    .forbid{
+//      color: #CCCCCC;
+//    }
+//  }
+//  .pages{
+//    width: 91rem/$rem;
+//    height: 34rem/$rem;
+//    position: relative;
+//    font-size: 14rem/$rem;
+//    ul{
+//      display: none;
+//      position: absolute;
+//      top: 0;
+//      left: 0;
+//      transform: translateY(-104%);
+//      width: 100%;
+//      //height: 200px;
+//      background: #f2f2f2;
+//      border: 1px solid #ccc;
+//      border-radius: 5px;
+//      padding: 10rem/$rem 10rem/$rem 0;
+//      li{
+//        a{
+//          display: block;
+//          width: 100%;
+//          height: 34rem/$rem;
+//          line-height: 34rem/$rem;
+//          text-align: center;
+//          border: 1px solid #ccc;
+//          border-radius: 5px;
+//          margin-bottom: 5rem/$rem;
+//          color: #000;
+//        }
+//
+//      }
+//    }
+//  }
+//}

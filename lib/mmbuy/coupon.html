@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>优惠券</title>
+    <link href="favicon.ico" rel="shortcut icon" type="image/x-icon">
+    <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/coupon.css">
+    <!--下面导入自己的css-->
+
+</head>
+<body>
+<div class="head">
+    <div class="back">
+        <a href="index.html" class="icon_back glyphicon glyphicon-menu-left"></a>
+    </div>
+    <h1>优惠券</h1>
+    <div class="home">
+        <a href="http://m.manmanbuy.com/?o=download" class="icon_app">
+            <img src="images/header_app.png" alt="">
+        </a>
+    </div>
+</div>
+
+<div class="quan-box">
+    <div class="quan-model">
+        <div class="bd clearfix">
+            <ul class="get_coupon">
+                <!--<li style="width: 129.333px;"><a href="quan.aspx?id=52"><img src="http://www.juanlaoda.com/ImageUpload/2013310191729944.jpg" alt="肯德基优惠券"><br>肯德基</a></li>-->
+            </ul>
+        </div>
+    </div>
+</div>
+
+<div id="ctl00_Menu" class="nav" style="margin-top:20px;"><a href="http://m.manmanbuy.com">首页</a>&nbsp;&gt;&nbsp;
+    <a href="javascript:void(0)">优惠券</a>
+</div>
+
+
+<!--footer 开始-->
+<footer class="container-fluid">
+    <div class="row handle">
+        <div class="col-xs-4"><a href="login.html">登陆</a></div>
+        <div class="col-xs-4"><a href="enroll.html">注册</a></div>
+        <div class="col-xs-4"><span></span>返回顶部</div>
+    </div>
+    <div>
+        <p><a href="javascript:;">手机APP下载</a>慢慢买手机版-掌上比价平台</p>
+        <p>m.manmanbuy.com</p>
+    </div>
+</footer>
+<!--footer 结束-->
+<div style="position:fixed;right:0;bottom:30px;z-index:999">
+    <a href="http://m.manmanbuy.com/?o=download"><img src="https://img.alicdn.com/imgextra/i2/379516416/TB2WepTeb1J.eBjSszcXXbFzVXa_!!379516416.png" width="60"></a>
+</div>
+
+</body>
+</html>
+<script src="lib/bootstrap/js/jquery-1.12.2.min.js"></script>
+<script src="lib/bootstrap/js/bootstrap.min.js"></script>
+<script src="lib/template/template.js"></script>
+<script src="js/base.js"></script>
+<!--下面导入自己的js-->
+
+<!--制作模板引擎-->
+<script id='template' type='text/html'>
+    {{each result as value index }}
+    <li class='tem_li'>
+        <a href="coupon_detail.html?couponid={{result[index].couponId}}&couponTitle={{result[index].couponTitle}}">
+            <img src="{{result[index].couponImg}}" alt="">
+            <br>{{result[index].couponTitle}}
+        </a>
+    </li>
+    {{/each}}
+</script>
+<script src="js/coupon.js"></script>
+

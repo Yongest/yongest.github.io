@@ -1,0 +1,142 @@
+@charset "UTF-8";
+/*省钱控制部分*/
+.save a:hover {
+  text-decoration: none;
+}
+.save header {
+  width: 100%;
+  padding-left: 2.66667rem;
+  padding-right: 2.66667rem;
+  background: #ff841d;
+  position: relative;
+  text-align: center;
+  line-height: 2.34667rem;
+}
+.save header .save-back {
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+.save header .save-back a {
+  display: block;
+  width: 2.66667rem;
+  height: 2.34667rem;
+  color: white;
+  font-size: 1.22667rem;
+  font-family: '隶书';
+  font-weight: 900;
+}
+.save header h1 {
+  width: 100%;
+  height: 2.34667rem;
+  color: white;
+  line-height: 2.34667rem;
+  font-size: 1.06667rem;
+  font-weight: bold;
+}
+.save header .save-home {
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+.save header .save-home a {
+  display: block;
+  width: 2.66667rem;
+  height: 2.34667rem;
+}
+.save header .save-home a img {
+  width: 1.70667rem;
+  height: 1.70667rem;
+}
+.save .save-content li {
+  padding: 0.74667rem 0.42667rem;
+}
+.save .save-content li a {
+  display: block;
+  padding-left: 5.86667rem;
+  position: relative;
+}
+.save .save-content li a .sc-img {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 5.86667rem;
+  font-size: 0.74667rem;
+  line-height: 1.28rem;
+}
+.save .save-content li a .sc-img img {
+  width: 5.33333rem;
+  height: 5.33333rem;
+}
+.save .save-content li a .sc-txt {
+  height: 5.33333rem;
+  overflow: hidden;
+}
+.save .save-content li a .sc-txt .sc-txt-top {
+  font-size: 0.8rem;
+  color: #333333;
+  line-height: 1.01333rem;
+  height: 3.04rem;
+  text-align: left;
+  font-weight: normal;
+}
+.save .save-content li a .sc-txt .sc-txt-top span {
+  color: #ff6c00;
+  font-size: 0.8rem;
+}
+.save .save-content li a .sc-txt .sc-txt-bottom {
+  font-size: 0.64rem;
+  color: #a1a1a1;
+  line-height: 24px;
+  margin-top: 0.42667rem;
+}
+.save .save-content li a .sc-txt .sc-txt-bottom i {
+  display: inline-block;
+  width: 0.8rem;
+  height: 0.8rem;
+  vertical-align: middle;
+}
+.save .save-content .sc-btn {
+  margin-top: 1.06667rem;
+  padding: 0 0.42667rem;
+  display: flex;
+  justify-content: space-between;
+}
+.save .save-content .sc-btn a {
+  display: inline-block;
+  background-color: #d4d4d4;
+  background: -webkit-gradient(linear, 0 0, 0 100%, from(#f1f1f1), to(#d4d4d4));
+  border-bottom: 1px solid #bababa;
+  box-shadow: 0 0 1px #666;
+  border-radius: 0.26667rem;
+  text-align: center;
+  line-height: 1.70667rem;
+  padding: 0rem 1.06667rem;
+  color: #000;
+  box-sizing: border-box;
+}
+.save .save-content .sc-btn select {
+  border: 1px solid #bababa;
+  font-size: 0.85333rem;
+  padding: 0.85333rem 0.8rem;
+  height: 1.70667rem;
+}
+
+.sc-f-top {
+  padding: 0 0.42667rem;
+  height: 1.92rem;
+  background-color: #ebebeb;
+  background: -webkit-gradient(linear, 0 0, 0 100%, from(#ffffff), to(#ebebeb));
+  background: -moz-linear-gradient(top, #ffffff, #ebebeb);
+  background: -o-linear-gradient(top, #ffffff, #ebebeb);
+  border-top: solid 1px #ebebeb;
+  border-bottom: 1px solid #ccc;
+  line-height: 1.92rem;
+}
+.sc-f-top a {
+  color: #000;
+}
+
+footer {
+  padding-top: 0;
+}

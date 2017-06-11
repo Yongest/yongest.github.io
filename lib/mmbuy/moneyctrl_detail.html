@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>省钱控商品详情</title>
+    <link href="favicon.ico" rel="shortcut icon" type="image/x-icon">
+    <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/base.css">
+    <!--下面导入自己的css-->
+    <link rel="stylesheet" href="css/moneyctrl_detail.css">
+</head>
+<body>
+    <!--省钱控S-->
+    <div class="save">
+        <!--头部 S-->
+        <header class="clearfix">
+            <div class="save-back fl">
+                <a href="moneyctrl.html" name='top'>&lt;</a>
+            </div>
+            <h1 class="fl">国内折扣</h1>
+            <div class="save-home fr">
+                <a href="http://a.app.qq.com/o/simple.jsp?pkgname=com.manmanbuy.bijia"><img src="images/header_app.png" alt=""></a>
+            </div>
+        </header>
+        <!--头部E-->
+        <!--主体部分 S-->
+        <div class="save-content">
+            <!--内容部分S-->
+
+
+            <!--内容部分E-->
+
+
+        </div>
+        <!--主体部分E-->
+
+        <!--底部S-->
+        <!--<footer id="footer">-->
+            <!--<div class="sc-f-top">-->
+                <!--<a href="mon.html">首页></a><a href="moneyctrl.html">超值推荐</a><span id="productName"></span>-->
+            <!--</div>-->
+            <!--<div class="sc-f-center">-->
+                <!--<a href="javascript:void(0)">登录</a>-->
+                <!--<a href="javascript:void(0)">注册</a>-->
+                <!--<a href="#top"><i></i>返回顶部</a>-->
+            <!--</div>-->
+            <!--<div class="sc-f-bottom">-->
+                <!--<p>-->
+                    <!--<a href="javascript:void(0)">手机APP下载</a>-->
+                    <!--<a href="javascript:void(0)">慢慢买手机版</a>-->
+                    <!--<span>掌上比价平台</span>-->
+                <!--</p>-->
+                <!--<p>m.manmanbuy.com</p>-->
+            <!--</div>-->
+        <!--</footer>-->
+        <!--footer 开始-->
+        <footer id="footer" class="container-fluid">
+            <div class="sc-f-top">
+            <a href="mon.html">首页></a><a href="moneyctrl.html">超值推荐</a><span id="productName"></span>
+            </div>
+            <div class="row handle">
+                <div class="col-xs-4"><a href="login.html">登陆</a></div>
+                <div class="col-xs-4"><a href="enroll.html">注册</a></div>
+                <div class="col-xs-4"><span></span>返回顶部</div>
+            </div>
+            <div>
+                <p><a href="javascript:;">手机APP下载</a>慢慢买手机版-掌上比价平台</p>
+                <p>m.manmanbuy.com</p>
+            </div>
+        </footer>
+        <!--footer 结束-->
+        <!--底部E-->
+    </div>
+    <!--省钱控E-->
+</body>
+
+</html>
+<!--制作模板-->
+<script id='mytemplate' type="txt/html">
+    {{each result as value index}}
+    <h3>{{value.productName}}</h3>
+    <h4>{{value.productInfo1}}</h4>
+    <div id="info">
+        <span>{{value.productFrom}}&nbsp;</span><span>{{valueproductTime}}&nbsp;</span><span>{{value.productTips}}&nbsp;</span><a
+            href="javascript:void(0)"><span>{{value.productComCount}}</span></a>
+    </div>
+    <div class="info-detail">
+        <p>
+            {{#value.productImgSm}}
+            <span>{{value.productInfo}}</span>
+        </p>
+    </div>
+    <div id="imglg">
+       {{#value.productImgSm}}
+    </div>
+    <div id="productcity">
+        <h3>商品查询</h3>
+       {{#value.productCity}}
+    </div>
+    <div class="gobuy">
+        <a href="javascript:void(0)">前往购买</a>
+    </div>
+    
+    
+    <div class="productcomment">
+        {{#value.productComment}}
+    </div>
+    <div class='mmbuy'>
+        <img src="images/mmbweixin2.png" style="width: 100%" alt="">
+    </div>
+    {{/each}}
+</script>
+<script src="lib/bootstrap/js/jquery-1.12.2.min.js"></script>
+<script src="lib/bootstrap/js/bootstrap.min.js"></script>
+<script src="lib/template/template.js"></script>
+<script src="js/base.js"></script>
+<script src="js/moneyctrl_detail.js"></script>
+<script>
+
+
+</script>

@@ -1,0 +1,118 @@
+$rem:18.75;
+header{
+
+    background:#ff841d;
+    width: 100%;
+    height: (44rem/$rem);
+    text-align: center;
+    color: #FFFFFF;
+    h1{
+        line-height: (44rem/$rem);
+        font-weight: bold;
+        font-size: (20rem/$rem);
+    }
+    
+    a{
+        display: block; 
+        height: 100%;
+        width:(50rem/$rem);
+        &:hover{
+            text-decoration: none;
+        }
+        
+    }  
+   .glyphicon{
+            top:0;
+       }
+    .header_left{
+       
+        font-size:(28rem/$rem);
+        line-height: (44rem/$rem);
+        color: #FFFFFF;
+       
+       
+    }
+    .header_right{
+        background:url("../images/header_app.png")no-repeat;
+        background-size: (32rem/$rem);
+        background-position: center;
+        
+    }
+
+}
+.main_contain{
+   
+    padding: 10px 30px;
+   
+    ul{
+       
+         
+     li{
+        height: 39px;
+        margin-right: 10px;
+        margin-bottom: 3px;
+        display: block;
+        float: left;
+        // width: 40%;
+
+        
+
+        a{
+            text-decoration: none;
+            display: block;
+            background:#f4f4f4;
+            border:1px solid #bfbfbf;
+            padding:5px 10px;
+            border-radius:10px;
+            
+        }
+    }
+    }
+   
+}
+
+
+
+
+
+
+
+  .bottom_nav{
+       width: 100%;
+       height: 36rem/$rem;
+       background:linear-gradient(to bottom, #ffffff,#dadada);
+       border-top: #999;
+       border-bottom: #999;
+       font-size: 14rem/$rem;
+       padding-left: 8rem/$rem;
+       line-height:36rem/$rem;
+       
+    a{
+        line-height:36rem/$rem;
+        color: #999;
+    }
+   } 
+
+//footer{
+//  padding-top: 25rem/$rem;
+//  .handle{
+//    padding-bottom: 15rem/$rem;
+//    div{
+//      height: 34rem/$rem;
+//      border-top: 1rem/$rem solid #C4C4C4;
+//      border-bottom: 1rem/$rem solid #C4C4C4;
+//      line-height: 34rem/$rem;
+//      text-align: center;
+//      &:nth-of-type(2){
+//        border: 1rem/$rem solid #C4C4C4;
+//      }
+//    }
+//  }
+//  p{
+//    font-size: 12rem/$rem;
+//    text-align: center;
+//    a{
+//      color: red;
+//    }
+//  }
+//}

@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>登录页面</title>
+    <link href="favicon.ico" rel="shortcut icon" type="image/x-icon">
+    <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/login.css">
+    <!--下面导入自己的css-->
+
+</head>
+<body>
+<!--头部-->
+<div class="index_header">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-10">
+                <a href="index.html"><img src="images/header_logo.png" alt="" class="index_img1" /></a>
+            </div>
+            <div class="col-xs-2">
+                <a href="http://a.app.qq.com/o/simple.jsp?pkgname=com.manmanbuy.bijia"><img src="images/header_app.png" alt="" class="index_img2" /></a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--&lt;!&ndash;搜索框&ndash;&gt;-->
+<!--<div  class="search1 clearfix">-->
+    <!--<div class="searchtxt">-->
+        <!--<input value="" name="key" type="search" placeholder="请输入你想比价的商品">-->
+    <!--</div>-->
+    <!--<div class="searchbtn">-->
+        <!--<input type="submit" value="搜索">-->
+    <!--</div>-->
+<!--</div>-->
+<!--&lt;!&ndash;输入框部分&ndash;&gt;-->
+<!--搜索开始-->
+<div class="search">
+    <form id="search_form" action="category_list.html"  method="get">
+        <input id="search_key" name="category" type="text" placeholder="请输入你想比价的商品">
+        <input id="search_id" type="hidden" name="categoryid">
+        <!--<input id="search" class="fr" type="submit" value="搜索">-->
+        <a id="search" href="javascript:;">搜索</a>
+    </form>
+</div>
+<!--搜索结束-->
+
+    <div class="t_wrap">
+        <table class="loginTab">
+            <tbody>
+            <tr>
+                <td>
+                    <input name="" type="text" id="" class="score_t" value="用户名" onblur="if(this.value=='')this.value='用户名';" onclick="if(this.value=='用户名')this.value='';">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input name="" type="password"  class="score_t" placeholder="密码">
+                </td>
+            </tr>
+            <tr>
+                <td style="padding-top: 3px;">
+                    <input type="submit" name="" value="登录"  class="login">
+                </td>
+            </tr>
+            <tr>
+                <td style="font-size: 14px; height: 36px;">
+                    <input class="auto" type="checkbox">一个月内自动登陆
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div  style="font-size: 14px; height: 36px; color:Red;">
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td style="font-size: 13px; color: #888; height: 20px;">
+                    忘记密码：请电脑登录www.manmanbuy.com找回
+                </td>
+            </tr>
+            </tbody></table>
+    </div>
+
+
+
+
+
+
+<!--footer 开始-->
+<footer class="container-fluid">
+    <div class="row handle">
+        <div class="col-xs-4"><a href="login.html">登陆</a></div>
+        <div class="col-xs-4"><a href="enroll.html">注册</a></div>
+        <div class="col-xs-4"><span></span>返回顶部</div>
+    </div>
+    <div>
+        <p><a href="javascript:;">手机APP下载</a>慢慢买手机版-掌上比价平台</p>
+        <p>m.manmanbuy.com</p>
+    </div>
+</footer>
+<!--footer 结束-->
+
+
+
+<div class="app-promotion-bar"> <a class="closefix glyphicon glyphicon-remove-circle" href="javascript:;"></a>
+    <div class="icon"></div>
+    <p class="titlefix">慢慢买</p>
+    <p class="describe">全网比价，查历史价格</p>
+    <a class="download-btn" href="http://m.manmanbuy.com/?o=download" >立即打开</a> </div>
+
+
+</body>
+</html>
+<script src="lib/bootstrap/js/jquery-1.12.2.min.js"></script>
+<script src="lib/bootstrap/js/bootstrap.min.js"></script>
+<script src="lib/template/template.js"></script>
+<script src="js/base.js"></script>
+<!--下面导入自己的js-->

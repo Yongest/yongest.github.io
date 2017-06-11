@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>品牌大全详细列表</title>
+    <link href="favicon.ico" rel="shortcut icon" type="image/x-icon">
+    <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/base.css">
+    <!--下面导入自己的css-->
+    <link rel="stylesheet" href="css/category.css">
+    <script id="topten_brand" type="text/html">
+        {{each result as value index}}
+        <li>
+            <a href="javascript:;">
+                <span>{{index+1}}</span>
+                <h4>{{value.brandName}}</h4>
+                <p>{{value.brandInfo}}</p>
+                <s class="glyphicon glyphicon-menu-right"></s>
+
+            </a>
+        </li>
+        {{/each}}
+    </script>
+    <script id="topten_list" type="text/html">
+    {{each result as value index}}
+    <li>
+        <a class="clearfix" href="category_detail.html?productid={{value.productId}}&brandName={{#value.brandName}}">
+            <div class="img_wrap fl">
+                {{#value.productImg}}
+            </div>
+            <div class="fl">
+                <h4>{{value.productName}}</h4>
+                <span class="price">{{value.productPrice}}</span>
+                <p class="info"><span>{{value.productQuote}}</span> <span >{{value.productCom}}</span></p>
+            </div>
+        </a>
+    </li>
+    {{/each}}
+</script>
+    <script id="topten_evaluate" type="text/html">
+        {{each result as value index}}
+        <li>
+            <div class="evaluate_wrap">
+                <div class="clearfix"><span class="fl">{{value.comName}}</span><span class="fr">{{value.comTime}}</span></div>
+                <p>{{value.comContent}}</p>
+            </div>
+        </li>
+        {{/each}}
+    </script>
+    <script id="topten_evaluate_goods" type="text/html">
+        {{each result as value index}}
+        <div class="goods_wrap clearfix">
+            <div class="img_wrap fl">
+                {{#value.productImg}}
+
+            </div>
+            <p class="fl">{{value.productName}}</p>
+        </div>
+        {{/each}}
+    </script>
+
+
+
+</head>
+<body>
+<header class="header">
+    <a href="index.html"><img src="images/header_logo.png" alt=""></a>
+    <a  href="http://a.app.qq.com/o/simple.jsp?pkgname=com.manmanbuy.bijia"><img class="fr" src="images/header_app.png" alt=""></a>
+</header>
+<!--搜索开始-->
+<div class="search">
+    <form id="search_form" action="category_list.html"  method="get">
+        <input id="search_key" name="category" type="text" placeholder="请输入你想比价的商品">
+        <input id="search_id" type="hidden" name="categoryid">
+        <!--<input id="search" class="fr" type="submit" value="搜索">-->
+        <a id="search" href="javascript:;">搜索</a>
+    </form>
+</div>
+<!--搜索结束-->
+<div class="menu">
+    <a href="index.html">首页</a>&gt;
+    <a href="brandTitle.html">品牌大全</a>&gt;
+    <a id="distop_brandtitle" href="javascript:;">品牌大全</a>
+</div>
+<div class="distop_content">
+    <div class="topten_brand">
+    <h4 class="topten_title">液晶电视哪个牌子好</h4>
+    <ul>
+        <!--<li>-->
+            <!--<a href="javascript:;">-->
+                <!--<span>1</span>-->
+                <!--<h5>三星液晶电视</h5>-->
+                <!--<p>30天销量</p>-->
+                <!--<s class="glyphicon glyphicon-menu-right"></s>-->
+
+            <!--</a>-->
+        <!--</li>-->
+        <!--<li>-->
+            <!--<a href="javascript:;">-->
+                <!--<span>1</span>-->
+                <!--<h5>三星液晶电视</h5>-->
+                <!--<p>30天销量</p>-->
+                <!--<s class="glyphicon glyphicon-menu-right"></s>-->
+
+            <!--</a>-->
+        <!--</li>-->
+    </ul>
+    </div>
+    <div class="topten_list clearfix">
+        <h4 class="topten_title">液晶电视产品销量排行</h4>
+        <ul>
+            <!--<li>-->
+            <!--<a class="clearfix" href="javascript:;">-->
+                <!--<div class="img_wrap fl">-->
+                    <!--<img class="fl" src="images/compare_search_tv.jpg" alt="">-->
+                <!--</div>-->
+            <!--<div class="fl">-->
+            <!--<h4>康佳(KONKA) LED32E330C 32英寸 高清720P 普通LED液晶电视</h4>-->
+            <!--<span class="price">¥1099</span>-->
+            <!--<p class="info"><span>6商城报价</span> <span >有4176人评论</span></p>-->
+            <!--</div>-->
+            <!--</a>-->
+            <!--</li>-->
+            <!--<li>-->
+                <!--<a class="clearfix" href="javascript:;">-->
+                    <!--<div class="img_wrap fl">-->
+                        <!--<img class="fl" src="images/compare_search_tv.jpg" alt="">-->
+                    <!--</div>-->
+                    <!--<div class="fl">-->
+                        <!--<h4>康佳(KONKA) LED32E330C 32英寸 高清720P 普通LED液晶电视</h4>-->
+                        <!--<span class="price">¥1099</span>-->
+                        <!--<p class="info"><span>6商城报价</span> <span >有4176人评论</span></p>-->
+                    <!--</div>-->
+                <!--</a>-->
+            <!--</li>-->
+        </ul>
+    </div>
+    <div class="topten_evaluate">
+        <h4 class="topten_title">液晶电视最新评论</h4>
+        <ul>
+            <!--<li>-->
+                <!--<div class="goods_wrap clearfix">-->
+                    <!--<div class="img_wrap fl">-->
+                        <!--<img src="images/compare_search_tv.jpg" alt="">-->
+                    <!--</div>-->
+                    <!--<p class="fl">海尔42英寸智能网络电视海尔42英寸智能网络电视海尔42英寸智能网络电视</p>-->
+                <!--</div>-->
+                <!--<div class="evaluate_wrap">-->
+                    <!--<div class="clearfix"><span class="fl">j****k</span><span class="fr">2017/3/10</span></div>-->
+                    <!--<p>海尔电视连网络直接可以看电视海尔电视连网络直接可以看电视</p>-->
+                <!--</div>-->
+            <!--</li>-->
+            <!--<li>-->
+                <!--<div class="goods_wrap clearfix">-->
+                    <!--<div class="img_wrap fl">-->
+                        <!--<img src="images/compare_search_tv.jpg" alt="">-->
+                    <!--</div>-->
+                    <!--<p class="fl">海尔42英寸智能网络电视海尔42英寸智能网络电视海尔42英寸智能网络电视</p>-->
+                <!--</div>-->
+                <!--<div class="evaluate_wrap">-->
+                    <!--<div class="clearfix"><span class="fl">j****k</span><span class="fr">2017/3/10</span></div>-->
+                    <!--<p>海尔电视连网络直接可以看电视海尔电视连网络直接可以看电视</p>-->
+                <!--</div>-->
+            <!--</li>-->
+            <!--<li>-->
+                <!--<div class="goods_wrap clearfix">-->
+                    <!--<div class="img_wrap fl">-->
+                        <!--<img src="images/compare_search_tv.jpg" alt="">-->
+                    <!--</div>-->
+                    <!--<p class="fl">海尔42英寸智能网络电视海尔42英寸智能网络电视海尔42英寸智能网络电视</p>-->
+                <!--</div>-->
+                <!--<div class="evaluate_wrap">-->
+                    <!--<div class="clearfix"><span class="fl">j****k</span><span class="fr">2017/3/10</span></div>-->
+                    <!--<p>海尔电视连网络直接可以看电视海尔电视连网络直接可以看电视</p>-->
+                <!--</div>-->
+            <!--</li>-->
+        </ul>
+
+    </div>
+
+</div>
+<!--footer 开始-->
+<footer class="container-fluid">
+    <div class="row handle">
+        <div class="col-xs-4"><a href="login.html">登陆</a></div>
+        <div class="col-xs-4"><a href="enroll.html">注册</a></div>
+        <div class="col-xs-4"><span></span>返回顶部</div>
+    </div>
+    <div>
+        <p><a href="javascript:;">手机APP下载</a>慢慢买手机版-掌上比价平台</p>
+        <p>m.manmanbuy.com</p>
+    </div>
+</footer>
+<!--footer 结束-->
+</body>
+</html>
+<script src="lib/bootstrap/js/jquery-1.12.2.min.js"></script>
+<script src="lib/bootstrap/js/bootstrap.min.js"></script>
+<script src="lib/template/template.js"></script>
+<script src="js/base.js"></script>
+<!--下面导入自己的js-->
+<script src="js/brandTitle_distop.js"></script>

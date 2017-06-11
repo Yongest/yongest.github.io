@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>省钱控</title>
+    <link href="favicon.ico" rel="shortcut icon" type="image/x-icon">
+    <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/base.css">
+    <!--下面导入自己的css-->
+    <link rel="stylesheet" href="css/moneyctrl.css">
+</head>
+
+<body>
+    <!--省钱控S-->
+    <div class="save">
+        <!--头部 S-->
+        <header class="clearfix">
+            <div class="save-back fl">
+                <a href="index.html" name='top'>&lt;</a>
+            </div>
+            <h1 class="fl">省钱控 - 最新优惠</h1>
+            <div class="save-home fr">
+                <a href="http://a.app.qq.com/o/simple.jsp?pkgname=com.manmanbuy.bijia"><img src="images/header_app.png" alt=""></a>
+            </div>
+        </header>
+        <!--头部E-->
+        <!--主体部分 S-->
+        <div class="save-content">
+            <!--内容部分S-->
+            <ul id="save-items">
+                <!--<li>
+                    <a class="clearfix" href="javascript:void(0)">
+                        <div class="sc-img fl">
+                            <img src="images/1.png" alt="">
+                        </div>
+                        <div class="sc-txt fr">
+                            <div class="sc-txt-top">
+                                手机端也能自动比价了！内含奖品！
+                                <span>跟浏览器比价插件一样智能！</span>
+                            </div>
+                            <div class="sc-txt-bottom">
+                                <span class="fl">慢慢买 | 03-09 16:30</span>
+                                <span class="fr"><i></i>13</span>
+                            </div>
+                        </div>
+                    </a>
+                </li>-->
+
+            </ul>
+            <!--内容部分E-->
+
+
+        </div>
+        <!--按钮分页部分S-->
+        <div id="page" class="row">
+            <div class="col-xs-4">
+                <a class="btn btn-default pre_page" href="javascript:;">上一页</a>
+            </div>
+            <div class="col-xs-4">
+                <div class="pages btn btn-default">
+                    选择页码
+                    <ul>
+                        <!--<li><a href="javascript:;" data-pageid="1">第1页</a></li>-->
+                    </ul>
+                </div>
+
+            </div>
+            <div class="col-xs-4">
+                <a class="btn btn-default nex_page" href="javascript:;">下一页</a>
+            </div>
+        </div>
+        <!--按钮部分E-->
+        <!--主体部分E-->
+
+        <!--底部S-->
+        <!--<footer>-->
+            <!--<div class="sc-f-top">-->
+                <!--首页><span>省钱控</span>-->
+            <!--</div>-->
+            <!--<div class="sc-f-center">-->
+                <!--<a href="javascript:void(0)">登录</a>-->
+                <!--<a href="javascript:void(0)">注册</a>-->
+                <!--<a href="#top"><i></i>返回顶部</a>-->
+            <!--</div>-->
+            <!--<div class="sc-f-bottom">-->
+                <!--<p>-->
+                    <!--<a href="javascript:void(0)">手机APP下载</a>-->
+                    <!--<a href="javascript:void(0)">慢慢买手机版</a>-->
+                    <!--<span>掌上比价平台</span>-->
+                <!--</p>-->
+                <!--<p>m.manmanbuy.com</p>-->
+            <!--</div>-->
+        <!--</footer>-->
+        <!--footer 开始-->
+        <div class="sc-f-top">
+            <a href="index.html">首页></a><span>省钱控</span>
+        </div>
+        <footer class="container-fluid">
+
+            <div class="row handle">
+                <div class="col-xs-4"><a href="login.html">登陆</a></div>
+                <div class="col-xs-4"><a href="enroll.html">注册</a></div>
+                <div class="col-xs-4"><span></span>返回顶部</div>
+            </div>
+            <div>
+                <p><a href="javascript:;">手机APP下载</a>慢慢买手机版-掌上比价平台</p>
+                <p>m.manmanbuy.com</p>
+            </div>
+        </footer>
+        <!--footer 结束-->
+        <!--底部E-->
+    </div>
+    <!--省钱控E-->
+</body>
+</html>
+<!--制作模板-->
+<script id='template' type="txt/html">
+{{each result as value index}}
+    <li id="{{value.productId}}">
+        <a class="clearfix" href="moneyctrl_detail.html?id={{value.productId}}">
+            <div class="sc-img fl">
+                {{#value.productImgSm}}
+            </div>
+            <div class="sc-txt fr">
+                <div class="sc-txt-top">
+                    {{value.productName}}
+                    <span>{{value.productPinkage}}</span>
+                </div>
+                <div class="sc-txt-bottom">
+                    <span class="fl">{{value.productFrom}}| {{value.productTime}}</span>
+                    <span class="fr"><i class="glyphicon glyphicon-comment"></i>&nbsp;{{value.productComCount}}</span>
+                </div>
+            </div>
+        </a>
+    </li>
+{{/each}}
+</script>
+<script src="lib/bootstrap/js/jquery-1.12.2.min.js"></script>
+<script src="lib/bootstrap/js/bootstrap.min.js"></script>
+<script src="lib/template/template.js"></script>
+<script src="js/base.js"></script>
+<!--下面导入自己的js-->
+<script src="js/moneyctrl.js"></script>

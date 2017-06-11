@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!--视口设置-->
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>商品详情</title>
+    <link href="favicon.ico" rel="shortcut icon" type="image/x-icon">
+    <!--导入bootstrap样式文件-->
+    <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.min.css">
+    <!--导入公共样式文件-->
+    <link rel="stylesheet" href="css/base.css">
+    <!--下面导入自己的css-->
+    <link rel="stylesheet" href="css/category.css">
+    <!--商品详情模板引擎开始-->
+    <script id="goods_detail" type="text/html">
+        <div class="goods">
+            <div class="img_wrap">
+                {{#result[0].productImg}}
+                <a href="javascript:;">收藏</a>
+            </div>
+            <h4>{{result[0].productName}}</h4>
+        </div>
+        <div class="goods_nav">
+            <div class="active">比价购买</div>
+            <div>产品参数</div>
+            <div>优选评价</div>
+        </div>
+        <div class="shop_list">
+            {{#result[0].bjShop}}
+        </div>
+    </script>
+    <!--商品详情模板引擎结束-->
+    <!--商品评价模板引擎开始-->
+    <script id="appraise_list" type="text/html">
+        {{each result as value index}}
+        <li>
+            <div class="clearfix">
+                <div class="fl">
+                    <span>{{value.comName}}</span><br>
+                    <!--<span>*****</span>-->
+                </div>
+                <div class="fr">
+                    <span class="fr">{{value.comTime}}</span><br>
+                    <span>{{value.comFrom}}</span>
+                </div>
+            </div>
+            <div class="evaluate_info">
+                {{value.comContent}}
+            </div>
+            <p>
+                <a href="javascript">回复</a>
+            </p>
+        </li>
+        {{/each}}
+    </script>
+    <!--商品评价模板引擎结束-->
+</head>
+<body>
+<!--头部开始-->
+<header  class="header">
+    <a href="index.html"><img src="images/header_logo.png" alt=""></a>
+    <a  href="http://a.app.qq.com/o/simple.jsp?pkgname=com.manmanbuy.bijia"><img class="fr" src="images/header_app.png" alt=""></a>
+</header>
+<!--头部结束-->
+<!--搜索开始-->
+<div class="search">
+    <form id="search_form" action="category_list.html"  method="get">
+        <input id="search_key" name="category" type="text" placeholder="请输入你想比价的商品">
+        <input id="search_id" type="hidden" name="categoryid">
+        <!--<input id="search" class="fr" type="submit" value="搜索">-->
+        <a id="search" href="javascript:;">搜索</a>
+    </form>
+</div>
+<!--搜索结束-->
+<!--商品详情开始-->
+<div class="goods_detail">
+    <!--三级菜单开始-->
+    <div class="menu">
+        <a href="index.html">首页&nbsp;&gt;</a>
+        <a id="category" href="#">&nbsp;&gt;</a>
+        <a id="brandName" href="javascript:;"></a>
+    </div>
+    <!--三级菜单结束-->
+    <!--引入模板引擎-->
+    <!--<div class="goods">-->
+    <!--<div class="img_wrap">-->
+    <!--<img src="images/compare_search_tv_big.jpg" alt="">-->
+    <!--<a href="javascript:;">收藏</a>-->
+    <!--</div>-->
+    <!--<h4>TCL L32F3301B 32英寸 高清720P 普通LED液晶电视 </h4>-->
+    <!--<p class="clearfix">-->
+    <!--<span class="fl">最低价：<s class="toRed">¥1149.00</s></span>-->
+    <!--<span class="fr">最低来自：<s>京东商城</s></span>-->
+    <!--</p>-->
+    <!--<p class="clearfix">-->
+    <!--<span class="fl">全网评论：<s>331232条</s></span>-->
+    <!--<span class="fr">优选评论：<s>3312条</s></span>-->
+    <!--</p>-->
+    <!--</div>-->
+    <!--<div class="goods_nav">-->
+    <!--<div>比价购买</div>-->
+    <!--<div>产品参数</div>-->
+    <!--<div>优选评价</div>-->
+    <!--</div>-->
+    <!--<div class="shop_list">-->
+    <!--<ul>-->
+    <!--<li>-->
+    <!--<div class="fl">-->
+    <!--<s></s><span>京东商城</span>-->
+    <!--</div>-->
+    <!--<div class="fr">-->
+    <!--<span class="price toRed">¥1149.00</span>-->
+    <!--<a href="javascript:;">去购买</a>-->
+    <!--</div>-->
+    <!--</li>-->
+    <!--<li>-->
+    <!--<div class="fl">-->
+    <!--<s></s><span>京东商城</span>-->
+    <!--</div>-->
+    <!--<div class="fr">-->
+    <!--<span class="price toRed">¥1149.00</span>-->
+    <!--<a href="javascript:;">去购买</a>-->
+    <!--</div>-->
+    <!--</li>-->
+    <!--</ul>-->
+    <!--<p>-->
+    <!--* 实际价格以各网站列出的实时售价为准，我们提供的价格可能有数小时至数日的延迟。-->
+    <!--</p>-->
+    <!--</div>-->
+    <div class="evaluate clearfix">
+        <h4>网友评论</h4>
+        <ul>
+            <!--<li>-->
+            <!--<div class="clearfix">-->
+            <!--<div class="fl">-->
+            <!--<span>j****m</span><br>-->
+            <!--<span>*****</span>-->
+            <!--</div>-->
+            <!--<div class="fr">-->
+            <!--<span class="fr">2015/1/23</span><br>-->
+            <!--<span>购买至：<s>京东商城</s></span>-->
+            <!--</div>-->
+            <!--</div>-->
+            <!--<div class="evaluate_info">-->
+            <!--电视已收到，第一感觉是好轻哦！应该要比实体店里的电视轻些，装底坐时螺丝孔做工有问题，怎么拧也拧不正。至于图像嘛！也不能要求很高，毕竟价格在这里。声音就更别提了，记得十五年前家里买了一台老式的TcL电视机那声音都比这好听得多。现在就希望它能多放点时间。总之，一句话，以后下单的朋友们不要抱太高期望。极度的怀疑这是不是TcL原厂生产的电视。-->
+            <!--</div>-->
+            <!--<p><a href="javascript">回复</a></p>-->
+            <!--</li>-->
+            <!--<li>-->
+            <!--<div class="clearfix">-->
+            <!--<div class="fl">-->
+            <!--<span>j****m</span><br>-->
+            <!--<span>*****</span>-->
+            <!--</div>-->
+            <!--<div class="fr">-->
+            <!--<span class="fr">2015/1/23</span><br>-->
+            <!--<span>购买至：<s>京东商城</s></span>-->
+            <!--</div>-->
+            <!--</div>-->
+            <!--<div class="evaluate_info">-->
+            <!--电视已收到，第一感觉是好轻哦！应该要比实体店里的电视轻些，装底坐时螺丝孔做工有问题，怎么拧也拧不正。至于图像嘛！也不能要求很高，毕竟价格在这里。声音就更别提了，记得十五年前家里买了一台老式的TcL电视机那声音都比这好听得多。现在就希望它能多放点时间。总之，一句话，以后下单的朋友们不要抱太高期望。极度的怀疑这是不是TcL原厂生产的电视。-->
+            <!--</div>-->
+            <!--<p><a href="javascript">回复</a></p>-->
+            <!--</li>-->
+        </ul>
+    </div>
+    <a class="more" href="javascript:;">
+        查看更多评价
+    </a>
+</div>
+<!--商品详情结束-->
+<!--footer 开始-->
+<footer class="container-fluid">
+    <div class="row handle">
+        <div class="col-xs-4"><a href="login.html">登陆</a></div>
+        <div class="col-xs-4"><a href="enroll.html">注册</a></div>
+        <div class="col-xs-4"><span></span>返回顶部</div>
+    </div>
+    <div>
+        <p><a href="javascript:;">手机APP下载</a>慢慢买手机版-掌上比价平台</p>
+        <p>m.manmanbuy.com</p>
+    </div>
+</footer>
+<!--footer 结束-->
+</body>
+</html>
+<!--导入jQuery-->
+<script src="lib/bootstrap/js/jquery-1.12.2.min.js"></script>
+<!--导入bootstrap.js-->
+<script src="lib/bootstrap/js/bootstrap.min.js"></script>
+<!--导入模板引擎-->
+<script src="lib/template/template.js"></script>
+<!--导入basejs-->
+<script src="js/base.js"></script>
+<!--下面导入自己的js-->
+<script src="js/category_detail.js"></script>

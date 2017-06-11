@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>白菜价</title>
+    <link href="favicon.ico" rel="shortcut icon" type="image/x-icon">
+    <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/baicaijia.css">
+    <!--下面导入自己的css-->
+
+</head>
+<script id="model" type="text/html">
+    <!--导航栏模板引擎-->
+    {{each result as value index}}
+    <li>
+        <div class="left_pic">
+            <a href="javascript:void(0)"> {{#value.productImg}}</a>
+        </div>
+        <div class="pro_name">{{#value.productName}}</div>
+        <div class="after_coupon">{{#value.productPrice}}</div>
+        <div class="pro_coupon">{{#value.productCoupon}} {{#value.productHref}}
+        </div>
+        <div class="pro_remain">{{#value.productCouponRemain}}</div>
+    </li>
+    {{/each}}
+</script>
+<!--中心列表模板引擎-->
+<script id="title" type="text/html">
+    {{each result as value index}}
+    <li><a href="javascript:void(0)">{{#value.title}}</a></li>
+    {{/each}}
+</script>
+
+<body>
+    <!--头部-->
+    <header>
+        <a class="header_left fl glyphicon glyphicon-menu-left" href="index.html"></a>
+        <a class="header_right fr" href="javascript:void(0)"></a>
+        <h1><span class="header_p">白菜价</span>-淘宝内部券</h1>
+    </header>
+    <!--头部-->
+
+    <!--中心-->
+    <div class="main_contain">
+        <div class="m_c_nav">
+            <nav>
+                <ul class="m_c_nav_list listMenu clearfix">
+                    <!--导航栏模板引擎-->
+                </ul>
+            </nav>
+            <div class="search">
+                <div class="searchBox glyphicon glyphicon-search"></div>
+            </div>
+            <div class="hide_box">
+                <div class="hide_small_box">
+                    <form id="search_form" action="category_list.html"  method="get">
+
+                    <span><a id="search" href="javascript:void(0)">搜索</a></span>
+                    <input id="search_key"  name="category" type="text" placeholder="搜索商品即可查内部券">
+                    <input id="search_id" type="hidden" name="categoryid">
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="coupon">
+            <img class="coupon_imgs" src="images/baicaijia_banner.png" alt=""></div>
+        <div class="main_contain_list">
+            <ul>
+                <!--中心列表模板引擎-->
+            </ul>
+        </div>
+    </div>
+    <!--中心-->
+
+    <!--底部导航-->
+    <div class="bottom_nav">
+        <a href="index.html">首页</a>><a href="javascript:">白菜价</a>
+    </div>
+    <!--底部导航-->
+    <!--底部登录-->
+    <!--footer 开始-->
+    <footer class="container-fluid">
+        <div class="row handle">
+            <div class="col-xs-4"><a href="login.html">登陆</a></div>
+            <div class="col-xs-4"><a href="enroll.html">注册</a></div>
+            <div class="col-xs-4"><span></span>返回顶部</div>
+        </div>
+        <div>
+            <p><a href="javascript:;">手机APP下载</a>慢慢买手机版-掌上比价平台</p>
+            <p>m.manmanbuy.com</p>
+        </div>
+    </footer>
+    <!--footer 结束-->
+    <!--底部登录-->
+
+</body>
+
+</html>
+
+<script src="lib/bootstrap/js/jquery-1.12.2.min.js"></script>
+<script src="lib/bootstrap/js/bootstrap.min.js"></script>
+<script src="lib/template/template.js"></script>
+<script src="js/base.js"></script>
+<script src="js/baicaijia.js"></script>
+<!--下面导入自己的js-->

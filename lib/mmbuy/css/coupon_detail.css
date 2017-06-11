@@ -1,0 +1,181 @@
+body, html {
+  height: 100%;
+}
+
+.head {
+  background: #f4483e;
+  color: #FFFFFF;
+  height: 2.4rem;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.head .back {
+  width: 2.66667rem;
+  height: 2.4rem;
+  position: relative;
+}
+.head .back a {
+  display: block;
+  text-align: center;
+  width: 2.66667rem;
+  height: 2.4rem;
+  font-size: 0.90667rem;
+  line-height: 2.4rem;
+  text-decoration: none;
+  color: #FFFFFF;
+}
+.head h1 {
+  font-size: 1.06667rem;
+  font-weight: bold;
+  text-align: center;
+}
+.head .home {
+  height: 2.4rem;
+  width: 2.66667rem;
+}
+.head .home a {
+  display: block;
+  height: 2.4rem;
+  width: 2.66667rem;
+}
+.head .home a img {
+  display: block;
+  position: absolute;
+  height: 1.6rem;
+  width: 1.6rem;
+  top: 0.53333rem;
+}
+
+.quan-box {
+  background: #FFFFFF;
+  text-align: left;
+}
+.quan-box .quan-list {
+  position: relative;
+  font-size: 2.13333rem;
+  font-weight: normal;
+  color: lightgray;
+}
+.quan-box .quan-list ul li {
+  border-bottom: 0.05333rem solid #e7e7e7;
+  position: relative;
+}
+.quan-box .quan-list ul li .arrow {
+  position: absolute;
+  right: 0;
+  height: 5.92rem;
+  line-height: 5.92rem;
+}
+.quan-box .quan-list ul li a {
+  display: inline-block;
+  height: 100%;
+  width: 100%;
+  padding: 0.53333rem;
+  color: #5a5a5a;
+  position: relative;
+}
+.quan-box .quan-list ul li .pic {
+  width: 5.33333rem;
+  height: 4.26667rem;
+  overflow: hidden;
+  margin-right: 0.53333rem;
+  float: left;
+}
+.quan-box .quan-list ul li .pic img {
+  max-width: 5.33333rem;
+}
+.quan-box .quan-list ul li .info {
+  padding-right: 1.6rem;
+  overflow: hidden;
+  font-size: 0.74667rem;
+  line-height: 1.28rem;
+  font-size: 0.64rem;
+}
+.quan-box .quan-list ul li .info .tit h3 {
+  word-break: break-all;
+  text-align: justify;
+  font-size: 0.64rem;
+  font-weight: normal;
+  color: #333333;
+  line-height: 1.06667rem;
+}
+.quan-box .quan-list ul li .info .tit h2 {
+  font-size: 0.64rem;
+  font-weight: bold;
+  line-height: 1.28rem;
+}
+.quan-box .quan-list ul li .info .time {
+  font-size: 0.64rem;
+  color: #EE7700;
+  margin-top: 0.53333rem;
+}
+
+.nav {
+  height: 1.92rem;
+  background-color: #ebebeb;
+  background: -webkit-gradient(linear, 0 0, 0 100%, from(#ffffff), to(#ebebeb));
+  background: -moz-linear-gradient(top, #ffffff, #ebebeb);
+  background: -o-linear-gradient(top, #ffffff, #ebebeb);
+  border-top: solid 0.05333rem #ebebeb;
+  border-bottom: 0.05333rem solid #ccc;
+  line-height: 1.92rem;
+  padding-left: 0.42667rem;
+  font-size: 0.74667rem;
+}
+.nav a {
+  color: #000;
+}
+
+.placeholder {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  text-align: center;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+}
+.placeholder li {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin-left: -5.33333rem;
+  margin-top: -4.26667rem;
+  width: 10.66667rem;
+  height: 8.53333rem;
+  opacity: 0;
+}
+.placeholder li img {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  left: 0;
+  top: 0;
+}
+
+.clip {
+  display: flex;
+}
+
+.hide {
+  display: none;
+}
+
+[class^='k_arrow'] {
+  position: fixed;
+  top: 16.85333rem;
+  z-index: 100;
+}
+
+.k_arrow_1 {
+  left: 0;
+}
+
+.k_arrow_2 {
+  right: 0;
+}

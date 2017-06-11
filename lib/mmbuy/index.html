@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <!--视口设置-->
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>慢慢买</title>
+    <link href="favicon.ico" rel="shortcut icon" type="image/x-icon">
+    <!--导入bootstrap样式文件-->
+    <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.min.css">
+    <!--导入公共样式文件-->
+    <link rel="stylesheet" href="css/base.css">
+    <!--下面导入自己的css-->
+    <link rel="stylesheet" href="css/index.css"/>
+</head>
+<script id='template' type='text/html'>
+    {{each result as value index}}
+        <div class="col-xs-3" id="classify{{index}}">
+            <a class="index_link" href="{{value.titlehref}}">
+                <div>{{#value.img}}</div>
+                <div>{{value.name}}</div>
+            </a>
+        </div>
+    {{/each}}
+</script>
+
+<body>
+<!--index页面 header  头部-->
+<div class="index_header clearfix">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-10">
+                <a href="#"><img src="images/header_logo.png" alt="" class="index_img1"/></a>
+            </div>
+            <div class="col-xs-2">
+                <a href="http://a.app.qq.com/o/simple.jsp?pkgname=com.manmanbuy.bijia">
+                    <img src="images/header_app.png" alt="" class="index_img2"/>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--banner-->
+<div class="banner">
+    <!--搜索开始-->
+    <div class="search">
+        <form id="search_form" action="category_list.html"  method="get">
+            <input id="search_key" name="category" type="text" placeholder="请输入你想比价的商品">
+            <input id="search_id" type="hidden" name="categoryid">
+            <!--<input id="search" class="fr" type="submit" value="搜索">-->
+            <a id="search" href="javascript:;">搜索</a>
+        </form>
+    </div>
+    <!--搜索结束-->
+    <!--轮播图开始-->
+    <ul class="banner_img clearfix">
+        <li><a href="category_list.html?categoryid=6&category=洗衣机"><img src="images/banner1.jpg" alt=""></a></li>
+        <li><a href="category_list.html?categoryid=26&category=笔记本电脑"><img src="images/banner2.jpg" alt=""></a></li>
+        <li><a href="category_list.html?categoryid=19&category=音箱"><img src="images/banner3.jpg" alt=""></a></li>
+        <li><a href="category_list.html?categoryid=98&category=美容器"><img src="images/banner4.jpg" alt=""></a></li>
+        <li><a href="category_list.html?categoryid=6&category=洗衣机"><img src="images/banner1.jpg" alt=""></a></li>
+    </ul>
+    <ul class="btn">
+        <li><a class="active" href="#"></a></li>
+        <li><a href="#"></a></li>
+        <li><a href="#"></a></li>
+        <li><a href="#"></a></li>
+    </ul>
+    <!--轮播图结束-->
+</div>
+<!--index页面 classify 分类-->
+<div class="index_classify">
+    <div class="container-fluid">
+        <div class="row index_classify_top">
+            <!--//导入模板-->
+        </div>
+    </div>
+</div>
+<!--index页面 discount 折扣-->
+<div class="index_discount">
+    <a href="moneyctrl.html">
+        <div class="container-fluid index_discount_header"><span>超值折扣推荐</span><img
+                src="http://www.zuyushop.com/wap/images/more.png" width="20" height="20"></div>
+    </a>
+</div>
+<!--content S-->
+<div class="index-content">
+    <ul id="index-items">
+        <!--<li>
+            <a class="clearfix" href="javascript:void(0)">
+                <div class="incon-img fl">
+                    <img src="images/2.jpg" alt="">
+                </div>
+                <div class="incon-txt fr">
+                    <div class="incon-txt-top">
+                        手机端也能自动比价了！内含奖品！
+                        <span>跟浏览器比价插件一样智能！</span>
+                    </div>
+                    <div class="incon-txt-bottom">
+                        <span class="fl">慢慢买 | 03-09 16:30</span>
+                        <span class="fr"><i></i>13</span>
+                    </div>
+                </div>
+            </a>
+        </li>-->
+
+    </ul>
+    <!--更多优惠信息-->
+    <div class="index-morme clearfix">
+        <a href="moneyctrl.html">更多优惠信息&gt;&gt;</a>
+        <a href="brandTitle.html">
+            <p>
+                <span class="fl">品牌排行</span>
+                <img class="fr" src="http://www.zuyushop.com/wap/images/more.png" alt="">
+            </p>
+        </a>
+    </div>
+
+</div>
+<!--content E-->
+
+<!--index页面 footer 尾部-->
+<!--footer 开始-->
+<footer class="container-fluid">
+    <div class="row handle">
+        <div class="col-xs-4"><a href="login.html">登陆</a></div>
+        <div class="col-xs-4"><a href="enroll.html">注册</a></div>
+        <div class="col-xs-4"><span></span>返回顶部</div>
+    </div>
+    <div>
+        <p><a href="javascript:;">手机APP下载</a>慢慢买手机版-掌上比价平台</p>
+
+        <p>m.manmanbuy.com</p>
+    </div>
+</footer>
+<!--footer 结束-->
+</body>
+
+</html>
+<!--导入jQuery-->
+<script src="lib/bootstrap/js/jquery-1.12.2.min.js"></script>
+<!--导入bootstrap.js-->
+<script src="lib/bootstrap/js/bootstrap.min.js"></script>
+<!--导入模板引擎-->
+<script src="lib/template/template.js"></script>
+<!--导入basejs-->
+<script src="js/base.js"></script>
+<!--下面导入自己的js-->
+<script src="js/index.js"></script>
+<!--制作模板 S created by yong 03/10-->
+<script id='templateTwo' type="text/html">
+    {{each result as value index}}
+        <li id="{{value.productId}}">
+            <a class="clearfix" href="moneyctrl_detail.html?id={{value.productId}}">
+                <div class="incon-img fl">
+                    {{#value.productImgSm}}
+                </div>
+                <div class="incon-txt fr">
+                    <div class="incon-txt-top">
+                        {{value.productName}}
+                        <span>{{value.productPinkage}}</span>
+                    </div>
+                    <div class="incon-txt-bottom">
+                        <span class="fl">{{value.productFrom}}| {{value.productTime}}</span>
+                        <span class="fr"><i class="glyphicon glyphicon-comment"></i>&nbsp;{{value.productComCount}}</span>
+                    </div>
+                </div>
+            </a>
+        </li>
+    {{/each}}
+</script>

@@ -1,0 +1,524 @@
+//定义rem初始值
+$r: 375/20;
+//公共样式开始
+body{
+  font-size: 14rem/$r;
+  background: #F2F2F2;
+}
+//三级导航菜单
+.menu{
+  padding-left: 8rem/$r;
+  height: 38rem/$r;
+  line-height: 38rem/$r;
+  a{
+    padding: 0 3rem/$r;
+    color: #000;
+  }
+}
+//公共样式结束
+
+//=============================比价搜索页面css开始=================================
+//content
+.content{
+  padding: 5rem/$r 5rem/$r 0;
+  ul{
+    border: 1px solid #CCCCCC;
+    border-radius: 5rem/$r;
+    width: 100%;
+    li{
+      width: 100%;
+      position: relative;
+      p{
+        position: absolute;
+        width: 100%;
+        height: 41rem/$r;
+        margin: 0;
+        z-index: 2;
+      }
+      >a{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 15rem/$r;
+        color: #000;
+        height: 41rem/$r;
+        line-height: 41rem/$r;
+        font-size: 16rem/$r;
+        font-weight: 900;
+        background: #EBEBEB;
+        border-bottom: 1px solid #CCCCCC;
+        //transform: rotate(180deg);
+        span{
+          transition: all 0.3s;
+        }
+        .active{
+          transform: rotate(180deg);
+        }
+      }
+      .items{
+        display: none;
+        .detail{
+          width: 100%;
+          display: flex;
+          //height: 0;
+          //display: none;
+          overflow: hidden;
+          flex-wrap: wrap;
+          div{
+            border-right: 1px solid grey;
+            border-bottom: 1px solid grey;
+            width: 33.33%;
+            //margin-left: -1rem/$r;
+            //margin-top: -1rem/$r;
+            height: 40rem/$r;
+            line-height: 40rem/$r;
+            text-align: center;
+            &:nth-of-type(3n){
+              border-right: none;
+            }
+            a{
+              display: block;
+              //width: 100px;
+              height: 100%;
+              color: #000;
+            }
+          }
+
+        }
+      }
+
+      //.items{
+      //  display: none;
+      //}
+    }
+  }
+}
+//=============================比价搜索页面css结束=================================
+//=============list页面开始==================
+
+.goods_warp{
+  background: #fff;
+
+  nav{
+    border-top: 1px solid #E6E6E6;
+    border-bottom: 1px solid #E6E6E6;
+    ul{
+      width: 100%;
+      padding: 0 8rem/$r;
+      li{
+        float: left;
+        width: 25%;
+        a{
+          display: block;
+          width: 100%;
+          height: 40rem/$r;
+          line-height: 40rem/$r;
+          text-align: center;
+          color: #000;
+          &.active{
+            color: red;
+            font-size: 14rem/$r;
+          }
+        }
+      }
+    }
+  }
+  .error{
+    position: relative;
+    display: none;
+    img{
+      width: 375rem/$r;
+      display: block;
+    }
+
+  }
+  .goods_list{
+    ul{
+      li{
+        border-bottom: 1px solid #E6E6E6;
+        a{
+          display: block;
+          .img_wrap{
+            width: 120rem/$r;
+            height: 120rem/$r;
+            text-align: center;
+            margin-right: 10rem/$r;
+          }
+          div{
+            width: 229rem/$r;
+            h4{
+              font-size: 15rem/$r;
+              height: 56rem/$r;
+              line-height: 28rem/$r;
+              margin: 0;
+              color: #000;
+              //display:block;
+              overflow : hidden;
+              text-overflow: ellipsis;
+              display: -webkit-box;
+              -webkit-line-clamp: 2;
+              -webkit-box-orient: vertical;
+              word-break: break-all;
+            }
+            .price{
+              color: red;
+              font-size: 18rem/$r;
+              s{
+                font-size: 12rem/$r;
+              }
+            }
+            p{
+              font-size: 12rem/$r;
+              color: #A1A1A1;
+            }
+          }
+        }
+      }
+    }
+  }
+  //友情链接
+  .friend_link{
+    background: #F2F2F2;
+    h4{
+      color: #000;
+      padding-bottom: 10rem/$r;
+    }
+    a{
+      font-size: 12rem/$r;
+      color: #000;
+
+    }
+  }
+}
+//=============list页面开始结束==================
+//================detail 页面开始====================
+.goods_detail{
+  //.menu{
+  //  padding-left: 8rem/$r;
+  //  height: 38rem/$r;
+  //  line-height: 38rem/$r;
+  //  a{
+  //    padding: 0 3rem/$r;
+  //    color: #000;
+  //  }
+  //}
+  .shop_list{
+    padding: 10rem/$r;
+  }
+  .goods{
+    padding: 10rem/$r 10rem/$r 0;
+    background: #fff;
+    .img_wrap{
+
+      height: 180rem/$r;
+      line-height: 160rem/$r;
+      text-align: center;
+      padding: 10rem/$r 0;
+      position: relative;
+      img{
+        width: 160rem/$r;
+      }
+      a{
+        top: 15rem/$r;
+        right: 15rem/$r;
+        position: absolute;
+        height: 39rem/$r;
+        line-height: 39rem/$r;
+        text-align: center;
+        width: 39rem/$r;
+        background: #95D600;
+        border: 1px solid #94CA1B;
+        border-radius: 20rem/$r;
+        color: #fff;
+        font-size: 12rem/$r;
+      }
+    }
+    h4{
+      font-size: 16rem/$r;
+      color: #000;
+      padding-bottom: 10rem/$r;
+    }
+    p{
+      font-size: 13rem/$r;
+      span{
+        display: block;
+        width: 50%;
+        height: 24rem/$r;
+        line-height: 24rem/$r;
+      }
+      &:last-of-type{
+        color: #A1A1B5;
+      }
+    }
+
+  }
+  .goods_nav{
+    padding-top: 20rem/$r;
+    display: flex;
+    div{
+      height: 34rem/$r;
+      line-height: 34rem/$r;
+      text-align: center;
+      flex: 1;
+      border-top: 1px solid #C14D00;
+      border-bottom: 1px solid #C14D00;
+      background: #FCC11C;
+      color: #fff;
+      &:nth-of-type(2){
+        border: 1px solid #C14D00;
+      }
+      &.active{
+        background: #FF930A;
+      }
+    }
+  }
+  .shop_list{
+    font-size: 16rem/$r;
+    li{
+      height: 44rem/$r;
+      border-bottom: 1px solid #BBBBBB;
+      padding: 0 5rem/$r;
+      div{
+        height: 44rem/$r;
+        line-height: 44rem/$r;
+        a{
+          display: inline-block;
+          color: #fff;
+          background: #FF5500;
+          width: 56rem/$r;
+          height: 24rem/$r;
+          line-height: 24rem/$r;
+          text-align: center;
+          border-radius: 5px;
+          font-size: 14rem/$r;
+        }
+      }
+    }
+    p{
+      color: #888888;
+      font-size: 12rem/$r;
+      padding: 10rem/$r 10rem/$r;
+    }
+  }
+  .evaluate{
+    h4{
+      text-align: center;
+      background: #DBDBDB;
+      padding: 10rem/$r 0;
+    }
+    ul{
+      li{
+        padding: 10rem/$r 10rem/$r 0 10rem/$r;
+        div{
+          span{
+            font-size: 12rem/$r;
+            color: #666666;
+          }
+        }
+      }
+      p{
+        a{
+          font-size: 12rem/$r;
+          color: #666666;
+        }
+        margin-bottom: 20rem/$r;
+      }
+    }
+
+
+  }
+  //显示更多
+  .more{
+    display: block;
+    width: 360rem/$r;
+    height: 33rem/$r;
+    line-height: 33rem/$r;
+    text-align: center;
+    border: 1px solid #D2D2D2;
+    color: #000;
+    margin: 15rem/$r 8rem/$r;
+    border-radius: 5px;
+  }
+}
+//================detail 页面结束====================
+
+
+//=========================brandTitle页面开始==================
+.content{
+  >h4{
+    color: #874604;
+    text-align: center;
+    height: 42rem/$r;
+    line-height: 42rem/$r;
+    //background: red;
+    border: 1px solid #CCCCCC;
+    border-radius: 5px;
+    margin-bottom: 10rem/$r;
+  }
+}
+//=========================brandTitle页面结束==================
+
+
+//=========================brandTitle_distop页面===============
+.distop_content{
+  //十大品牌标题
+  .topten_title{
+    height: 40rem/$r;
+    line-height: 40rem/$r;
+    padding-left: 20rem/$r;
+    font-size: 14rem/$r;
+    color: #A24604;
+    border-top: 1px solid #C8C8C8;
+    border-bottom: 1px solid #C8C8C8;
+    font-weight: 700;
+  }
+  //十大品牌排行
+  .topten_brand{
+    ul{
+      li{
+        padding: 10rem/$r;
+      }
+      a{
+        display: block;
+        height: 57rem/$r;
+        padding: 13rem/$r 40rem/$r 7rem/$r;
+        position: relative;
+        color: #000;
+        border-bottom: 1px solid #D8D8D8;
+        span{
+          left: 10rem/$r;
+          top: 17rem/$r;
+          position: absolute;
+          text-align: center;
+          line-height: 20rem/$r;
+          width: 20rem/$r;
+          height: 20rem/$r;
+          background: #C9C9C9;
+          color: #fff;
+          &.one{
+            background: red;
+          }
+          &.two{
+            background: orange;
+          }
+          &.three{
+            background: green;
+          }
+        }
+        p{
+          font-size: 12rem/$r;
+          color: #999999;
+        }
+        s{
+          top: 20rem/$r;
+          position: absolute;
+          right: 20rem/$r;
+          color: #A4A4A4;
+        }
+      }
+    }
+  }
+  //热门商品列表
+  .topten_list{
+    ul{
+      li{
+        padding: 10rem/$r;
+        border-bottom: 1px solid #E6E6E6;
+        a{
+          display: block;
+          .img_wrap{
+            width: 100rem/$r;
+            height: 100rem/$r;
+            text-align: center;
+            margin-right: 10rem/$r;
+            background: #fff;
+          }
+          div{
+            width: 229rem/$r;
+            h4{
+              font-size: 15rem/$r;
+              height: 56rem/$r;
+              line-height: 28rem/$r;
+              margin: 0;
+              color: #000;
+              //display:block;
+              overflow : hidden;
+              text-overflow: ellipsis;
+              display: -webkit-box;
+              -webkit-line-clamp: 2;
+              -webkit-box-orient: vertical;
+              word-break: break-all;
+            }
+            .price{
+              color: red;
+              font-size: 18rem/$r;
+              s{
+                font-size: 12rem/$r;
+              }
+            }
+            p{
+              font-size: 12rem/$r;
+              color: #A1A1A1;
+              span{
+                margin-right: 20rem/$r;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  //评价
+  .topten_evaluate{
+    ul{
+      li{
+        padding: 10rem/$r;
+        .goods_wrap{
+          margin-bottom: 10rem/$r;
+          .img_wrap{
+            width: 80rem/$r;
+            height: 80rem/$r;
+            img{
+              width: 80rem/$r !important;
+              height: 80rem/$r !important;
+            }
+          }
+          p{
+            //background: red;
+            width: 275rem/$r;
+            margin: 0;
+            color: #A1A1A1;
+            padding: 0 10rem/$r;
+          }
+        }
+        .evaluate_wrap{
+          background: #fff;
+          //background: red;
+          border: 1px solid #E7E7E7;
+          padding: 10rem/$r;
+          span{
+            color: #936900;
+            &.fr{
+              color: #A1A1A1;
+            }
+          }
+          p{
+            padding: 10rem/$r 0;
+          }
+        }
+      }
+    }
+  }
+}
+//=========================brandTitle_distop页面结束===============
+
+
+
+
+
+
+
+
+
+
+

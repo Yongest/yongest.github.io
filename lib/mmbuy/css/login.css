@@ -1,0 +1,190 @@
+html {
+  min-width: 13.33333rem;
+}
+html a {
+  text-decoration: none;
+}
+html a:active {
+  text-decoration: none;
+}
+
+body {
+  background: #f1f1f1;
+}
+
+.index_header {
+  min-width: 13.33333rem;
+  min-width: 13.33333rem;
+  box-sizing: border-box;
+  height: 2.72rem;
+  background: #FF841D;
+  line-height: 1.86667rem;
+  padding: 0.42667rem;
+  border-bottom: 0.05333rem solid #e6e6e6;
+}
+.index_header .index_img1 {
+  width: 9.92rem;
+  height: 1.33333rem;
+  margin-left: -0.32rem;
+  margin-bottom: 0.16rem;
+}
+.index_header .index_img2 {
+  height: 1.81333rem;
+  width: 1.81333rem;
+  margin-left: 0.64rem;
+  margin-top: -0.21333rem;
+}
+
+.search1 {
+  border-bottom: 0.05333rem solid #e6e6e6;
+  padding: 0.53333rem;
+  position: relative;
+  background-color: White;
+}
+.search1 .searchtxt input {
+  -webkit-appearance: none;
+  border: none;
+  background: #f1f1f1;
+  margin: 0rem;
+  padding: 0rem;
+  height: 1.6rem;
+  line-height: 1.6rem;
+  border-radius: 0.8rem;
+  width: 90%;
+  padding-left: 5%;
+  font-size: 0.85333rem;
+}
+.search1 .searchbtn input {
+  width: 3.36rem;
+  background: #ff841d;
+  color: #FFFFFF;
+  border: none;
+  height: 1.6rem;
+  line-height: 1.6rem;
+  border-radius: 0.8rem;
+  position: absolute;
+  top: 0.53333rem;
+  right: 0.53333rem;
+  font-size: 0.85333rem;
+}
+
+.t_wrap {
+  padding: 0.42667rem 0.53333rem;
+}
+.t_wrap .loginTab {
+  width: 100%;
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+.t_wrap .loginTab tbody {
+  display: table-row-group;
+  vertical-align: middle;
+}
+.t_wrap .loginTab tbody tr td {
+  height: 2.56rem;
+}
+.t_wrap .loginTab tbody tr td .score_t {
+  height: 2.02667rem;
+  width: 100%;
+  box-sizing: border-box;
+  background-color: #fff;
+  background: -webkit-gradient(linear, 0 0, 0 100%, from(#f5f5f5), to(#fdfdfd));
+  line-height: 1.70667rem;
+  -webkit-border-radius: 0;
+  font-size: 0.74667rem;
+  border: solid 0.05333rem #ccc;
+  border-top-color: #aaa;
+  padding-left: 0.26667rem;
+  color: #666;
+}
+.t_wrap .loginTab tbody tr td .login {
+  background-color: #ff9000;
+  background: -webkit-gradient(linear, 0 0, 0 100%, from(#ffaf47), to(#ff9000));
+  box-shadow: 0 0 0.05333rem #666;
+  border-radius: 0.26667rem;
+  text-align: center;
+  font-size: 1.06667rem;
+  line-height: 2.13333rem;
+  overflow: hidden;
+  border: none;
+  border-bottom: 0.05333rem solid #bababa;
+  width: 100%;
+  color: #fff;
+}
+.t_wrap .loginTab tbody tr td .auto {
+  font-size: 0.74667rem;
+  -webkit-appearance: checkbox;
+}
+
+.app-promotion-bar {
+  position: fixed;
+  bottom: 0;
+  z-index: 3;
+  display: block;
+  width: 100%;
+  height: 3.2rem;
+  background-color: #faf8f5;
+  transition: opacity .2s ease-out;
+}
+.app-promotion-bar .closefix {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1.12rem;
+  height: 1.12rem;
+  padding: 1.01333rem 0.64rem 1.06667rem;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 1.12rem;
+  opacity: 1;
+  color: lightgray;
+  font-size: 1.06667rem;
+}
+.app-promotion-bar .icon {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 2.45333rem;
+  width: 2.18667rem;
+  height: 2.18667rem;
+  margin: auto;
+  background-image: url("../images/1.png");
+  background-position: center;
+  background-size: 2.18667rem;
+}
+.app-promotion-bar .titlefix {
+  margin-top: 0.64rem;
+  margin-bottom: 0;
+  font-size: 0.96rem;
+  color: #888;
+  margin-left: 5.17333rem;
+  margin-right: 4.48rem;
+  line-height: 1;
+}
+.app-promotion-bar .describe {
+  margin-top: 0.16rem;
+  font-size: 0.74667rem;
+  color: #999;
+  margin-left: 5.17333rem;
+  margin-right: 4.48rem;
+  line-height: 1;
+}
+.app-promotion-bar .download-btn {
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0.53333rem;
+  bottom: 0;
+  width: 3.94667rem;
+  height: 1.70667rem;
+  padding-top: 0.53333rem;
+  margin: auto;
+  font-size: 0.69333rem;
+  line-height: 1;
+  text-align: center;
+  color: #fff;
+  background-color: #ff7700;
+  border-radius: 0.21333rem;
+  box-shadow: inset 0 -0.10667rem #ff5500;
+  text-decoration: none;
+}

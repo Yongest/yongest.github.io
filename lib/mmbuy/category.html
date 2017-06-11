@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!--视口设置-->
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>比价搜索</title>
+    <link href="favicon.ico" rel="shortcut icon" type="image/x-icon">
+    <!--导入bootstrap样式文件-->
+    <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.min.css">
+    <!--导入公共样式文件-->
+    <link rel="stylesheet" href="css/base.css">
+    <!--下面导入自己的css-->
+    <link rel="stylesheet" href="css/category.css">
+
+    <!--品牌模板引擎开始-->
+    <script id="goodsTitle" type="text/html">
+        {{each result as value index}}
+            <li>
+                <p></p>
+                <a href="javascript:;">
+                    <span>{{value.title}}</span>
+                    <span class="arrow  glyphicon glyphicon-menu-down"></span>
+                </a>
+            </li>
+        {{/each}}
+    </script>
+    <!--品牌模板引擎结束-->
+    <!--品牌列表模板引擎开始-->
+    <script id="goodsItems" type="text/html">
+        <div class="items">
+            <div class="detail clearfix ">
+                {{each result as value index}}
+                    <div class="">
+                        <a href="category_list.html?categoryid={{value.categoryId}}&category={{value.category}}">{{value.category}}</a>
+                    </div>
+                {{/each}}
+            </div>
+        </div>
+
+    </script>
+    <!--品牌列表模板引擎结束-->
+</head>
+<body>
+<!--头部开始-->
+<header  class="header">
+    <a href="index.html"><img src="images/header_logo.png" alt=""></a>
+    <a  href="http://a.app.qq.com/o/simple.jsp?pkgname=com.manmanbuy.bijia"><img class="fr" src="images/header_app.png" alt=""></a>
+</header>
+<!--头部结束-->
+<!--搜索开始-->
+<div class="search">
+    <form id="search_form" action="category_list.html"  method="get">
+        <input id="search_key" name="category" type="text" placeholder="请输入你想比价的商品">
+        <input id="search_id" type="hidden" name="categoryid">
+        <!--<input id="search" class="fr" type="submit" value="搜索">-->
+        <a id="search" href="javascript:;">搜索</a>
+    </form>
+</div>
+<!--搜索结束-->
+<!--主体部分开始-->
+<div class="content">
+    <ul>
+        <!--插入品牌模板引擎-->
+        <!--插入品牌列表模板引擎-->
+        <!--<li>-->
+        <!--<a href="javascript:;"><span>大家电</span><span class=" glyphicon glyphicon-menu-down"></span></a>-->
+        <!--<div class="detail">-->
+        <!--<div class="">平板电视</div>-->
+        <!--<div class="">平板电视</div>-->
+        <!--<div class="">平板电视</div>-->
+        <!--<div class="">平板电视</div>-->
+        <!--<div class="">平板电视</div>-->
+        <!--<div class="">平板电视</div>-->
+        <!--<div class="">平板电视</div>-->
+        <!--</div>-->
+        <!--</li>-->
+    </ul>
+</div>
+<!--主体部分结束-->
+<!--footer 开始-->
+<footer class="container-fluid">
+    <div class="row handle">
+        <div class="col-xs-4"><a href="login.html">登陆</a></div>
+        <div class="col-xs-4"><a href="enroll.html">注册</a></div>
+        <div class="col-xs-4"><span></span>返回顶部</div>
+    </div>
+    <div>
+        <p><a href="javascript:;">手机APP下载</a>慢慢买手机版-掌上比价平台</p>
+        <p>m.manmanbuy.com</p>
+    </div>
+</footer>
+<!--footer 结束-->
+</body>
+</html>
+<!--导入jQuery-->
+<script src="lib/bootstrap/js/jquery-1.12.2.min.js"></script>
+<!--导入bootstrap.js-->
+<script src="lib/bootstrap/js/bootstrap.min.js"></script>
+<!--导入模板引擎-->
+<script src="lib/template/template.js"></script>
+<!--导入basejs-->
+<script src="js/base.js"></script>
+<!--下面导入自己的js-->
+<script src="js/category.js"></script>

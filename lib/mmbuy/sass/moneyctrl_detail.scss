@@ -1,0 +1,335 @@
+/*省钱控制详细部分*/
+$rem:18.75;
+.save {
+    a:hover {
+        text-decoration: none;
+    }
+    header {
+        // height: 44px;
+        width: 100%;
+        padding-left: (50rem/$rem);
+        padding-right: (50rem/$rem);
+        background: #ff841d;
+        position: relative;
+        text-align: center;
+        line-height: (44rem/$rem);
+        .save-back{
+            position: absolute;
+            left: 0;
+            top: 0;
+             a {
+                 display: block;
+                 width: (50rem/$rem);
+                 height: (44rem/$rem);
+                 color: white;
+                 font-size: (23rem/$rem);
+                 font-family: '隶书';
+                 font-weight: 900;
+            }
+        }
+        h1 {
+            width: 100%;
+            height: (44rem/$rem);
+            color: white;
+            line-height: (44rem/$rem);
+            font-size: (20rem/$rem);
+            font-weight: bold;
+        }
+        .save-home {
+            position: absolute;
+            right:0;
+            top: 0;
+             a {
+                 display: block;
+                 width: (50rem/$rem);
+                 height: (44rem/$rem);
+                //  background-color: green;
+                img {
+                    width: (32rem/$rem);
+                    height: (32rem/$rem);
+                }
+            }
+        }
+    }
+}
+
+.save-content {
+    padding:(4rem/$rem) (10rem/$rem);
+    h3 {
+        font-size: (18rem/$rem);
+        margin: (10rem/$rem) auto (5rem/$rem) auto;
+        font-weight: 800;
+        text-align: left;
+        text-align-last: left;
+        word-break: break-all;
+        color: #5a5a5a;
+        line-height: normal;
+    }
+    h4 {
+        color: #ff6c00;
+        display: block;
+        font-size: (15rem/$rem);
+    }
+    #info{
+            margin: (12rem/$rem) auto;
+            color: #999999;
+        span {
+             vertical-align: middle;
+            margin: 0px (4rem/$rem);
+        }
+       
+    } 
+    .info-detail {
+            font-size: (16rem/$rem);
+            line-height: (24rem/$rem);
+            color: #606060;
+            word-break: break-all;
+            margin: (6rem/$rem) auto;
+            img {
+                margin-left: (20rem/$rem);
+                vertical-align: middle;
+                width: (120rem/$rem);
+                height: (120rem/$rem);
+                float: right;
+            }
+    }
+    #imglg {
+        img {
+            width: 100% !important;
+            margin-top: (20rem/$rem);
+            text-align: center;
+        } 
+    }
+
+
+
+    #productcity {
+        width: 100%;
+        // text-align: center;
+        h3 {
+            text-align: center !important;
+            font-size: (20rem/$rem);
+        }
+       span {
+           margin-left: (60rem/$rem);
+           text-align: left;
+           color: black;
+       }
+       strong {
+           margin-left: (100rem/$rem);
+           text-align: right;
+           color: orangered
+       }
+    }
+
+
+
+
+    .gobuy {
+        a {
+            height: (40rem/$rem);
+            line-height: (40rem/$rem);
+            text-align: center;
+            font-size: (14rem/$rem);
+            color: #ffffff;
+            border-radius: (4rem/$rem);
+            display: block;
+            margin: (20rem/$rem) (10rem/$rem);
+            background: #FF9000;
+        }    
+    }
+   .tit {
+       height: (33rem/$rem);
+       font-size: (16rem/$rem);
+       padding: (8rem/$rem) 0;
+   }
+   .productcomment {
+       .form {
+
+        border: 2px solid #ECEAE8;
+       border-radius: 2px;
+       padding: (4rem/$rem) 0 0 (4rem/$rem);
+       background-color: #fff;
+       position: relative;
+       width: 98%;
+       margin: 0px auto;
+       input {
+               position: absolute;
+                right: -2px;
+                bottom: -2px;
+                background: #ff841d;
+                border: none;
+                border: 2px solid #ff841d;
+                border-left: none;
+                border-top: none;
+                padding: 0px;
+                width: (100rem/$rem);
+                height: (39rem/$rem);
+                color: #fff;
+                outline: 0;
+                border-radius: 0 0 2px 0;
+                font-size: (16rem/$rem);
+                -webkit-appearance: none;
+       }
+       }
+      
+      .ui-border-b {
+          overflow: hidden;
+          margin-bottom: (20rem/$rem) !important;
+          margin-top: (20rem/$rem);
+          .userimg {
+              float: left;
+              clear: both;
+                img {
+              width: (40rem/$rem);
+              height: (40rem/$rem);
+            
+              
+          }
+          }
+          .con {
+              float: left;
+             
+              width:80%;
+             .username {
+                 color: lightseagreen;
+                 float: left;
+             }
+
+             .time {
+              color: gray;
+              text-align: right;
+            }
+          }
+            
+          
+         
+      }
+   }
+   textarea {
+            width: 100%;
+            resize: none;
+            overflow-x: hidden;
+            overflow-y: auto;
+            border: none;
+            line-height: (22rem/$rem);
+            font-size: (14rem/$rem);
+            outline: 0;
+            color: #666;
+            height: (68rem/$rem);
+   }
+   
+
+}
+
+
+// 底部
+ #footer {
+        //margin-top: (20rem/$rem);
+        
+    .sc-f-top {
+        padding: 0 (8rem/$rem);
+        height: (36rem/$rem);
+         background-color: #ebebeb;
+         background: -webkit-gradient(linear,0 0,0 100%,from(#ffffff),to(#ebebeb));
+         background: -moz-linear-gradient(top, #ffffff, #ebebeb);
+         background: -o-linear-gradient(top,#ffffff, #ebebeb);
+         border-top: solid 1px #ebebeb;
+         border-bottom: 1px solid #ccc;
+         line-height: (36rem/$rem);
+         a {
+             color: #000;
+         }
+    }
+    .sc-f-center {
+            background: #efefef;
+            border-top: 1px solid #c4c4c4;
+            border-bottom: 1px solid #c4c4c4;
+            height: (34rem/$rem);
+            line-height: (34rem/$rem);
+            margin-top: (25rem/$rem);
+            display: flex;
+            justify-content: space-around;
+            // padding: 0 (8rem/$rem);
+            a {
+                color: black;
+                flex: 1;
+                text-align: center;
+                border-right: 1px solid #c4c4c4;
+            }  
+            a:last-child {
+                border:none;
+            }
+    }
+    .sc-f-bottom{
+        text-align: center;
+        background: #efefef;
+        text-align: center;
+        font-size: (12rem/$rem);
+        padding: (15rem/$rem) 0;
+        color: #666;
+        p{
+            a:first-child {
+                color: red;
+            }
+            a:last-of-type {
+                color: #000;
+            }
+        }
+    }
+}
+
+
+
+
+
+//分页部分css
+//#page{
+//  div{
+//    //background: #F2F2F2;
+//    height: 74rem/$rem;
+//    display: flex;
+//    justify-content: center;
+//    align-items: center;
+//    //input{
+//    //  width: 91rem/$r;
+//    //  height: 34rem/$r;
+//    //}
+//    .forbid{
+//      color: #CCCCCC;
+//    }
+//  }
+//  .pages{
+//    width: 91rem/$rem;
+//    height: 34rem/$rem;
+//    position: relative;
+//    font-size: 14rem/$rem;
+//    ul{
+//      display: none;
+//      position: absolute;
+//      top: 0;
+//      left: 0;
+//      transform: translateY(-104%);
+//      width: 100%;
+//      //height: 200px;
+//      background: #f2f2f2;
+//      border: 1px solid #ccc;
+//      border-radius: 5px;
+//      padding: 10rem/$rem 10rem/$rem 0;
+//      li{
+//        a{
+//          display: block;
+//          width: 100%;
+//          height: 34rem/$rem;
+//          line-height: 34rem/$rem;
+//          text-align: center;
+//          border: 1px solid #ccc;
+//          border-radius: 5px;
+//          margin-bottom: 5rem/$rem;
+//          color: #000;
+//        }
+//
+//      }
+//    }
+//  }
+//}
