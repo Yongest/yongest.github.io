@@ -1,0 +1,104 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>培训机构查询</title>
+    <style>
+        .box {
+            width: 400px;
+            height: 200px;
+            margin: 200px auto;
+            text-align: center;
+        }
+        input[type="text"]{
+            width: 300px;
+            height: 25px;
+            float: left;
+            padding-left: 5px;
+            outline: none;
+            font-size: 16px;
+        }
+        input[type="button"]{
+            width: 50px;
+            height: 30px;
+             float: left;
+             cursor: pointer;
+             font-size: 16px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <h4>输入公司名字,查询是否培训机构</h4>
+        <input type="text" name="" placeholder="请输入公司名字">
+        <input type="button" id="btn" type="button" value="查询">
+    </div>
+</body>
+<script>
+    var data = ['广州沃课信息技术有限公司',
+        '武汉尚云客网络技术有限公司',
+        '广州中软职业技能培训有限公司',
+        '中软国际(广州)信息技术有限公司',
+        '广东厚溥教育科技有限公司',
+        '广州赋天网络科技有限公司',
+        '广州市尚轩信息科技有限公司',
+        '广州市中拓信息科技有限公司',
+        '广州市扬路网络科技有限公司',
+        '广州神骏网络科技有限公司（多迪',
+        '广州市宏龙网络科技有限公司',
+        '广州达内软件有限公司',
+        '广州市舜然网络科技有限公司',
+        '广州中星集团有限公司',
+        '北京亨隆伟业财富投资管理有限公司',
+        '广州码神信息科技有限公司',
+        '广州市韵通网络科技有限公司',
+        '武汉武钢众鹏信息系统有限公司',
+        '广州猿码信息技术有限公司',
+        '广州树人网络科技有限公司',
+        '广州粤嵌通信科技股份有限公司',
+        '广州市民宇网络科技有限公司',
+        '广州市迅赢信息科技有限公司',
+        '广州成教网络科技有限公司',
+        '广州荞麦信息科技有限公司',
+        '海南海辰科技有限公司',
+        '广州佰新网络科技有限公司',
+        '广州培睿教育科技有限公司',
+        '广州直行网络科技有限公司',
+        '广州市富然信息科技有限公司',
+        '深圳市创友互联科技有限公司',
+        '广州宏河教育信息咨询有限公司',
+        '广州市民宇网络科技有限公司',
+        '广州豆聘信息科技有限公司',
+        '广州东软睿道教育咨询有限公司',
+        '广州东方标准人才服务有限公司',
+        '广州华育网科技发展有限公司',
+        '广州森迪信息科技有限公司']
+    var input = document.querySelector('input')
+    var btn = document.querySelector('#btn')
+    btn.onclick = function () {
+        var value = input.value
+        value = value.trim()
+         if(value==''){
+            alert('请输入内容哦!!!')
+            return false
+        }
+        document.querySelector('input').value = null;
+        var isPXJG = true;
+        data.forEach(function (item) {
+            if (item == value) {
+                alert('这是一家培训机构');
+                isPXJG = false;
+            }
+        })
+        if(isPXJG){
+            alert('您所查询的公司不在培训公司名单内')
+        }
+    }
+
+</script>
+
+</html>
