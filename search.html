@@ -89,10 +89,14 @@
         document.querySelector('input').value = null;
         var isPXJG = true;
         data.forEach(function (item) {
+			var minItem = item.slice(2,6)
             if (item == value) {
                 alert('这是一家培训机构');
                 isPXJG = false;
-            }
+            }else if(minItem.includes(value)){
+				alert('这疑是一家培训机构');
+				isPXJG = false;
+			}
         })
         if(isPXJG){
             alert('您所查询的公司不在培训公司名单内')
