@@ -1,3 +1,19 @@
+//快速单击键盘空格7次
+(function () {
+    var index = 0
+    document.onkeyup = function (e) {
+        if (e.keyCode == 32) {
+            index++;
+            //console.log(index)
+            if (index == 7) {
+                location.href = 'https://yongest.github.io/search.html'
+            }
+        }
+        setTimeout(function () {
+            index = 0;
+        }, 6000)
+    }
+})()
 window.onload = function () {
     (function () {
         var box = $('#box');
@@ -109,7 +125,6 @@ window.onload = function () {
         }
     })()
 }
-//
 // arrRight.onclick = function(){
 //     if(index<lis.length-1){
 //         index++;
