@@ -1,0 +1,120 @@
+@charset "UTF-8";
+@charset "UTF-8";
+/*css 初始化 */
+html, body, ul, li, ol, dl, dd, dt, p, h1, h2, h3, h4, h5, h6, form, fieldset, legend, img { margin:0; padding:0; }
+fieldset, img,input,button { border:none; padding:0;margin:0;outline-style:none; }
+ul, ol { list-style:none; }
+input { padding-top:0; padding-bottom:0; font-family: "SimSun","宋体";}
+select, input { vertical-align:middle;}
+select, input, textarea { font-size:12px; margin:0; }
+textarea { resize:none; } /*防止拖动*/
+img {border:0;	vertical-align:middle; }  /*  去掉图片低测默认的3像素空白缝隙*/
+table { border-collapse:collapse; }
+body {
+    font:12px/150% Arial,Verdana,"\5b8b\4f53";/*unitedCode的写法，宋体的写法*/
+    color:#666;  /*150%基于当前字体尺寸的百分比行间距*/
+    background:#fff;
+}
+.clearfix:before,.clearfix:after {    /*清除浮动，最好最标准的写法*/
+    content:"";
+    display:table;
+}
+.clearfix:after{clear:both;}
+.clearfix{                   /*兼容IE6的写法*/
+    *zoom:1;/*IE/7/6*/
+}
+a {color:#666; text-decoration:none; }
+a:hover{color:#C81623;}
+h1,h2,h3,h4,h5,h6 {text-decoration:none;font-weight:normal;font-size:100%;}
+s,i,em{font-style:normal;text-decoration:none;} /*把默认的样式全部去掉*/
+.col-red{color: #C81623!important;}
+
+/*公共类*/
+.w {  /*版心 提取 */
+    width: 1210px; margin: 0 auto;
+}
+.fl{
+    float:left;
+}
+.fr {
+    float:right;
+}
+.al {
+    text-align:left
+}
+.ac {
+    text-align:center
+}
+.ar {
+    text-align: right
+}
+.hide {
+    display: none
+}
+.slider {
+    width: 730px;
+    height: 454px;
+    margin: 12px 0 0 220px;
+    float: left;
+    position: relative;
+}
+.slider .slider-ul li {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+}
+.slider .slider-ul li.img-show {
+    opacity: 1;
+}
+.arrow-l,
+.arrow-r {
+    position: absolute;
+    top: 50%;
+    margin-top: -40px;
+    height: 80px;
+    width: 40px;
+    /*background-color: blue;*/
+    font: 400 30px/80px consolas;
+    color: #fff;
+    text-align: center;
+    cursor: pointer;
+    background: rgba(0,0,0,.2);
+}
+.arrow {
+    display: none;
+}
+.arrow-l {
+    left: 0;
+}
+.arrow-r {
+    right: 0;
+}
+.arrow-l:hover,
+.arrow-r:hover {
+    background: rgba(0,0,0,.6);
+}
+
+.circle {
+    position: absolute;
+    left: 50%;
+    margin-left: -66px;
+    bottom: 8px;
+    /*width: 200px;*/
+    /*background-color: blue;*/
+}
+.circle li {
+    float: left;
+    height: 18px;
+    line-height: 18px;
+    width: 18px;
+    background-color: #3E3E3E;
+    text-align: center;
+    margin: 0 2px;
+    color: #fff;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.circle li.current {
+    background-color: #B61B1F;
+}
