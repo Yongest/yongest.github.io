@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+    <style type="text/css">
+        body,
+        html,
+        #allmap {
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            margin: 0;
+            font-family: "微软雅黑";
+        }
+    </style>
+    <!--<script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=您的密钥"></script>-->
+    <!-- javascript sdk -->
+    <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=ZuSbFihUuxRyEfO7ZqL8rGXKPRVuDmQ8"></script>
+    <title>添加动画标注点</title>
+</head>
+
+<body>
+    <!-- 地图容器 -->
+    <div id="allmap"></div>
+</body>
+
+</html>
+<script type="text/javascript">
+    // 百度地图API功能
+    var map = new BMap.Map("allmap");
+    //  设置 经纬度 
+    // var point = new BMap.Point(116.404, 39.915);
+    // 定位的时候 有一些 定位的方式 
+    //  ip定位(只能 精确到 城市)    基站定位(最近的基站)       gps 定位 
+    // 定位的api  在手机上执行的时候  基于 gps 来进行定位
+    // 在手机上 使用 定位 不会跟电脑一样 需要等待很久 或者 翻墙
+    // 获取位置 都会 使用 第三方 api 来获取
+    // 如果只是 小流量的 访问 那么 是可以免费使用的
+    // 商业级别的网站使用(每天 几万几百万)  很大之后 百度 就回 限制请求 并且 提示 升级vip
+    
+    var point = new BMap.Point(113.422084, 23.132328599999997);
+    map.centerAndZoom(point, 15);
+    var marker = new BMap.Marker(point); // 创建标注
+    map.addOverlay(marker); // 将标注添加到地图中
+    marker.setAnimation(BMAP_ANIMATION_BOUNCE); //跳动的动画
+</script>

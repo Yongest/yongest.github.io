@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <input type="button" name="" value="获取我的位置">
+</body>
+</html>
+<script>
+//  html5中的 定位 api  只能获取经纬度 
+// 需要去配合 一些 第三方的工具 展示图形界面给用户 
+    document.querySelector('input[type=button]').onclick = function(){
+        // html5中 定位的对象
+        // 获取 用户的 位置信息
+        // 参数1 成功回调
+        // 参数2 失败回调
+        // 参数3 设置一些定位东西
+        window.navigator.geolocation.getCurrentPosition(function(position){
+            console.log(position);
+            //  弹框 提示 经纬度
+            alert('维度:'+position.coords.latitude+'经度:'+position.coords.longitude);
+        })
+    }
+
+    //  在 自己创建代码块的时候 起名 添加一个 前缀
+    // fox_position fox_reader fox_fullScreen
+</script>
