@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        .showBox {
+            width: 243px;
+            height: 220px;
+            margin: 100px auto;
+            border: 1px solid #000;
+            position: relative;
+            overflow: hidden;
+        }
+        .showBox div {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+        }
+        .imgBox {
+            background: url('img/dog2.jpg') no-repeat center/cover ;
+        }
+        .titleBox {
+            top: 220px;
+            background: rgba(255, 255, 255, .5)
+        }
+        .imgBox {
+            transition:all .5s;
+        }
+        .showBox:hover .imgBox {
+            transform: scale(1.2,1.2);
+        }
+        .titleBox {
+            transition: all .5s;
+        }
+        .showBox:hover .titleBox{
+            transform:translateY(-220px);
+        }
+    </style>
+</head>
+<body>
+    <div class="showBox">
+        <div class="imgBox"></div>
+        <div class="titleBox">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam repellendus veniam at, nulla natus repudiandae rerum et animi perferendis illo vitae dolorem aperiam illum mollitia rem numquam eum alias modi.
+        </div>
+    </div>
+</body>
+</html>
