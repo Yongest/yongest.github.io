@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: lightblue;
+        }
+        .fish{
+            /* 有 12条鱼 总高度 1512  每一条的高度是 126 */
+            width: 174px;
+            height: 126px;
+            /*border: 1px solid #000;*/
+            background: url('img/fish.png') no-repeat ;
+        }
+        /* 使用动画 让鱼 动起来 */
+        /* 定义动画 */
+        @keyframes autoSwim{
+            from{}
+            to{
+                /*background-position-y:-1386px;*/
+                background-position-y:-882px;
+            }
+        }
+        /* 使用动画 */
+        .autoSwim{
+            /*animation: autoSwim 1s steps(11) infinite;*/
+            animation: autoSwim  .5s steps(7) infinite;
+        }
+
+
+        /* 鼠标 hover body的时候 fish
+            鱼 从前海 游到 深海
+            鱼的方向  变为 朝下 越有越小 transform
+         */
+         /* 修改body的高度 */
+         html,body{
+             height: 100%;
+             margin: 0;
+         }
+         /* 线性渐变  */
+         body{
+             background-image: linear-gradient(to bottom,lightblue,deepskyblue,blue,black)
+         }
+         .fish{
+             transition: all 1s linear;
+         }
+        body:hover .fish{
+            transform:translate(1000px,500px) rotate(90deg) scale(0,0);
+        }
+    </style>
+</head>
+<body>
+    <div class="fish autoSwim"></div>
+</body>
+</html>
