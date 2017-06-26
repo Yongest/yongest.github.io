@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        body {
+            background: hotpink;
+        }
+        
+        .pkBox {
+            width: 150px;
+            height: 200px;
+            margin: 250px auto;
+            border: 1px solid #000;
+            position: relative;
+        }
+        
+        .pkBox>img {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+        }
+        /* 鼠标悬停 旋转 */
+        
+        .pkBox:hover>img:nth-child(1) {
+            transform: rotate(60deg);
+        }
+        
+        .pkBox:hover>img:nth-child(2) {
+            transform: rotate(120deg);
+        }
+        
+        .pkBox:hover>img:nth-child(3) {
+            transform: rotate(180deg);
+        }
+        
+        .pkBox:hover>img:nth-child(4) {
+            transform: rotate(240deg);
+        }
+        
+        .pkBox:hover>img:nth-child(5) {
+            transform: rotate(300deg);
+        }
+        
+        .pkBox:hover>img:nth-child(6) {
+            transform: rotate(360deg);
+        }
+        .pkBox >img{
+            transition: all 1s;
+            /* 变换中心点 */
+            transform-origin: right top;
+        }
+
+        /* 旋转大盒子 */
+        .pkBox{
+            transition:  all 1s 1s;
+            /*  变换的中心点 也能够使用 具体的 坐标来设置 */
+            /*transform-origin: right top;*/
+            /* 坐标的原点 是自己的 左上角
+                x  →
+                y ↓
+             */
+            transform-origin: 0 0 ;
+        }
+        .pkBox:hover{
+            transform: rotate(360deg);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="pkBox">
+        <!--img[src=img/pk1.png]*6-->
+        <img src="img/pk1.png" alt="">
+        <img src="img/pk1.png" alt="">
+        <img src="img/pk1.png" alt="">
+        <img src="img/pk1.png" alt="">
+        <img src="img/pk1.png" alt="">
+        <img src="img/pk1.png" alt="">
+    </div>
+</body>
+
+</html>

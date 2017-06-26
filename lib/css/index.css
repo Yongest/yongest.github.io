@@ -1,0 +1,383 @@
+/*  body 跟html 高度一致 都是 浏览器窗口的大小 */
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+}
+
+
+/* 设置 最顶级 swiper容器的 尺寸 */
+
+.swiper-container {
+    height: 100%;
+    width: 100%;
+}
+
+
+/* 首页颜色 */
+
+.one {
+    background-color: deepskyblue;
+}
+
+
+/* logo */
+
+.one .logo {
+    height: 186px;
+    width: 100%;
+    background: url('../images/logo.png') no-repeat center;
+    margin-top: 100px;
+}
+
+.one .text {
+    text-align: center;
+    margin: 80px 0;
+}
+
+.one .info {
+    height: 49px;
+    width: 100%;
+    background: url('../images/info_1.png')no-repeat center;
+}
+
+
+/* 区域2 */
+
+.two {
+    background-color: yellowgreen;
+    /* 开启 弹性布局 */
+    display: flex;
+    /* 主轴 */
+    justify-content: space-around;
+    /* 副轴 */
+    align-items: center;
+}
+
+
+/* 区域2 盾牌 */
+
+.two .shield {
+    width: 500px;
+    text-align: center;
+}
+
+
+/* 区域2 信息 */
+
+.two .info {
+    width: 635px;
+    height: 309px;
+    background: url("../images/info_2.png") no-repeat;
+}
+
+
+/*  区域3 */
+
+.three {
+    background-color: orange;
+    /* 开启弹性布局 */
+    display: flex;
+    /* 主轴对其 */
+    justify-content: space-around;
+    /* 副轴对其 */
+    align-items: center;
+    /* 相对定位 */
+    position: relative;
+}
+
+
+/* 信息 */
+
+.three .info {
+    width: 631px;
+    height: 278px;
+    background: url("../images/info_3.png") no-repeat;
+}
+
+.three .circle {
+    width: 453px;
+    height: 449px;
+    background: url("../images/circle.png") no-repeat;
+}
+
+.three .rocket {
+    width: 203px;
+    height: 204px;
+    background: url("../images/rocket.png") no-repeat;
+    /* 定位 脱离标准流 */
+    position: absolute;
+    /* 定位 设置位置 */
+    right: 180px;
+}
+
+
+/* 区域4 */
+
+.four {
+    background-color: seagreen;
+    /* 开启 弹性布局 */
+    display: flex;
+    /* 主轴 对齐 */
+    justify-content: space-around;
+    /*  副轴对齐 */
+    align-items: center;
+}
+
+.four .info {
+    width: 612px;
+    height: 299px;
+    background: url("../images/info_4.png") no-repeat;
+}
+
+
+/* 搜索区域的 盒子 */
+
+.four .search-box {
+    position: relative;
+}
+
+.four .search-box .key {
+    width: 99px;
+    height: 22px;
+    background: url("../images/key.png")no-repeat;
+    /* 定位的方式 调整到 搜索框中 */
+    position: absolute;
+    /* 定位 设置 位置 */
+    left: 20px;
+    top: 22px;
+}
+
+.four .search-box .search {
+    width: 529px;
+    height: 66px;
+    background: url("../images/search.png")no-repeat;
+}
+
+.four .search-box .result {
+    width: 529px;
+    height: 372px;
+    background: url("../images/result.png")no-repeat;
+}
+
+
+/* 区域5 */
+
+.five {
+    background-color: skyblue;
+    /* 开启弹性 */
+    display: flex;
+    /* 设置弹性的 方向 */
+    flex-direction: column;
+    /* 副轴对齐 */
+    align-items: center;
+}
+
+.five .info {
+    width: 100%;
+    height: 134px;
+    background: url("../images/info_5.png")no-repeat center;
+}
+
+.five .browser {
+    width: 1004px;
+    /* flex 主轴方向上的 尺寸 */
+    flex: 1;
+    background: hotpink;
+    background: url("../images/toolbar.png") no-repeat top center, url("../images/extra.png") no-repeat bottom right;
+    /* 先对定位 为了调整线段 */
+    position: relative;
+}
+
+
+/*  四根线段 */
+
+.five .browser .line {
+    background: white;
+    position: absolute;
+}
+
+.five .browser .top {
+    width: 100%;
+    height: 4px;
+    top: 0px;
+    left: 0px;
+}
+
+.five .browser .bottom {
+    width: 100%;
+    height: 4px;
+    bottom: 0px;
+    left: 0px;
+}
+
+.five .browser .left {
+    width: 4px;
+    height: 100%;
+    top: 0px;
+    left: 0px;
+}
+
+.five .browser .right {
+    width: 4px;
+    height: 100%;
+    top: 0px;
+    right: 0px;
+}
+
+
+/* 设置 区域的动画 
+    使用 animation   class 来触发 所有页面的动画
+    每一个页面的动画效果 又是不同的
+*/
+
+
+/*  页面1 默认的状态
+    img 有间隙
+    默认看不到 透明度 为0
+ */
+
+.one .text img {
+    margin: 0 10px;
+    opacity: 0;
+    /*  添加 过渡属性*/
+    transition: all 1s ;
+}
+
+
+/* 触发动画的时候 */
+
+.one.animation .text img {
+    margin: 0;
+    opacity: 1;
+}
+
+
+/* 区域2的动画效果 */
+
+
+/* 默认状态
+    盾牌 飞出去一[片
+ */
+
+.two .shield img:nth-child(3) {
+    transform: translate(200px, 100px) rotate(600deg);
+    transition: all 1s;
+}
+
+.two.animation .shield img:nth-child(3) {
+    transform: translate(0, 0) rotate(0);
+}
+
+
+/* 区域3的动画效果 */
+
+
+/* 默认状态 火箭飞出去 */
+
+.three .rocket {
+    transition: all 1s;
+    /* 弄出去 */
+    transform: translateX(-3000px) translateY(300px);
+}
+
+
+/* 火箭 飞回来 */
+
+.three.animation .rocket {
+    transform: translateX(-0) translateY(0);
+}
+
+
+/* 区域4 搜索盒子 默认移出去 */
+
+.four .search-box {
+    transform: translateX(-1000px);
+}
+
+
+/* 飞进来 */
+
+.four.animation .search-box {
+    transform: translateX(0);
+    transition: all 1s;
+}
+
+
+/* 输入的文本 默认看不到 */
+
+.four .search-box .key {
+    /*width: 0;*/
+    width: 2px;
+}
+
+
+/* 搜索的结果 默认看不到 */
+
+.four .search-box .result {
+    height: 0;
+}
+
+
+/* 逐字出现 输入文字 */
+
+.four.animation .search-box .key {
+    width: 99px;
+    /* 分为 五步 出现 */
+    transition: all 1s 1s steps(5);
+}
+
+
+/* 慢慢出现  搜索结果 */
+
+.four.animation .search-box .result {
+    height: 372px;
+    transition: all 1s 2.5s;
+}
+
+/* 区域5的 动画效果 */
+.five .top{
+    transform: translateX(-1000px);
+    opacity: 0;
+}
+.five .bottom{
+    transform: translateX(1000px);
+    opacity: 0;
+    
+}
+.five .left{
+    transform: translateY(1000px);
+    opacity: 0;
+    
+}
+.five .right{
+    transform: translateY(-1000px);
+    opacity: 0;
+}
+/* 触发 动画的 样式 */
+.five.animation .top{
+    transform: translateX(-0);
+    opacity: 1;
+    transition:all 1s;
+}
+.five.animation .bottom{
+    transform: translateX(0);
+    opacity: 1;
+    transition:all 1s;
+    
+}
+.five.animation .left{
+    transform: translateY(0);
+    opacity: 1;
+    transition:all 1s;
+    
+}
+.five.animation .right{
+    transform: translateY(-0);
+    opacity: 1;
+    transition:all 1s;
+}

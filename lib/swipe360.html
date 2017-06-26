@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <!--  导入 对应 css -->
+    <link rel="stylesheet" href="css/swiper.min.css" />
+    <!-- 导入 自己的 css -->
+    <link rel="stylesheet" href="css/index.css">
+</head>
+
+<body>
+    <!--  html的页面结构 -->
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+            <!-- 页面1 -->
+            <div class="swiper-slide one ">
+                <!-- logo -->
+                <div class="logo"></div>
+                <!-- 文本 -->
+                <!--div>img[src="images/text_$.png"]*8-->
+                <div class='text'>
+                    <img src="images/text_1.png" alt="">
+                    <img src="images/text_2.png" alt="">
+                    <img src="images/text_3.png" alt="">
+                    <img src="images/text_4.png" alt="">
+                    <img src="images/text_5.png" alt="">
+                    <img src="images/text_6.png" alt="">
+                    <img src="images/text_7.png" alt="">
+                    <img src="images/text_8.png" alt="">
+                </div>
+                <!-- 信息 -->
+                <div class="info"></div>
+            </div>
+            <!-- 区域2 -->
+            <div class="swiper-slide two">
+                <!--div.shield>img[src=[images/shield_$.png']*9-->
+                <!--  盾牌 -->
+                <div class="shield">
+                    <img src="images/shield_1.png" alt="">
+                    <img src="images/shield_2.png" alt="">
+                    <img src="images/shield_3.png" alt="">
+                    <img src="images/shield_4.png" alt="">
+                    <img src="images/shield_5.png" alt="">
+                    <img src="images/shield_6.png" alt="">
+                    <img src="images/shield_7.png" alt="">
+                    <img src="images/shield_8.png" alt="">
+                    <img src="images/shield_9.png" alt="">
+                </div>
+                <!-- 信息 -->
+                <div class="info"></div>
+            </div>
+            <!-- 区域3 -->
+            <div class="swiper-slide three">
+                <!-- 信息 -->
+                <div class="info"></div>
+                <!--  圈-->
+                <div class="circle"></div>
+                <!-- 火箭 -->
+                <div class="rocket"></div>
+            </div>
+            <!-- 区域4 -->
+            <div class="swiper-slide four">
+                <div class="search-box">
+                    <div class="key"></div>
+                    <div class="search"></div>
+                    <div class="result"></div>
+                </div>
+                <div class="info"></div>
+            </div>
+            <!-- 区域5 -->
+            <div class="swiper-slide five">
+                <div class="info"></div>
+                <div class="browser">
+                    <!-- 四条线段 -->
+                    <div class="line top"></div>
+                    <div class="line bottom"></div>
+                    <div class="line left"></div>
+                    <div class="line right"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
+<!-- 导入 jq -->
+<script src="js/jquery.min-1.72.js"></script>
+<!-- 导入 swiper -->
+<script src="js/swiper.jquery.min.js"></script>
+<!-- 调用 插件提供的 方法 初始化 -->
+<script>
+    //  需求是
+    /*
+        swiper 每一页 滚动 完成的时候 为 
+            对应到 swiper 的回调函数
+        当前的 这一页 添加 animationclass  移除 其他页面的animation
+    */
+    var mySwiper = new Swiper('.swiper-container', {
+        //  设置 滚动的方向 
+        direction: 'vertical',
+        //  鼠标滚动操纵
+        mousewheelControl: true,
+        //  滚动 完毕 回调函数
+        onSlideChangeEnd: function (swiper) {
+            console.log('滚动完毕了');
+            //  移除 其他 页面的 animation class
+            $('.swiper-slide').removeClass('animation');
+            // 为当前页面 添加 animaiton  传入 索引 
+            $('.swiper-slide').eq(swiper.activeIndex).addClass('animation');
+        }
+    })
+
+    //  页面加载完毕之后 为 第一个 区域 索引为 0 添加 animation
+    $(function(){
+        $('.swiper-slide').eq(0).addClass('animation');
+    }) 
+</script>

@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: greenyellow;
+        }
+        
+        ul {
+            width: 560px;
+            height: 380px;
+            list-style: none;
+            padding: 0;
+            margin: 100px auto;
+            /* 为了一会 添加 li标签方便 直接使用 弹性布局 */
+            display: flex;
+        }
+        
+        li {
+            height: 100%;
+            /* 为了 后期 添加 li标签 能够均分 宽度 */
+            flex: 1;
+        }
+        /* 统一设置 div的宽高 跟li标签一致即可 */
+        
+        li>div {
+            width: 100%;
+            height: 100%;
+        }
+        
+        li>div:first-child {
+            background: url('img/01.jpg') no-repeat;
+        }
+        
+        li>div:nth-child(2) {
+            background: url('img/02.jpg') no-repeat;
+        }
+        
+        li>div:nth-child(3) {
+            background: url('img/03_kiss.jpg') no-repeat;
+        }
+        
+        li>div:last-child {
+            background: url('img/04_kiss.jpg') no-repeat;
+        }
+        /* 弹性布局中 使用定位 也能够 脱离  */
+        
+        ul {
+            position: relative;
+        }
+        
+        ul>a {
+            position: absolute;
+            top: 50%;
+            width: 100px;
+            height: 100px;
+            background-color: gray;
+            color: greenyellow;
+            text-align: center;
+            line-height: 100px;
+            text-decoration: none;
+            /* 网上走 自己高度的一半 */
+            /*margin-top: -50px;*/
+            /* 也能够使用变换 来实现 类似的效果 
+                可以给 具体的 值
+                如果给的是百分比 是自己的 尺寸的 百分比
+            */
+            transform: translateY(-50%);
+            /*  加粗 加大*/
+            font-weight: 900;
+            font-size: 80px;
+            font-family: "黑体";
+        }
+        
+        ul a:first-of-type {
+            left: -100px;
+        }
+        
+        ul a:last-of-type {
+            right: -100px;
+        }
+        /* 将 div 摞到一起 */
+        
+        li {
+            position: relative;
+        }
+        
+        li>div {
+            position: absolute;
+        }
+        /*  分别 设置 li标签中 的 div的方向 */
+        
+        li>div:nth-child(1) {
+            transform: rotateY(0) translateZ(190px);
+        }
+        
+        li>div:nth-child(2) {
+            transform: rotateX(180deg) translateZ(190px);
+        }
+        
+        li>div:nth-child(3) {
+            transform: rotateX(90deg) translateZ(190px);
+        }
+        
+        li>div:nth-child(4) {
+            transform: rotateX(-90deg) translateZ(190px);
+        }
+        /*  为li标签 设置 过渡属性 */
+        
+        li {
+            transition: all 1s linear;
+            /* 开启 3d旋转 */
+            transform-style: preserve-3d;
+            /*  设置元素 距离 浏览器的距离  
+                显示效果 十分丑陋
+                div相对于 li标签的 位置 并没有发生改变
+                可以提一级 到祖先元素上
+            */
+            /*perspective: 500px;*/
+        }
+        
+        ul {
+            /*  将设置在 li标签中的 perspective属性 提到了 父元素中*/
+            perspective: 1000px;
+        }
+        /* 让 第二个 li标签 过渡的 时间 稍微 晚一丢丢 */
+        
+        li:nth-child(2) {
+            transition-delay: .5s;
+        }
+        /* 调整的是 第二个li标签中 div的 背景图片 位置    */
+        
+        li:nth-child(2) div {
+            /*background-position-x: -100px;*/
+            background-position-x: -280px;
+            /*background-position-x: -50%;*/
+        }
+    </style>
+</head>
+
+<body>
+    <ul>
+        <li>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </li>
+        <li>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </li>
+        <!-- 空格 &nbsp; -->
+        <a href="javascript:void(0)">&lt;</a>
+        <a href="javascript:void(0)">&gt;</a>
+    </ul>
+</body>
+
+</html>
+<!-- `伪元素  只能 设置外观 动画 过渡等属性 
+        无法响应 js的事件
+ -->
+<!-- 点击按钮 让 li标签 旋转 90deg -->
+<script>
+    //   定义变量 点击的次数 
+    var clickNum = 0;
+
+    //  querySelector 支持 css3的选择器 
+    var nextA = document.querySelector('a:last-of-type');
+
+    //  定义 变量 来 锁住 一直点击旋转
+    var isRotate = false; 
+
+    nextA.onclick = function () {
+        //  判断 标示变量
+        if(isRotate == false){
+            isRotate = true;
+        } else{
+            //  如果直接进到了 else 说明 isRotate = true
+            return; 
+        }
+
+        console.log('你点我了哦');
+        //  旋转 90度 根据 点击的次数 决定
+        clickNum++;
+
+        // 设置给 li标签 旋转的角度 
+        // document.querySelector('li').style.transform = 'rotateX(' + clickNum * 90 + 'deg)';
+        //  使用 querySelectorAll方法获取所有的
+        var liLists = document.querySelectorAll('li');
+        for (var i = 0; i < liLists.length; i++) {
+            //  如果 设置样式的时候 拼接字符串 没有把握
+            //   rotateX(100deg);
+            //  'rotateX('++'deg)'
+            liLists[i].style.transform = 'rotateX(' + clickNum * 90 + 'deg)';
+        }
+    }
+
+
+    //  最后一个 li标签 旋转 完毕 之后   才能 再次旋转
+    /*
+        交互效果 都遵循一个套路
+        在 某个时候   干 某件事
+        
+        找到对应的事件 .onclick =function(){
+            干 某件事
+             修改 body的背景色 为红色
+             将 密码框的 值  进行验证 提示用户 长度是否足够
+             获取某个值
+             赋值给 另外一个东西
+        }
+    */
+
+    // 过渡结束事件 on
+    //  过渡 结束 事件 html5中 新推出的事件 部分新推出的事件 兼容性不好 
+    //  而要使用 addEventListener添加 
+    //  document.querySelector('li:last-of-type').ontransitionEnd = function(){
+    //      console.log('过渡结束时间触发');
+    //  }
+    //  jq中 支持 新的事件 on 
+    //  如果工作中 遇到 不会的事件 可以先 百度谷歌 找到 关键的 字 再去 mdn 搜索 
+    document.querySelector('li:last-of-type').addEventListener('transitionend',function(){
+        console.log('我触发了哦');
+        //  过渡完毕之后 就能够 修改 标示变量 让其 再次 开始旋转
+        isRotate =false; 
+    })
+</script>

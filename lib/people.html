@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script src="js/getCtx.js" type="text/javascript"></script>
+		<script type="text/javascript">
+			
+			/**
+			 * @constructor 人类
+			 * @param { options: Object } 可配置参数
+			 * @param { options.ctx: Context } 绘图环境
+			 * @param { options.img: Image } 要绘制的小人图像
+			 * @param { options.crosswiseFrame: number } 小人图像一排有多少张
+			 * @param { options.lengthwaysFrame: number } 小人图像一列有多少张
+			 * @param { options.speed: number } 行走速度
+			 * @param { options.x: number } 小人起始x坐标
+			 * @param { options.y: number } 小人起始y坐标
+			 * 
+			 * */
+			function Person(options) {
+				this.ctx = options.ctx;
+				this.img = options.img;
+				this.crosswiseFrame = options.crosswiseFrame;
+				this.lengthwaysFrame = options.lengthwaysFrame;
+				this.speed = options.speed || 2;
+				this.x = options.x || 50;
+				this.y = options.y || 50;
+				
+				// 控制小人某个方向的第几帧，控制小人行走的方向
+				this.index = 0;
+				this.direction = 0;
+				
+				// 求小人宽高
+				this.w = this.img.width / this.crosswiseFrame;
+				this.h = this.img.height / this.lengthwaysFrame;
+			}
+			
+			Person.prototype = {
+				
+				// 按照小人的属性进行绘制
+				draw: function() {
+					this.ctx.drawImage(this.img, 
+						this.w * this.index, this.h * this.direction, this.w, this.h,
+						this.x, this.y, this.w, this.h);
+					this.update();
+				},
+				
+				// 计算小人下一帧绘制所需的数据
+				// 这里要更新小人某动作的第几帧
+				// 还要更新小人最新的坐标
+				update: function() {
+					this.index = ++this.index % this.crosswiseFrame;
+
+					// 左
+					if(this.direction === 1) {
+						this.x -= this.speed;
+						this.x = this.x < -this.w? this.ctx.canvas.width: this.x;
+					}
+					// 上
+					else if(this.direction === 3) {
+						this.y -= this.speed;
+						this.y = this.y < -this.h? this.ctx.canvas.height: this.y;
+					}
+					// 右
+					else if(this.direction === 2) {
+						this.x += this.speed;
+						this.x = this.x > this.ctx.canvas.width? -this.w: this.x;
+					}
+					// 下
+					else if(this.direction === 0) {
+						this.y += this.speed;
+						this.y = this.y > this.ctx.canvas.height? -this.h: this.y;
+					}
+				},
+				
+				// 根据keyCode修改小人的方向
+				changeDirection: function(code) {
+					// 左
+					if(code === 37) {
+						this.direction = 1;
+					}
+					// 上
+					else if(code === 38) {
+						this.direction = 3;
+					}
+					// 右
+					else if(code === 39) {
+						this.direction = 2;
+					}
+					// 下
+					else if(code === 40) {
+						this.direction = 0;
+					}
+				}
+			};
+			
+			/*-----------------------------------------*/
+			var ctx = getCtx('body', 700, 500);
+			var img = new Image();
+			img.src = 'img/NPCrabbitbaby-2.png';
+			img.onload = function() {
+				
+				// 创建小人实例
+				var tuzijie = new Person({
+					ctx: ctx,
+					img: img,
+					crosswiseFrame: 4,
+					lengthwaysFrame: 4,
+				});
+				
+				// 帧动画
+				setInterval(function() {
+					ctx.clearRect(0, 0, ctx.canvas.width, ctx.canvas.height);
+					tuzijie.draw();
+				}, 1000 / 60);
+				
+				// 监听键盘按下事件
+				document.onkeydown = function(e) {
+					var code = e.keyCode;
+					
+					// 当按下上下左右方向键的时候
+					// 1、去掉浏览器的默认事件
+					// 2、调用实例的修改方向方法
+					if(code >= 37 && code <= 40) {
+						e.preventDefault();
+						tuzijie.changeDirection(e.keyCode);
+					}
+				};
+			};
+		</script>
+	</body>
+</html>

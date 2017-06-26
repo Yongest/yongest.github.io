@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+        <style>
+                .heart{
+                    width: 300px;
+                    height: 300px;
+                    border: 1px solid #000;
+                    margin: 100px auto;
+                    position: relative;
+                }
+                .heart>div{
+                    background: red;
+                }
+                .left,.right{
+                    width: 200px;
+                    height: 200px;
+                    border-radius: 50%;
+                    position: absolute;
+                    top:0px;
+                }
+                .left{
+                    left:-10px;
+                }
+                .right{
+                    right: -10px;
+                }
+                .bottom{
+                    width: 150px;
+                    height: 150px;
+                    position: absolute;
+                    bottom:36px;
+                    left:75px;
+                    transform: rotate(45deg);
+                }
+
+                /* 动画使用 1 */
+                @keyframes beat{
+                    from{}
+                    to{
+                        transform: scale(1.2,1.2);
+                    }
+                }
+                .beat{
+                    animation: beat .5s infinite;
+                }
+
+                @keyframes shadow{
+                    from{}
+                    to{
+                        box-shadow: 0 0 50px yellow;
+                    }
+                }
+                /*  设置给 heart 内部的 所有 div*/
+                .heart>div{
+                    animation:  shadow .5s infinite;
+                }
+                .heart{
+                    border:none;
+                }
+                body{
+                    background-color: black;
+                }
+        </style>
+</head>
+<body>
+    <div class="heart beat">
+        <div class='left'></div>
+        <div class='right'></div>
+        <div class='bottom'></div>
+    </div>
+</body>
+</html>

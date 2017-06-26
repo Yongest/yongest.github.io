@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: skyblue;
+            /* 出现了 形式问题 提一级 到父元素中 */
+            perspective: 1000px;
+        }
+        
+        .dogBox {
+            width: 249px;
+            height: 251px;
+            background: url('img/dog2.jpg') no-repeat center/cover;
+            position: relative;
+            margin: 150px auto;
+
+            /* 直接 设置距离 */
+            /* perspective: 1000px; */
+        }
+        
+        .dogBox>.dog {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: url('img/dog.gif')no-repeat center/cover;
+
+        }
+        
+        .dog:nth-child(1) {
+            transform: rotateY(0deg) translateZ(400px);
+        }
+        
+        .dog:nth-child(2) {
+            transform: rotateY(60deg) translateZ(400px);
+        }
+        
+        .dog:nth-child(3) {
+            transform: rotateY(120deg) translateZ(400px);
+        }
+        
+        .dog:nth-child(4) {
+            transform: rotateY(180deg) translateZ(400px);
+        }
+        
+        .dog:nth-child(5) {
+            transform: rotateY(240deg) translateZ(400px);
+        }
+        
+        .dog:nth-child(6) {
+            transform: rotateY(300deg) translateZ(400px);
+        }
+
+
+        /* 鼠标悬停 旋转 */
+        .dogBox:hover{
+            transform: rotateY(360deg) ;
+            transition:  all 3s linear;
+        }
+
+        /* 浏览器 默认 不会 渲染 3d变换的 元素 
+            只会 显示 一个 基础的 3d效果而已
+            如果希望浏览器 能够显示 运动的 3d元素 
+            需要在    父元素    中 设置一个 属性
+         */
+         .dogBox{
+             transform-style: preserve-3d;
+         }
+
+         /* perspective 属性 设置位置的问题 
+            perspective 设置之后 子元素 显示的效果 是 相对于 设置了 perspective 的元素
+            如果 无法理解 相对 关系
+            可以直接记结果
+            出现 显示 问题 将 perspective提一级即可
+         */
+
+    </style>
+</head>
+
+<body>
+    <div class="dogBox">
+        <div class="dog"></div>
+        <div class="dog"></div>
+        <div class="dog"></div>
+        <div class="dog"></div>
+        <div class="dog"></div>
+        <div class="dog"></div>
+    </div>
+</body>
+
+</html>
