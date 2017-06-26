@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        body {
+            background: url('imgs/wall.jpg');
+        }
+        .door {
+            width: 360px;
+            height: 270px;
+            border: 10px solid #000;
+            margin: 100px auto 0;
+            background: url('imgs/dog.gif') no-repeat center /cover;
+            position: relative;
+        }
+        /*设置左边的门*/
+        .door::before {
+            /*智能输入法可以输入一些基础符号*/
+            content: '○';
+            width: 50%;
+            height: 100%;
+            position: absolute;
+            background: url('imgs/door.jpg') no-repeat center /cover;
+            text-align: right;
+            line-height: 270px;
+            font-weight: 900;
+            color: white;
+            font-size: 50px;
+            transition: all 1s;
+            /*transform: perspective(100px);*/
+            perspective: 500px;
+            transform-origin: left center;
+        }
+        .door:hover::before {
+            transform:perspective(500px) rotateY(-180deg);
+        }
+         .door::after {
+            /*智能输入法可以输入一些基础符号*/
+            content: '○';
+            width: 50%;
+            height: 100%;
+            position: absolute;
+            background: url('imgs/door.jpg') no-repeat center /cover;
+            text-align: left;
+            line-height: 270px;
+            font-weight: 900;
+            color: white;
+            font-size: 50px;
+            transition: all 1s;
+            /*transform: perspective(100px);*/
+            perspective: 500px;
+            /*用位移translateX移动门，
+            在用到变换中心时候会出问题, 所以需要用定位的方式*/
+            left: 50%;
+            transform-origin: right center;
+        }
+        .door:hover::after {
+            transform:perspective(500px) rotateY(180deg);
+        }
+    </style>
+</head>
+<body>
+    <div class="door"></div>
+</body>
+</html>

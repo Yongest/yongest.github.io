@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+       ul {
+           list-style: none;
+           height: 200px;
+           width: 600px;
+           margin: 100px auto 0;
+       }
+       li {
+           float: left;
+           width: 180px;
+           height: 180px;
+           background-color: pink;
+           margin: 10px;
+           transition:all 1s;
+       }
+       li:nth-child(1):hover {
+           /*设置元素在3d世界中距离屏幕的距离*/
+            transform: perspective(200px) rotateX(180deg);;
+       }
+       li:nth-child(2):hover {
+           transform: perspective(200px) rotateY(-180deg)
+       }
+       li:nth-child(3):hover {
+           transform: perspective(200px) rotateZ(180deg)
+       }
+       li:nth-child(4):hover {
+           transform: perspective(100px) rotateY(180deg) ;
+       }
+    </style>
+</head>
+<body>
+    <ul>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+    </ul>
+</body>
+</html>
