@@ -61,8 +61,8 @@
   <script>
     $(function () {
       // 保存的数据,"[{'useri':'2342','user2':'fsfas'}]"
-      var getStorageStr = localStorage.getItem('userinpt') || '';
-      var getStorageArr = JSON.parse(getStorageStr || '[]');
+      var getStorageStr = localStorage.getItem('userinpt') || '[{}]';
+      var getStorageArr = JSON.parse(getStorageStr);
       var getStorageObj = getStorageArr[0];
       $.each(getStorageObj, function (key, ele) {
         $("ul").prepend($("<li id=" + key + ">" + ele + "<input type='button' value='删除'/></li>"));
