@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="box">
+        <input type="text" name="" bb="hello" value="1">
+        <input type="text" name="" aa="hello" value="2">
+        <input type="text" name="" cc="hello" value="3">
+    </div>
+</body>
+<script src="js/jquery-1.12.2.js"></script>
+<script>
+    // function getEl(dom,attr) {
+    //     var a = $(dom)
+    //     for (var i = 0; i < a.length; i++) {
+    //         if (a[i].getAttribute(attr)) {
+    //             return $(a[i])
+    //         }
+    //     }
+    // }
+    // var a = getEl('input','cc')
+   var a = $("input[aa='hello']")
+   console.log(a)
+
+</script>
+
+</html>

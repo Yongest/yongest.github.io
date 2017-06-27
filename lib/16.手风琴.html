@@ -1,0 +1,79 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <title>手风琴</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .con {
+      width: 999px;
+      border: 1px solid gold;
+      height: 400px;
+      margin: 100px auto;
+      overflow: hidden;
+    }
+
+    .con ul {
+      width: 1100px;
+      overflow: hidden;
+    }
+
+    .con ul li {
+      width: 199px;
+      border-left: 1px solid gold;
+      height: 400px;
+      float: left;
+    }
+
+    .con ul .first {
+      border-left: none;
+    }
+  </style>
+  <script type="text/javascript" src="./js/jquery-1.12.2.js"></script>
+  <script type="text/javascript">
+//    $(function () {
+//      $('.con ul li').hover(function () {
+//        $(this).stop().animate({'width': '599px'}, 500).siblings().stop().animate({'width': '99px'}, 500);
+//      }, function () {
+//        $('.con ul li').stop().animate({'width': '199px'}, 500)
+//      })
+//    })
+
+// 步骤：
+// 1. 鼠标移入当前的li标签的时候，要让当前的li标签全部的显示出来
+// 2. 鼠标门离开之后，要让所有的li标签恢复成原状
+    $(function(){
+        $(".con ul li").hover(function (){
+               $(this).stop().animate({
+                 width:599
+               },500).siblings().stop().animate({
+                 width:99
+               },500);
+        },function(){
+          $(".con ul li").stop().animate({
+            width:199
+          })
+        })
+    })
+  </script>
+</head>
+
+<body>
+<div class="con">
+  <ul>
+    <li class="first"><img src="images/1.jpg" width="600" height="400"/></li>
+    <li><img src="img/2.jpg" width="600" height="400"/></li>
+    <li><img src="img/3.jpg" width="600" height="400"/></li>
+    <li><img src="img/4.jpg" width="600" height="400"/></li>
+    <li><img src="img/5.jpg" width="600" height="400"/></li>
+  </ul>
+</div>
+</body>
+</html>

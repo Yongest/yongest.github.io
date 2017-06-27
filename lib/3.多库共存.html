@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+      <style>
+      
+    </style>
+</head>
+<body>
+<input type="button" value="按钮"/>
+</body>
+<script src="js/jquery-1.12.2.js"></script>
+<script src="js/jquery-2.2.2.min.js"></script>
+<script>
+console.log($.fn.jquery)
+ $("input").on("click",function (){
+        alert(123);
+ })
+ console.log(jQuery.fn.jquery);
+  var jd = $.noConflict(); // conflict   矛盾，冲突
+  console.log($.fn.jquery);
+   console.log(jQuery.fn.jquery);
+   jd('input').on('click',function(){
+     alert(789)
+    alert( jd.fn.jquery)
+   })
+</script>
+</html>

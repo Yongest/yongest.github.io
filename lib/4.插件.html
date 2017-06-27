@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    .box {
+      width: 200px;
+      height: 200px;
+      /*background-color: red;*/
+    }
+  </style>
+</head>
+
+<body>
+  <input type="button" value="按钮" />
+  <div class="box"></div>
+</body>
+<script src="js/jquery-1.12.2.js"></script>
+ <script src="jQuery-plugins/jquery.color.js"></script>
+<script>
+   $(function(){
+        $("input").on("click",function (){
+               $("div").animate({
+//                 backgroundColor:"blue"
+//                 backgroundColor:"pink"
+                 backgroundColor:"red"
+               },2000)
+        })
+      // 插件就是具有某种功能的小文件，jQuery中的插件就是对jQuery文件中某些方法功能的一个扩展
+      // 使用插件的步骤
+      // 1. 引用jQuery文件
+      // 2. 引用插件文件
+      // 3. 还是使用原来的jQuery中的api
+    })
+
+
+</script>
+
+</html>

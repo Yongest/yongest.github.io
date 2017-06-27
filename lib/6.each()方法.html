@@ -1,0 +1,71 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head lang="en">
+  <meta charset="UTF-8">
+  <title></title>
+  <style>
+    ul {
+      list-style: none;
+    }
+    ul li {
+      width: 50px;
+      height: 50px;
+      background-color: red;
+      float: left;
+      margin: 0 10px;
+    }
+    .last {
+        width: 100px;
+        height: 100px;
+    }
+  </style>
+  <script src="js/jquery-1.12.2.js"></script>
+  <script>
+    // $(function(){
+//        $("ul li").css("font-size","25px") ;
+//      $("ul li").css("opacity",0.2);
+//      // 现在新的要求是： 让这10个li标签的透明度依次递增，也就是说从0.1--1
+//      $("ul li:first").css("opacity",0.1);
+//      $("ul li:eq(1)").css("opacity",0.2);
+
+      // jQuery当中提供了一个遍历jQuery对象的方法，each()
+//       $("ul li").each(function(index,ele){
+//         // index是遍历到的jQuery对象的索引
+//         // ele是遍历到的当前对象，但是这个对象是一个dom对象
+// //        console.log(index+"===="+ele.innerText);
+//         $(ele).css("opacity",(index+1)/10);
+//       })
+
+//       // each()是jQuery对象的方法，专门用来遍历jQuery对象的
+//     })
+
+   $(function(){
+       var w = $('ul li').width();//默认打印第一个
+       var h = $('ul li').height();
+       console.log(w,h);
+        $('ul li').each(function(index,el){
+        $(el).css({
+            "opacity":(index+1)/10,
+            "width":(1+(index+1)/10)*w,
+            "height":(1+(index+1)/10)*h
+        })
+    })
+   })
+  </script>
+</head>
+<body>
+<ul>
+  <li>这是第1个li标签</li>
+  <li>这是第2个li标签</li>
+  <li>这是第3个li标签</li>
+  <li>这是第4个li标签</li>
+  <li>这是第5个li标签</li>
+  <li>这是第6个li标签</li>
+  <li>这是第7个li标签</li>
+  <li>这是第8个li标签</li>
+  <li>这是第9个li标签</li>
+  <li class="last">这是第10个li标签</li>
+</ul>
+</body>
+</html>

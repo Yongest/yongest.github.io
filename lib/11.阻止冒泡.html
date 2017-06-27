@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head lang="en">
+  <meta charset="UTF-8">
+  <title></title>
+  <style>
+     #d0 {
+      width: 400px;
+      height: 400px;
+      background-color: yellow;
+    }
+    #d1 {
+      width: 300px;
+      height: 300px;
+      background-color: pink;
+    }
+    #d2 {
+      width: 200px;
+      height: 200px;
+      background-color: blue;
+    }
+    #d3 {
+      width: 100px;
+      height: 100px;
+      background-color: red;
+    }
+    div {
+      text-align: right;
+    }
+  </style>
+  <script src="js/jquery-1.12.2.js"></script>
+  <script>
+    $(function(){
+        $("div:eq(0)").on("click",function (event){
+               console.log(this.id);
+        })
+      $("div:eq(1)").on("click",function (event){
+        console.log(this.id);
+          // event.stopPropagation();
+      })
+      $("div:eq(2)").on("click",function (event){
+        console.log(this.id);
+//        return false; // 阻止冒泡  没有兼容性
+        // cancaleBubblue   IE8支持的
+        // stopPropagation   高级浏览器支持
+        // event.stopPropagation();  // 任何浏览器都支持的阻止冒泡的行为
+      })
+       $("div:eq(3)").on("click",function (event){
+        console.log(this.id);
+      //  return false; // 阻止冒泡  没有兼容性
+        // cancaleBubblue   IE8支持的
+        // stopPropagation   高级浏览器支持
+        // 任何浏览器都支持的阻止冒泡的行为
+        event.stopPropagation(); //只会阻止最底层的元素的冒泡
+      })
+       
+    })
+  </script>
+</head>
+<body>
+  <div id="d0">
+    d0
+    <div id="d1">
+      d1
+  <div id="d2">
+    d2
+    <div id="d3">d3</div>
+  </div>
+</div>
+  </div>
+
+</body>
+</html>

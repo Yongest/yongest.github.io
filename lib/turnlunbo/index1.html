@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>优酷轮播</title>
+<style>
+	*{
+		margin:0;
+		padding:0;
+		list-style:none;
+	}
+	img{
+		display: block;
+	}
+	.box{
+		width: 1196px;
+		height: 320px;
+		overflow: hidden;
+		position: relative;
+		margin:100px auto 0;
+	}
+	span{
+		width: 45px;
+		height: 45px;
+		position: absolute;
+		top:50%;
+		margin-top: -23px;
+		background:green;
+		z-index: 99999;
+		cursor:pointer;
+	}
+	.right{
+		right:16px;
+		background:url(img/02/youanniu.png) 0 0 no-repeat;
+	}
+	.left{
+		left: 16px;
+		background:url(img/02/zuoanniu.png) 0 0 no-repeat;
+	}
+	li{
+		position: absolute;
+	}
+	li img{
+		width: 100%;
+		height: 100%;
+	}
+	.list li.no0{width: 281px;height:130px;left:-76px;top:82px;z-index: 666;}
+	.list li.no1{width: 435px;height: 223px;left:0px;top:30px;z-index: 777;}
+	.list li.no2{width: 639px;height: 271px;left:278px;top:6px;z-index: 888;}
+	.list li.no3{width: 435px;height: 223px;left:761px;top:30px;z-index: 777;}
+	.list li.no4{width: 281px;height:130px;left:1053px;top:82px;z-index: 666;}
+	.list li.waiting{display: none;}
+</style>
+<script src="js/jquery-1.11.1.min.js"></script>
+<script>
+	$(function(){
+
+		// 将每一个LI所在的位置给它存起来
+		var json0 = {"width":281,"height": 130,"left": -76,"top": 82};
+		var json1 = {"width":435,"height":223,"left":0,"top":30};
+		var json2 = {"width":639,"height":271,"left":278,"top":6};
+		var json3 = {"width":435,"height":223,"left":761,"top":30};
+		var json4 = {"width":281,"height": 130,"left": 1053,"top": 82};
+
+		$('.right').click(function(){
+			if( !$('li').is(":animated") ){
+				// 交换位置
+				$('.no0').css(json4);
+				$('.no1').animate(json0,300); 
+				$('.no2').animate(json1,300);
+				$('.no3').animate(json2,300);
+				$('.no4').animate(json3,300);
+
+				// 交换身份
+				var no4 = $('.no4');
+				$('.no0').attr('class','waiting');
+				$('.no1').attr('class','no0');
+				$('.no2').attr('class','no1');
+				$('.no3').attr('class','no2');
+				no4.attr('class','no3');
+				if( no4.next().length != 0 ){
+					no4.next().attr('class','no4');
+				}else{
+					$('li').eq(0).attr('class','no4');
+				}
+
+				$('.no4').css(json4);
+			}
+		});
+
+		$('.left').click(function(){
+			if( !$('li').is(":animated") ){
+				// 交换位置
+				$('.no0').animate(json1,300);
+				$('.no1').animate(json2,300);
+				$('.no2').animate(json3,300);
+				$('.no3').animate(json4,300);
+				$('.no4').css(json0);
+
+				// 交换身份
+				var no0 = $('.no0');
+				
+				$('.no4').attr('class','waiting');
+				$('.no3').attr('class','no4');
+				$('.no2').attr('class','no3');
+				$('.no1').attr('class','no2');
+				no0.attr('class','no1');
+				if( no0.prev().length != 0 ){
+					no0.prev().attr('class','no0');
+				}else{
+					$('li:last').attr('class','no0');
+				}
+				$('.no0').css(json0);
+			}
+		});
+	});
+</script>
+</head>
+<body>
+    <div class="box">
+    	<div class="list">
+    		<ul>
+    			<li class="no0"><img src="img/02/a.jpg" alt=""></li>
+    			<li class="no1"><img src="img/02/b.jpg" alt=""></li>
+    			<li class="no2"><img src="img/02/c.jpg" alt=""></li>
+    			<li class="no3"><img src="img/02/d.jpg" alt=""></li>
+    			<li class="no4"><img src="img/02/e.jpg" alt=""></li>
+    			<li class="waiting"><img src="img/02/f.jpg" alt=""></li>
+    			<li class="waiting"><img src="img/02/g.jpg" alt=""></li>
+    			<li class="waiting"><img src="img/02/h.jpg" alt=""></li>
+    			<li class="waiting"><img src="img/02/i.jpg" alt=""></li>
+    		</ul>
+    	</div>
+    	<div class="btn">
+    		<span class="left"></span>
+    		<span class="right"></span>
+    	</div>
+    </div>
+</body>
+</html>

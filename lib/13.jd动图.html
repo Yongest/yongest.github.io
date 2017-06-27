@@ -1,0 +1,79 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <title>京东图片</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .con {
+      width: 790px;
+      border: 1px solid #000;
+      height: 362px;
+      margin: 100px auto;
+      overflow: hidden;
+    }
+
+    img {
+      display: block; /*cssreset 要加这句话  是为了让img和li之间没有间距*/
+    }
+
+    .con ul li {
+      float: left;
+      width: 158px;
+      height: 362px;
+      overflow: hidden;
+    }
+
+    .con ul li a {
+      display: block;
+    }
+
+    /*.link1 {*/
+    /*margin-left: -20px;*/
+    /*}*/
+    /*.link3 {*/
+    /*margin-left: -20px;*/
+    /*}*/
+  </style>
+  <script type="text/javascript" src="js/jquery-1.12.2.js"></script>
+  <script type="text/javascript">
+    $(function () {
+      $(".con ul li a").hover(function () {
+        $(this).stop().animate({marginLeft: -15}, 500);
+      }, function () {
+        $(this).stop().animate({"margin-left": "-0px"}, 500);
+      });
+    })
+  </script>
+</head>
+
+<body>
+<div class="con">
+  <ul>
+    <li>
+      <a href="javascript:;"><img src="images/01.jpg" width="173" height="181"/></a>
+      <a href="javascript:;"><img src="images/02.jpg" width="173" height="181"/></a>
+    </li>
+    <li><a href="javascript:;"><img src="images/03.jpg" width="173" height="362"/></a></li>
+    <li>
+      <a href="javascript:;"><img src="images/04.jpg" width="173" height="181"/></a>
+      <a href="javascript:;"><img src="images/05.jpg" width="173" height="181"/></a>
+    </li>
+    <li><a href="javascript:;"><img src="images/06.jpg" width="173" height="362"/></a></li>
+    <li>
+      <a href="javascript:;"><img src="images/07.jpg" width="173" height="181"/></a>
+      <a href="javascript:;"><img src="images/08.jpg" width="173" height="181"/></a>
+    </li>
+  </ul>
+</div>
+</body>
+
+
+</html>

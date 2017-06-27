@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        .wrap {
+            width: 300px;
+            margin: 100px auto 0;
+        }
+
+        table {
+            border-collapse: collapse;
+            border-spacing: 0;
+            border: 1px solid #c0c0c0;
+        }
+
+        th,
+        td {
+            border: 1px solid #d0d0d0;
+            color: #404060;
+            padding: 10px;
+        }
+
+        th {
+            background-color: #09c;
+            font: bold 16px "微软雅黑";
+            color: #fff;
+        }
+
+        td {
+            font: 14px "微软雅黑";
+        }
+
+        tbody tr {
+            background-color: #f0f0f0;
+        }
+
+        tbody tr:hover {
+            cursor: pointer;
+            background-color: #fafafa;
+        }
+    </style>
+    <script src="js/jquery-1.12.2.js"></script>
+    <script>
+        $(function(){
+            // 思路
+            //  让下面的小按钮的选中状态和总按钮保持一致就行
+            //  第二个需求的思路：
+            //    1. 当单击当前小按钮的时候，先判断一下其它的按钮的状态，如果所有的都选中了，则总按钮也选中，如果有一个不选中的话，则总按钮也不能选中
+            //   2. 获取一下所有的小按钮的个数，然后单击每个小按钮的时候，判断一下，选有小按钮的中状态，如果小按钮选中的个数和总的小按钮的个数一样的话，则让总按钮也选中，否则不选中
+
+            // 代码实现
+            // 1. 单击总按钮的时候，让小按钮的状态和总按钮保持一致
+            $("#j_cbAll").click(function (){
+//                  var isChecked = $(this).prop("checked");
+////                console.log(isChecked);
+//                $("#j_tb input").prop("checked",isChecked);
+                $("#j_tb input").prop("checked",$(this).prop("checked"));
+            })
+            // 2. 单击小按钮的时候，要判断一下全部的小按钮的选中的状态
+            $("#j_tb input").click(function (){
+                   var allLength = $("#j_tb input").length; // 包装集，伪数组
+                var selLength = $("#j_tb input:checked").length;//获取所有的被选中的小按钮的个数
+//                console.log(allLength);
+                if(selLength==allLength){ // 如果选中状态的小按钮的个数与总的小按钮的个数一致的话，则让总的按钮也选中，如果有一个没有选中的话，则让总的按钮也不选中
+                    $("#j_cbAll").prop("checked",true);
+                }else {
+                    $("#j_cbAll").prop("checked",false);
+                }
+            })
+        })
+    </script>
+</head>
+<body>
+<div class="wrap">
+    <table>
+        <thead>
+        <tr>
+            <th>
+                <input type="checkbox" id="j_cbAll"  />
+            </th>
+            <th>课程名称</th>
+            <th>所属学院</th>
+        </tr>
+        </thead>
+        <tbody id="j_tb">
+        <tr>
+            <td>
+                <input type="checkbox" />
+            </td>
+            <td>JavaScript</td>
+            <td>前端与移动开发学院</td>
+        </tr>
+        <tr>
+            <td>
+                <input type="checkbox" />
+            </td>
+            <td>css</td>
+            <td>前端与移动开发学院</td>
+        </tr>
+        <tr>
+            <td>
+                <input type="checkbox" />
+            </td>
+            <td>html</td>
+            <td>前端与移动开发学院</td>
+        </tr>
+        <tr>
+            <td>
+                <input type="checkbox" />
+            </td>
+            <td>jQuery</td>
+            <td>前端与移动开发学院</td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+</body>
+
+</html>

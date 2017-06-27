@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+
+<head lang="en">
+  <meta charset="UTF-8">
+  <title>微博发布案例</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+    ul {
+      list-style: none;
+    }
+    .box {
+      width: 600px;
+      margin: 100px auto;
+      border: 1px solid #000;
+      padding: 20px;
+    }
+    textarea {
+      width: 450px;
+      height: 160px;
+      outline: none;
+      /*去掉环绕线*/
+      resize: none;
+      /*禁用拖动*/
+    }
+    ul {
+      width: 450px;
+      padding-left: 80px;
+      word-break: break-all;
+    }
+    ul li {
+      /*line-height: 25px;*/
+      /*min-height: 25px; 设定最小高度后,slideDown()效果就会消失*/
+      height: 40px;
+      width: 450px;
+      /*border: 1px solid #000;*/
+      border-bottom: 1px dashed #cccccc;
+    }
+    input {
+      float: right;
+    }
+  </style>
+ 
+</head>
+
+<body>
+  <div class="box" id="weibo">
+    <span>微博发布</span>
+    <textarea name="" id="txt" cols="30" rows="10" maxlength="50" placeholder="最多50个字"></textarea>
+    <button id="btn">发布</button>
+    <ul id="ul">
+      <!--<li>这是第一条用户输入的内容 <input type="button" value="删除"/></li>-->
+    </ul>
+  </div>
+
+</body>
+ <script src="js/jquery-1.12.2.js"></script>
+  <script>
+    $(function () {
+      // 保存的数据,"[{'useri':'2342','user2':'fsfas'}]"
+      var getStorageStr = localStorage.getItem('userinpt') || '';
+      var getStorageArr = JSON.parse(getStorageStr || '[]');
+      var getStorageObj = getStorageArr[0];
+      $.each(getStorageObj, function (key, ele) {
+        $("ul").prepend($("<li id=" + key + ">" + ele + "<input type='button' value='删除'/></li>"));
+        deleteInfo();
+      })
+      $("#btn").click(function () {
+        var val = $("#txt").val();//获取用户输入的内容
+        //        //动态创建元素的方式有两种  一个是$  另一个是html()
+         if ($.trim(val) == "") {
+          alert("内容不能为空");
+          return;
+        }
+        var key = 'key' + Math.random() + Math.random()
+        getStorageObj[key] = val;
+        getStorageArr[0] = getStorageObj;
+        localStorage.setItem('userinpt', JSON.stringify(getStorageArr))
+        $("ul").prepend($("<li>" + val + "<input type='button' value='删除'/></li>"));
+        // 获得ul中的第一个，然后设置效果
+        // $("ul li:first").hide().slideDown();
+        $("ul li:first").hide().slideDown();
+        $("#txt").val(""); // 清空内容
+        // 给删除按钮注册事件，删除当前li标签
+        deleteInfo()
+      })
+      // 点击删除按钮,删除localStorage中对应的数据,然后复写到localStorage中去.
+      function deleteInfo() {
+        $("input").click(function () {
+          // $(this).parent().remove();
+          $(this).parent().hide(500)
+          //清除localStorage中储存的id为***的li元素.
+          delete getStorageObj[$(this).parent().attr('id')]
+          getStorageArr[0] = getStorageObj;
+          localStorage.setItem('userinpt', JSON.stringify(getStorageArr))
+        });
+      }
+    })
+  </script>
+</html>

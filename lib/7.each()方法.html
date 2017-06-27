@@ -1,0 +1,42 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head lang="en">
+  <meta charset="UTF-8">
+  <title></title>
+  <script src="js/jquery-1.12.2.js"></script>
+  <script>
+  $(function(){
+      var nums = [10,20,30,40,50,60,70,80,90];
+//    $.each(nums,function (index,ele){
+//        console.log(index+"===="+ele);
+//    });
+
+    // forEach()  这是数组的一个遍历的方法
+//    nums.forEach(function (ele,index){
+//      console.log(index+"===="+ele);
+//    });
+
+    var obj = {
+      name:"张三",
+      age: 20,
+      sex:"男"
+    }
+
+    $.each(obj,function (index,ele){
+      console.log(index+"===="+ele);
+    })
+
+    // each()的用法
+    // 1. 用来遍历jQuery对象   $(selector).each(function(index,ele){})
+    // 2. 用来遍历数组  $.each(array,function(index,ele){});
+    // 3. 用来遍历对象  $.each(obj,function(index,ele){});
+
+    // forEach()的用法与each()的用法类似，只是forEach()是用来遍历数组的
+  })
+  </script>
+</head>
+<body>
+
+</body>
+</html>
