@@ -6,8 +6,23 @@
     <title>原生轮播</title>
     <link rel="stylesheet" href="css/index.css">
 </head>
+<style>
+    .boxshare {
+       margin: 0 auto;
+       height: 25px;
+        width: 200px;
+    }
+</style>
 
 <body>
+    <div class="boxshare">
+        <div class="bdsharebuttonbox">
+            <a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a>
+            <a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+            <a href="#" class="bds_tqq" data-cmd="tqq" title="分享到腾讯微博"></a>
+        </div>
+    </div>
+
     <div id="box" class="all">
         <div class="ad">
             <ul id="imgs">
@@ -24,9 +39,16 @@
     <div id="getmore">
         <a href="ls.html">更多&gt;&gt;</a>
     </div>
-	<div><a href="search.html" style="background:green;display:block;width:10px;height:10px;position:fixed;right:58px;top:120px"></a></div>
+    <div>
+        <a href="search.html" style="background:green;display:block;width:10px;height:10px;position:fixed;right:58px;top:120px"></a>
+    </div>
 </body>
+
 <script src="js/yonger.js"></script>
 <script src="js/index.js"></script>
+<script>
+    window._bd_share_config = { "common": { "bdSnsKey": {}, "bdText": "welcome to yongest world,yongest.github.io", "bdMini": "1", "bdMiniList": false, "bdPic": "", "bdStyle": "2", "bdSize": "24" }, "share": {} }; with (document) 0[(getElementsByTagName('head')[0] || body).appendChild(createElement('script')).src = 'http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion=' + ~(-new Date() / 36e5)];
+
+</script>
 
 </html>
