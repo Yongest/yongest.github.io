@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <title>Yongest's Demo</title>
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<base target="_blank" >
     <style>
         ul,
         ol,
@@ -15,22 +16,32 @@
         }
         @media screen and (max-width:800px) {
             body {
-                background-color: skyblue;
+                background-color: #222;
             }
             h1 {
                 font-size: 20px;
                 margin-bottom: 10px;
+				color:white;
+				opacity:.8;
             }
+			.comment {
+				display:none;
+				color:white;
+			}
+			body {
+			padding-left:5px}
         }
         @media screen and (min-width:800px) {
             body {
-                background-color: skyblue;
+                background-color: #222;
                 padding:0 200px 0 200px;
             }
             h1 {
                 font-size: 30px;
                 margin-bottom: 50px;
                 margin-top: 50px;
+				color:white;
+				opacity:.8;
             }
         }  
         .box {
@@ -40,19 +51,20 @@
         
         h1 {
             text-align: center;
-             text-shadow: -1px -1px 5px ;
+             /*text-shadow: -1px -1px 5px ;*/
         }
         
         li {
             margin-bottom: 2px;
             font-size: 20px;
             font-family: '隶书';
-            font-weight: bold;
-            text-shadow: -1px -1px  ;
+            /*font-weight: bold;*/
+            /*text-shadow: -1px -1px  ;*/
         }
         
         a {
-            color: #000;
+            color: #fff;
+			opacity:.8;
             text-decoration: none;
         }
         .comment {
@@ -65,15 +77,88 @@
             font-size: 12px;
             /*font-family: '隶书';*/
         }
-		a:hover  {
-			color:yellow;
+		li:hover  a{
+			color:#ee3985;
+			  -webkit-transition: all .4s ease-in-out;
+				transition: all .4s ease-in-out;
 		}
+		h1:hover,.comment:hover,li:hover {
+		color:#ee3985;
+			  -webkit-transition: all .4s ease-in-out;
+				transition: all .4s ease-in-out;
+		}
+		}
+		a {
+		/*文字省略*/
+			position:absolute;
+			-o-text-overflow: ellipsis;/*兼容opera*/
+			text-overflow: ellipsis;/*这就是省略号喽*/		  
+			overflow: hidden;/*设置超过的隐藏*/
+			white-space: nowrap;/*设置不折行*/
+			width:260px;/*设置宽度*/
+			}
+			ol {
+				color:white;
+			}
+			
+			h1:hover {
+				 transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transition: all 1s;
+    -webkit-transition: all 1s;
+    -moz-transition: all 1s;
+    -ms-transition: all 1s;
+    -o-transition: all 1s;
+			
+			}
+			.comment {
+				color:white;
+				opacity:.8;
+			}
+			.comment:hover {
+			 transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+    -moz-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    -o-transform: scale(1.1);}
+		
+		.w {
+		display: inline-block;;
+    height:40px;
+	line-height:40px;
+    width:30px;
+    background:pink;
+    border-radius:50%;
+		}
+		 /* 使用动画 让鱼 动起来 */
+        /* 定义动画 */
+       
+    @keyframes autoTurn{
+            from{}
+            to{
+                transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    
+            }
+        }
+
+          /* 使用动画 */
+           .autoTurn{
+                    animation: autoTurn  6s steps(36) infinite;
+                    -webkit-animation: autoTurn  6s steps(36) infinite;
+}
     </style>
 </head>
 
 <body>
     <div class="box">
-        <h1>Welcome to Yongest's World!</h1>
+        <h1><span class="w autoTurn">W</span>elcome to <span class="w autoTurn">Y</span>ongest's <span class="w autoTurn">W</span>orld!</h1>
         <ol>
 			<li><a href="./lib/mmbuy/index.html">mmbuy项目(请在移动端看)</a></li>
 			<li><a href="./lib/dist/index.html">vue项目(请在移动端看)</a></li>
@@ -90,6 +175,20 @@
 			<li><a href="./lib/3dchange.html">css3--3dchange</a></li>
 			<li><a href="./lib/door/index.html">css3--开门效果</a></li>
 			<li><a href="./lib/picturechange.html">css3--图片改变效果图</a></li>
+			<li><a href="./lib/多款炫酷鼠标悬停图文动画效果/index.html">css3--多款炫酷鼠标悬停图文动画效果</a></li>
+			<li><a href="./lib/适合图片列表排列(文字说明较多)的CSS3动画效果/index.html">css3--适合图片列表排列(文字说明较多)的CSS3动画效果</a></li>
+			<li><a href="./lib/基础效果/index.html">css3--图片旋转</a></li>
+			<li><a href="./lib/基础效果/2D转换-应用-阴影特效.html">css3--2D转换-应用-阴影特效</a></li>
+			<li><a href="./lib/css3review/01.小鲜肉.html">css3--01.小鲜肉</a></li>
+			<li><a href="./lib/css3review/2.背景图的新用法.html">css3--2.背景图的新用法</a></li>
+			<li><a href="./lib/css3review/3.图片相框.html">css3--3.图片相框</a></li>
+			<li><a href="./lib/css3review/4.图片相框韶光.html">css3--4.图片相框扫光</a></li>
+			<li><a href="./lib/css3review/5.2d变换.html">css3--5.2d变换</a></li>
+			<li><a href="./lib/css3review/6.渐变.html">css3--6.渐变</a></li>
+			<li><a href="./lib/css3review/7.渐变.html">css3--7.渐变</a></li>
+			<li><a href="./lib/css3review/8.过度步骤.html">css3--8.过度步骤</a></li>
+			<li><a href="./lib/css3review/9.过度属性.html">css3--9.过度属性</a></li>
+			<li><a href="./lib/css3review/11.游鱼深海.html">css3--11.游鱼深海</a></li>
 			<li><a href="./lib/map/index3.html">html5--百度地图的使用</a></li>
 			<li><a href="./lib/people.html">canvas--小人(控制方向键)</a></li>
 			<li><a href="./lib/picture.html">canvas--饼图</a></li>

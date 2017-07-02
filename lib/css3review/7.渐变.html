@@ -1,0 +1,46 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: skyblue;
+        }
+        .sun{
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            /*border:1px solid gray;*/
+            /* 径向渐变来设置 */
+            background: radial-gradient(100px at center,red,yellow,rgba(255,255,255,0));
+
+            /* 盒子阴影  阴影设置 四周 变模糊 */
+            /*box-shadow: 0 0 30px hotpink;*/
+        }
+
+        /* 设置椭圆 */
+        .eye{
+            width: 300px;
+            height: 300px;
+            border:1px solid gray;
+            border-radius: 50%;
+            /* 设置 两个尺寸 来标示椭圆
+                颜色1 设置具体的比例 或者是 大小
+                    该颜色 从 0开始 到 多少结束
+
+                颜色2 如果不设置 是从 开始 慢慢 变为白色
+                        设置了 具体的比例 或者是 距离
+                        标示 该颜色 从 多少 开始
+             */
+            background: radial-gradient( 100px 50px at center,black 50% ,white 50%);
+        }
+    </style>
+</head>
+<body>
+    <div class='sun'></div>
+    <div class="eye"></div>
+</body>
+</html>

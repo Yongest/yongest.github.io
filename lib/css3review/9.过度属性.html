@@ -1,0 +1,59 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        body{
+            background: saddlebrown;
+        }
+        div{
+            width: 200px;
+            height: 200px;
+            border: 1px solid #000;
+            background-color: yellowgreen;
+
+            /* 单独设置 过渡属性 指定 多个属性
+                一次性设置所有的属性 all
+             */
+            -webkit-transition-property: width,height;
+            transition-property: width,height;
+
+            /* 过渡的时间 */
+            -webkit-transition-duration: 1s;
+                    transition-duration: 1s;
+
+            /* 过渡的延迟时间 */
+            -webkit-transition-delay: 0s,2s;
+                    transition-delay: 0s,2s;
+
+            /* 动画的 线性 速度
+                默认值 ease
+                transition的动画效果 有多种设置
+                实际开发的时候 一般过渡 做的效果 是比较小 快的 交互效果
+                    持续时间 是很短
+                    直接使用默认的值 即可 用户是看不出来的
+             */
+            -webkit-transition-timing-function: linear;
+                    transition-timing-function: linear;
+
+            /* 复合写法
+                所有属性 持续1秒
+                延迟2秒
+                匀速
+             */
+            -webkit-transition: all 1s 2s linear;
+            transition: all 1s 2s linear;
+        }
+        /* 鼠标 悬停的时候 改变 div的 宽度 有个 过渡效果 */
+        div:hover{
+            width: 600px;
+            height: 600px;
+        }
+    </style>
+</head>
+<body>
+    <div>花</div>
+</body>
+</html>

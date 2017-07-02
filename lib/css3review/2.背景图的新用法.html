@@ -1,0 +1,42 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .manGod{
+            width: 200px;
+            height: 400px;
+            border: 1px solid #000;
+            margin: 100px auto 0;
+            /* 设置 背景图片的 大小 */
+            /*background: url('img/zyx.jpg') no-repeat center;*/
+
+            /* 直接 设置背景图片的大小 */
+            /*background-size: 200px 400px;
+                设置为 cover 图片会缩放 填满整个区域 但是 可能会切除一部分
+                contain 放大图片 一边顶格之后 就停止放大
+            */
+            /*background-size: cover;*/
+            /*background-size: contain;*/
+
+            /*  顺序可以调整 */
+            /*background: center / contain url('img/zyx.jpg') no-repeat ;*/
+            
+            /* 设置 多个背景图片
+                一般在设置 多个背景图片时 会在 最后 设置一个 背景颜色
+                为了防止 背景图片加载不出来时 起码显示一个颜色
+             */
+            /* background: url('img/wyf.jpg') no-repeat top/200px 200px,url('img/zyx.jpg') no-repeat bottom/200px 200px,hotpink; */
+
+            background:url('img/wyf.jpg') no-repeat top/200px 200px,url('img/zyx.jpg') no-repeat bottom/200px 200px,hotpink;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="manGod"></div>
+</body>
+</html>

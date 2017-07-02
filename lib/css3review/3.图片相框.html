@@ -1,0 +1,42 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        body{
+            background: url('img/wall.jpg');
+        }
+        .pictureBox{
+            width: 623px;
+            height: 417px;
+            margin:100px auto 0;
+            /* 使用多张背景图片 拼出相框
+                尺寸 根据相框的尺寸量取
+             */
+            background: url('img/bg1.png')no-repeat top left,
+            url('img/bg2.png')no-repeat top right,
+            url('img/bg3.png')no-repeat bottom right,
+            url('img/bg4.png')no-repeat bottom left;
+        }
+        /*  :hover的时候 改为 有狗的效果 */
+        .pictureBox:hover{
+            /* 这里需要保留 四周的相框 
+                在此基础上 在把狗的图片添加上去
+             */
+            background: url('img/bg1.png')no-repeat top left,
+            url('img/bg2.png')no-repeat top right,
+            url('img/bg3.png')no-repeat bottom right,
+            url('img/bg4.png')no-repeat bottom left,
+            url('img/dog.gif') no-repeat center/400px 270px;
+             
+        }
+    </style>
+</head>
+<body>
+    <div class="pictureBox"></div>
+</body>
+</html>

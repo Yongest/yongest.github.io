@@ -1,0 +1,47 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: black;
+        }
+        
+        div {
+            height: 88px;
+            margin-top: 20px;
+        }
+        
+        .header-bg {
+            background: url("img/header-bg.png") repeat-x;
+        }
+        /* 使用渐变 来实现 类似的效果 */
+        
+        .header-gradiant {
+            /* 渐变 生成的是 一张图片
+                告诉浏览器 朝着 那个方向 改变
+                    to 方向 (比如 top left)
+                    角度 (比如 45deg);
+                颜色1,颜色2....
+             */
+            /*background:linear-gradient(to bottom,white,hotpink,orange,yellowgreen);*/
+            /*background:linear-gradient(to left,white,hotpink,orange,yellowgreen);*/
+            /* 斜着 */
+            /*background:linear-gradient(to left top,white,hotpink,orange,yellowgreen);*/
+            /* 设置 具体的角度 */
+            background: -webkit-linear-gradient(30deg, white, hotpink, orange, yellowgreen);
+            background: linear-gradient(60deg, white, hotpink, orange, yellowgreen);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="header-bg"></div>
+    <div class="header-gradiant"></div>
+</body>
+
+</html>

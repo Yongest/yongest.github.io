@@ -1,0 +1,81 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background: url('img/wall.jpg');
+        }
+        .girlGod{
+            position: relative;
+             overflow: hidden;
+
+            width: 200px;
+            height: 400px;
+            margin:10px auto;
+            /* 背景图片 */
+            background: url('img/ly.jpg')no-repeat center/cover ;
+
+            /* 实线边框 */
+            border:30px solid gray;
+
+            /* 图片边框  必须要先设置 默认border 才能够生效 */
+            /*border-image-source: url('img/border-oil.jpg');*/
+            /* 目前使用频率 较低 主流还是 使用 border 来设置边框 */
+
+            /* 设置 边框的 切割尺寸 */
+            /*border-image-slice: 75 75;*/
+            /* 合并写法 */
+            border-image: url('img/border-oil.jpg') 75 75;
+        }
+        .girlGod::before {
+            content: '';
+            width: 10px;
+            height: 100%;
+            background-color: white;
+            position: absolute;
+             opacity: .5;
+             /*overflow: hidden;*/
+            left: -300px;
+            -webkit-transform: skewX(45deg);
+                    transform: skewX(45deg);
+
+        }
+         .girlGod:hover::before {
+             left: 500px;
+             -webkit-transition: all .5s ease-in;
+             transition: all .5s ease-in;
+         }
+
+         /*第二道邪光*/
+           .girlGod::after {
+            content: '';
+            /* 定位 */
+            position: absolute;
+            height: 100%;
+            width: 10px;
+            background-color: rgba(255, 255, 255, .5);
+            /* 默认 扭曲 移出去 */
+            -webkit-transform: skewX(-45deg);
+                    transform: skewX(-45deg);
+            /* right */
+            right: -250px;
+        }
+        /* hover的时候 扫过去 */
+        
+        .girlGod:hover::after {
+            -webkit-transition: all .5s .5s;
+            transition: all .5s .5s;
+            /* 修改 transform 让其 扫过 */
+            -webkit-transform: skewX(-45deg) translateX(-700px);
+                    transform: skewX(-45deg) translateX(-700px);
+        }
+    </style>
+</head>
+<body>
+    <div class='girlGod'></div>
+</body>
+</html>

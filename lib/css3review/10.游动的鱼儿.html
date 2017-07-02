@@ -1,0 +1,47 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: lightblue;
+        }
+        .fish{
+            /* 有 12条鱼 总高度 1512  每一条的高度是 126 */
+            width: 174px;
+            height: 126px;
+            /*border: 1px solid #000;*/
+            background: url('img/fish.png') no-repeat ;
+        }
+        /* 使用动画 让鱼 动起来 */
+        /* 定义动画 */
+        @-webkit-keyframes autoSwim{
+            from{}
+            to{
+                background-position-y:-1386px;
+                /*background-position-y:-882px;*/
+            }
+        }
+        @keyframes autoSwim{
+            from{}
+            to{
+                background-position-y:-1386px;
+                /*background-position-y:-882px;*/
+            }
+        }
+        /* 使用动画 */
+        .autoSwim{
+            /*animation: autoSwim 1s steps(11) infinite;*/
+            -webkit-animation: autoSwim  .5s steps(11) infinite;
+                    animation: autoSwim  .5s steps(11) infinite;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="fish autoSwim"></div>
+</body>
+</html>

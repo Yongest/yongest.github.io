@@ -1,0 +1,88 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: skyblue;
+        }
+        ul{
+            list-style: none;
+            padding: 0;
+            width: 450px;
+            height: 450px;
+            margin:100px auto;
+        }
+        li{
+            width: 200px;
+            height: 200px;
+            float: left;
+            background-color: yellowgreen;
+            margin: 10px;
+            /* 过渡属性 */
+            -webkit-transition: all 1s;
+            transition: all 1s;
+            border: 1px solid #000;
+        }
+        /* 第一个li标签 hover的 时候  移动
+            x →
+            y ↓
+         */
+        li:first-child:hover{
+            /*transform: translate(100px,500px);*/
+            /* 只想设置 某一个轴 */
+            /*
+                    translate(x,y)
+                    translateX(x)
+                    translateY(y);
+            */
+            -webkit-transform: translateY(-100px);
+                    transform: translateY(-100px);
+        }
+        /* 第二个li标签 鼠标hover 的时候 旋转  360度 */
+        li:nth-child(2):hover{
+            /* rotate(xxxdeg)旋转 */
+            -webkit-transform:rotate(-360deg);
+                    transform:rotate(-360deg);
+        }
+        /* 第三个li标签 hover的时候 缩放
+            设置的是 缩放的比例  不变 1
+            变小 小数即可 0.5
+         */
+        li:nth-child(3):hover{
+            /*transform:scale(0.5,1);*/
+            /* scale(x,y) x跟y都缩放
+                scaleX(x)只缩放x
+                scaleY(y)只缩放y
+             */
+            
+            -webkit-transform:scale(.5,0.5);
+            
+                    transform:scale(.5,0.5);
+        }
+        /*第四个li标签 hover x方向扭曲  设置的也是角度 */
+        li:last-child:hover{
+            /* skew(x,y)x跟y扭曲
+                skwyX(x)x方向扭曲
+                skewY(y)y方向扭曲
+             */
+            -webkit-transform: skewX(-45deg);
+                    transform: skewX(-45deg);
+        }
+    </style>
+</head>
+<body>
+    <!-- 移动 旋转 扭曲 缩放 -->
+    <ul>
+        <li></li>
+        <li>
+            (づ￣ 3￣)づ
+        </li>
+        <li></li>
+        <li></li>
+    </ul>
+</body>
+</html>
