@@ -51,7 +51,7 @@
 
 
             //链式编程的写法. 向前找之前的一个对象   只能向前找之前一个对象
-            $(this).text(wjx_s).prevAll().text(wjx_k).end().nextAll().text(wjx_k)
+            $(this).text(wjx_s).prevAll().text(wjx_s).end().nextAll().text(wjx_k)
         })
             // 2. 鼠标离开ul的时候,所有的li标签都要变成空心
         $('.comment').on('mouseleave',function(){
