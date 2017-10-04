@@ -62,7 +62,7 @@
         $('.comment li').on('click',function(){
             //   $(this).text(wjx_s).prevAll().text(wjx_s);
                 // 给当前单击的li标签添加一个标记
-            $(this).addClass('aa').siblings().removeClass('aa')
+            $(this).addClass('aa').siblings().removeClass('aa').end().prevAll().addClass("aa")
         })
     })
 </script>
