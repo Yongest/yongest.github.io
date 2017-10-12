@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Yongest's Demo</title>
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<base target="_blank" >
+    <style>
+        ul,
+        ol,
+        h1,
+        h2,h6,body {
+            margin: 0;
+            padding: 0;
+        }
+        @media screen and (max-width:800px) {
+            body {
+                background-color: #222;
+            }
+            h1 {
+                font-size: 20px;
+                margin-bottom: 10px;
+				color:white;
+				opacity:.8;
+            }
+			.comment {
+				display:none;
+				color:white;
+			}
+			body {
+			padding-left:5px}
+        }
+        @media screen and (min-width:800px) {
+            body {
+                background-color: #222;
+                padding:0 200px 0 200px;
+            }
+            h1 {
+                font-size: 30px;
+                margin-bottom: 50px;
+                margin-top: 50px;
+				color:white;
+				opacity:.8;
+            }
+        }  
+        .box {
+            margin: 0 auto;
+            padding: 0 50px 0 50px;
+        }
+        
+        h1 {
+            text-align: center;
+             /*text-shadow: -1px -1px 5px ;*/
+        }
+        
+        li {
+            margin-bottom: 2px;
+            font-size: 20px;
+            font-family: '隶书';
+            /*font-weight: bold;*/
+            /*text-shadow: -1px -1px  ;*/
+        }
+        
+        a {
+            color: #fff;
+			opacity:.8;
+            text-decoration: none;
+        }
+        .comment {
+            /*width: 20px;*/
+            position: fixed;
+            right: 20px;
+            bottom: 20px;
+        }
+        .comment h6 {
+            font-size: 12px;
+            /*font-family: '隶书';*/
+        }
+		li:hover  a{
+			color:#ee3985;
+			  -webkit-transition: all .4s ease-in-out;
+				transition: all .4s ease-in-out;
+		}
+		h1:hover,.comment:hover,li:hover {
+		color:#ee3985;
+			  -webkit-transition: all .4s ease-in-out;
+				transition: all .4s ease-in-out;
+		}
+		}
+		a {
+		/*文字省略*/
+			position:absolute;
+			-o-text-overflow: ellipsis;/*兼容opera*/
+			text-overflow: ellipsis;/*这就是省略号喽*/		  
+			overflow: hidden;/*设置超过的隐藏*/
+			white-space: nowrap;/*设置不折行*/
+			width:260px;/*设置宽度*/
+			}
+			ol {
+				color:white;
+			}
+			
+			h1:hover {
+				 transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transition: all 1s;
+    -webkit-transition: all 1s;
+    -moz-transition: all 1s;
+    -ms-transition: all 1s;
+    -o-transition: all 1s;
+			
+			}
+			.comment {
+				color:white;
+				opacity:.8;
+			}
+			.comment:hover {
+			 transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+    -moz-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    -o-transform: scale(1.1);}
+		
+		.w {
+		display: inline-block;;
+    height:40px;
+	line-height:40px;
+    width:30px;
+    background:pink;
+    border-radius:50%;
+		}
+		 /* 使用动画 让鱼 动起来 */
+        /* 定义动画 */
+       
+    @keyframes autoTurn{
+            from{}
+            to{
+                transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    
+            }
+        }
+
+          /* 使用动画 */
+           .autoTurn{
+                    animation: autoTurn  6s steps(36) infinite;
+                    -webkit-animation: autoTurn  6s steps(36) infinite;
+}
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <h1><span class="w autoTurn">W</span>elcome to <span class="w autoTurn">Y</span>ongest's <span class="w autoTurn">W</span>orld!</h1>
+        <ol>
+			<li><a href="./lib/mmbuy/index.html">mmbuy项目(请在移动端看)</a></li>
+			<li><a href="./lib/search/">查询系统</a></li>
+			<li><a href="./lib/dist/index.html">vue项目(请在移动端看)</a></li>
+            <li><a href="./lib/carrousel/index.html">原生--旋转木马案列</a></li>
+			<li><a href="./lib/bigglass.html">原生--放大镜案列</a></li>
+			<li><a href="./lib/3d/index.html">css3--3D旋转</a></li>
+			<li><a href="./lib/fish/index.html">css3--游动的小鱼</a></li>
+			<li><a href="./lib/3d.html">css3--3d跑马灯</a></li>
+			<li><a href="./lib/heart.html">css3--骚动的心</a></li>
+			<li><a href="./lib/picture1.html">css3--3d相册1</a></li>
+			<li><a href="./lib/picture2.html">css3--3d相册2</a></li>
+			<li><a href="./lib/poke.html">css3--旋转的扑克</a></li>
+			<li><a href="./lib/3dbox.html">css3--3d小盒子</a></li>
+			<li><a href="./lib/3dchange.html">css3--3dchange</a></li>
+			<li><a href="./lib/door/index.html">css3--开门效果</a></li>
+			<li><a href="./lib/picturechange.html">css3--图片改变效果图</a></li>
+			<li><a href="./lib/多款炫酷鼠标悬停图文动画效果/index.html">css3--多款炫酷鼠标悬停图文动画效果</a></li>
+			<li><a href="./lib/适合图片列表排列(文字说明较多)的CSS3动画效果/index.html">css3--适合图片列表排列(文字说明较多)的CSS3动画效果</a></li>
+			<li><a href="./lib/基础效果/index.html">css3--图片旋转</a></li>
+			<li><a href="./lib/基础效果/2D转换-应用-阴影特效.html">css3--2D转换-应用-阴影特效</a></li>
+			<li><a href="./lib/css3review/01.小鲜肉.html">css3--01.小鲜肉</a></li>
+			<li><a href="./lib/css3review/2.背景图的新用法.html">css3--2.背景图的新用法</a></li>
+			<li><a href="./lib/css3review/3.图片相框.html">css3--3.图片相框</a></li>
+			<li><a href="./lib/css3review/4.图片相框韶光.html">css3--4.图片相框扫光</a></li>
+			<li><a href="./lib/css3review/5.2d变换.html">css3--5.2d变换</a></li>
+			<li><a href="./lib/css3review/6.渐变.html">css3--6.渐变</a></li>
+			<li><a href="./lib/css3review/7.渐变.html">css3--7.渐变</a></li>
+			<li><a href="./lib/css3review/8.过度步骤.html">css3--8.过度步骤</a></li>
+			<li><a href="./lib/css3review/9.过度属性.html">css3--9.过度属性</a></li>
+			<li><a href="./lib/css3review/11.游鱼深海.html">css3--11.游鱼深海</a></li>
+			<li><a href="./lib/map/index3.html">html5--百度地图的使用</a></li>
+			<li><a href="./lib/people.html">canvas--小人(控制方向键)</a></li>
+			<li><a href="./lib/picture.html">canvas--饼图</a></li>
+			<li><a href="./lib/swipe360.html">swipe360</a></li>
+			<li><a href="./lib/cloud/index.html">jquery--跟斗云</a></li>
+			<li><a href="./lib/fixnav/index.html">jquery--固定导航栏</a></li>
+			<li><a href="./lib/changetab/index.html">jquery--tab栏切换</a></li>
+			<li><a href="./lib/turnlunbo/index2.html">jquery--京东轮播</a></li>
+			<li><a href="./lib/turnlunbo/index1.html">jquery--优酷轮播</a></li>
+			<li><a href="./lib/changeindex/index.html">jquery--呼吸灯</a></li>
+			<li><a href="./lib/1.获取自定义属性的标签.html">jquery--获取自定义属性</a></li>
+			<li><a href="./lib/2.五星评分.html">jquery--五星评分</a></li>
+			<li><a href="./lib/3.多库共存.html">jquery--多库共存</a></li>
+			<li><a href="./lib/5.选课案列.html">jquery--选课案列</a></li>
+			<li><a href="./lib/6.each()方法.html">jquery--each()方法1</a></li>
+			<li><a href="./lib/7.each()方法.html">jquery--each()方法2</a></li>
+			<li><a href="./lib/8.事件中的几个坐标.html">jquery--事件中的几个坐标</a></li>
+			<li><a href="./lib/9.事件中的几个属性.html">jquery--事件中的几个属性</a></li>
+			<li><a href="./lib/10.阻止默认行为.html">jquery--阻止默认行为</a></li>
+			<li><a href="./lib/11.阻止冒泡.html">jquery--阻止冒泡</a></li>
+			<li><a href="./lib/12.微博发布.html">jquery--微博发布(localStorage)</a></li>
+			<li><a href="./lib/13.jd动图.html">jquery--jd动图</a></li>
+			<li><a href="./lib/14.突出显示.html">jquery--突出显示</a></li>
+			<li><a href="./lib/15.淘宝精品案列.html">jquery--淘宝精品案列</a></li>
+			<li><a href="./lib/16.手风琴.html">jquery--手风琴</a></li>
+			<li><a href="./lib/17.下拉菜单.html">jquery--下拉菜单</a></li>
+            <li><a href="javascript:void(0)">更多精彩拼命更新中...</a></li>
+        </ol>
+    </div>
+    <div class="comment"><h6>如有问题,欢迎发邮件至:hnzhyong@163.com</h6><br/><h6>您的建议,就是我们宝贵的财富.</h6></div>
+</body>
+<script>
+
+</script>
+</html>
