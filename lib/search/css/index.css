@@ -1,0 +1,275 @@
+/*created by zhangyong on 2017-10-10*/
+@charset "UTF-8";
+body {
+    min-width: 1250px;
+}
+#header {
+    background: #ebeff2;
+    width: 100%;
+    height: 106px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    line-height: 106px;
+    border-bottom: 1px solid #b7b2ca;
+}
+.logo {
+    display: inline-block;
+    height: 75px;
+    width: 316px;
+    margin: 15px;
+    overflow: hidden;
+}
+img {
+    border: 0;
+    vertical-align: middle;
+    display: block;
+}
+.content {
+    position: relative;
+    width: 100%;
+    margin: 0 auto;
+    overflow: hidden;}
+a:visited {
+    color: #333333;
+    text-decoration: none;
+}
+.login_btn {
+    display: inline-block;
+    margin-right: 30px;
+    border: 1px solid #0f0436;
+    background: #50427f;
+    height: 29px;
+    line-height: 29px;
+    width: 92px;
+    text-align: center;
+    font-weight: 200;
+    font-size: 14px;
+    color: #fff;
+}
+.login_btn:hover {
+    text-decoration: underline;
+}
+a {
+    outline: none;
+    color: #333333;
+    text-decoration: none;
+    cursor: pointer;
+    font-weight: normal;
+}
+.content {
+    position: relative;
+    width: 100%;
+    margin: 0 auto;
+    overflow: hidden;
+}
+.aside {
+    float: left;
+    width: 20%;
+    border: 1px solid #e0e0e0;
+}
+.aside_title {
+    height: 33px;
+    line-height: 33px;
+    width: 100%;
+    background: #665c91;
+    font-size: 14px;
+    text-align: center;
+    color: #fff;
+}
+.aside_form {
+    padding: 5px 15px 15px 0;
+}
+.aside_form_td {
+    margin: 13px 0 0 0;
+    height: 30px;
+    width: 100%;
+}
+.aside_form_title {
+    float: left;
+    text-align: right;
+    width: 55px;
+    padding: 0 5px 0 0;
+    height: 30px;
+    line-height: 30px;
+    font-size: 14px;
+}
+.input_bg {
+    float: left;
+    height: 30px;
+    width: 160px;
+    font-size: 14px;
+    line-height: 30px;
+    background: url(../images/input_bg.png) no-repeat;
+    border: none;
+}
+.main {
+    width: 78%;
+    overflow: hidden;
+}
+.result_box {
+    width: 100%;
+    border: 1px solid #e0e0e0;
+    margin-bottom: 20px;
+}
+.result_title {
+    height: 33px;
+    text-align: center;
+    font-size: 14px;
+    color: #665c91;
+    background: #f4f4f4;
+    line-height: 33px;
+}
+.result_box_table {
+    width: 100%;
+    height: 235px;
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+.result_table {
+    width: 100%;
+    border-spacing: 0;
+    border-collapse: collapse;
+    border: none;
+    text-align: center;
+}
+.result_table th {
+    padding: 10px 0;
+    background: #e2e0e8;
+    border-top: 1px solid #c2bfd1;
+    border-bottom: 1px solid #c2bfd1;
+    font-weight: normal;
+    color: #665c91;
+}
+.result_table th div {
+    height: 12px;
+    width: 100%;
+}
+.form_bottom {
+    text-align: center;
+    padding: 5px 0 15px;
+}
+.auto_btn {
+    border: 1px solid #0f0436;
+    background: #50427f;
+    padding: 0 20px;
+    font-size: 12px;
+    height: 23px;
+    color: #fff;
+}.result_box {
+     width: 100%;
+     border: 1px solid #e0e0e0;
+     margin-bottom: 20px;
+ }
+.marking {
+    display: none;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 20;
+    height: 100%;
+    width: 100%;
+    background: rgba(0,0,0,0.75);
+}
+.dialog {
+    position: fixed;
+    top: 30%;
+    left: 50%;
+    margin-left: -200px;
+    z-index: 21;
+    background: #fff;
+    min-width: 150px;
+}
+.dialog_top {
+    position: relative;
+    width: 100%;
+    height: 22px;
+    padding: 10px;
+}
+.dialog_close {
+    position: absolute;
+    right: 32px;
+    top: 10px;
+    height: 22px;
+    width: 22px;
+    background: url(../images/dialog_close.png) no-repeat;
+}
+.dialog_login_form {
+    width: 400px;
+    height: 280px;
+    color: #50427f;
+    overflow: hidden;
+}
+.dialog_table_name {
+    height: 35px;
+    line-height: 35px;
+    overflow: hidden;
+}
+.dialog_login_table {
+    margin: 0 30px 45px;
+    overflow: hidden;
+    border-spacing: 0;
+    border-collapse: collapse;
+}
+.dialog_login_table .dialog_login_table_title {
+    width: 90px;
+    padding-right: 5px;
+    text-align: right;
+}
+.dialog_login_table td, .dialog_login_table th {
+    padding: 15px 0 0;
+    line-height: 30px;
+}
+.form_bottom {
+    text-align: center;
+    padding: 5px 0 15px;
+}
+.auto_btn {
+    border: 1px solid #0f0436;
+    background: #50427f;
+    padding: 0 20px;
+    font-size: 12px;
+    height: 23px;
+    color: #fff;
+}
+.mr25 {
+    margin-right: 25px;
+}
+.dialog_table_name {
+    height: 35px;
+    line-height: 35px;
+    overflow: hidden;
+    text-align: center;
+}
+tbody a:hover {
+    color: red;
+    text-decoration: underline;
+}
+.result_table td {
+    padding: 14px 0;
+    color: #131313;
+    font-family: Arial;
+    border-bottom: 1px solid #e5e5e5;
+}
+#view_pic .dialog {
+   top:20px;
+    margin-left: -350px;
+    
+}
+.dialog_success {
+    width: 83px;
+    height: 78px;
+    background: url(../images/right.png) no-repeat center center;
+    margin: 45px auto 30px;
+}
+.dialog_tips_txt {
+    font-family: \5FAE\8F6F\96C5\9ED1;
+    font-size: 30px;
+    text-align: center;
+    font-weight: 500;
+}
+.dialog_fail {
+    width: 86px;
+    height: 87px;
+    background: url(../images/wrong.png) no-repeat center center;
+    margin: 45px auto 40px;
+}

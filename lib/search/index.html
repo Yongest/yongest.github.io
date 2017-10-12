@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="Keywords" content="汽车水箱、汽车散热器、散热器、水箱、汽车配件" />
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="css/base.css">
+    <link rel="stylesheet" type="text/css" href="css/index.css">
+</head>
+<body>
+<div id="header">
+    <div class="content clearfix">
+        <a href="javascript:;" class="logo fl">
+            <img src="images/logo.png" class="middle"/>
+        </a>
+        <div class="logo_right fr">
+            <a href="javascript:;" class="login_btn" id="login" style="color:#FFF;">Login</a>
+            <a href="javascript:void(0)" target="_blank" class="login_btn" style="color:#FFF;">Registered</a>
+        </div>
+    </div>
+</div>
+<!--created by zhangyong on 2017-10-10-->
+<div class="content clearfix">
+    <div class="aside fl">
+        <h3 class="aside_title">Query conditions</h3>
+        <form action="" method="post">
+            <ul class="aside_form">
+                <li class="aside_form_td">
+                    <span class="aside_form_title">Brand：</span>
+                    <div class="input_bg rel">
+                        <select name="kw_cate" class="auto" id="kw_cate" style="width:160px;height:28px;border:none;background-color:#E9E9E9;" ><option value=""></option></select>
+                    </div>
+                </li>
+                <li class="aside_form_td">
+                    <span class="aside_form_title">Models：</span>
+                    <div class="input_bg rel">
+                        <select id="kw_type"  name="kw_type" style="width:160px;height:28px;border:none;background-color:#E9E9E9;"  >
+
+                            <option value="" selected="selected"></option>
+
+
+                        </select>
+                    </div>
+                </li>
+                <li class="aside_form_td">
+                    <span class="aside_form_title">No.：</span>
+                    <input name="kw_faret" id="cleartext" type="text" class="input_bg" value="" />
+                </li>
+                <li class="aside_form_td">
+                    <span class="aside_form_title">OEM：</span>
+                    <input id="kw_oem" name="kw_oem" type="text" class="input_bg" value=""  />
+                </li>
+                <li class="aside_form_td">
+                    <span class="aside_form_title">NISSENS：</span>
+                    <input id="kw_nissens" name="kw_nissens" type="text" class="input_bg" value=""/>
+                </li>
+
+            </ul>
+            <div class="form_bottom">
+                <input id="search" type="submit" name="submit" class="auto_btn mr25" value="Search">
+                <input type="reset" class="auto_btn" value="Reset">
+            </div>
+            <!--表单提交-->
+        </form>
+        <div class="clear"></div>
+    </div>
+    <!-- end Of aside-->
+
+    <div class="main fr">
+        <div class="result_box">
+            <h3 class="result_title">Search results</h3>
+            <div class="result_box_table">
+                <table class="result_table" >
+                    <tbody id="result_1">
+                    <tr class="title">
+                        <th width="5%"><div></div></th>
+                        <th width="8%"><div>FARET.NO.</div></th>
+                        <th width="10%"><div>CORE SIZE</div></th>
+                        <th width="10%"><div>NISSENS</div></th>
+                        <th width="18%"><div>OEM</div></th>
+                        <th width="7%"><div>BRAND </div></th>
+                        <th width="7%"><div>AT/MT</div></th>
+                        <th width="17%"><div>CAR TYPE</div></th>
+                        <th width="10%"><div>YAER </div></th>
+                        <th width="8%"><div>IMAGE</div></th>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="form_bottom">
+                <input type="button" class="auto_btn" id="to_check" value="Add to Quotation" >
+            </div>
+        </div>
+
+        <div class="result_box">
+            <h3 class="result_title">Quotation</h3>
+            <div class="result_box_table">
+                <table class="result_table" >
+                    <tbody id="result_2">
+                    <tr class="title">
+                        <th width="5%"><div></div></th>
+                        <th width="8%"><div>FARET.NO.</div></th>
+                        <th width="10%"><div>CORE SIZE</div></th>
+                        <th width="10%"><div>NISSENS</div></th>
+                        <th width="18%"><div>OEM</div></th>
+                        <th width="7%"><div>BRAND </div></th>
+                        <th width="7%"><div>AT/MT</div></th>
+                        <th width="15%"><div>CAR TYPE</div></th>
+                        <th width="10%"><div>YAER </div></th>
+                        <th width="5%"><div>QUANTITY</div></th>
+                        <th width="5%"><div>IMAGE</div></th>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="form_bottom">
+                <input id="_delete" type="button" class="auto_btn mr25" value="Delete" >
+                <input id="_send" type="button" class="auto_btn" value="Send quotation">
+
+            </div>
+        </div>
+    </div>
+</div>
+<!--登陆-->
+<div class="marking" id="login_dialog">Quotation
+    <div class="dialog">
+        <div class="dialog_top">
+            <a href="javascript:;" class="dialog_close"></a>
+        </div>
+        <form action="" method="post">
+            <div class="dialog_login_form">
+                <h3 class="dialog_table_name">Please log in first</h3>
+                <table class="dialog_login_table">
+                    <tr>
+                        <th class="dialog_login_table_title">Account：</th>
+                        <td><input type="text" name="item[username]" class="input_bg" /> </td>
+                    </tr>
+                    <tr>
+                        <th class="dialog_login_table_title">Password：</th>
+                        <td><input type="password" name="item[userpass]" class="input_bg" /> </td>
+                    </tr>
+                </table>
+                <div class="form_bottom">
+                    <input type="submit" name="loginsubmit" class="auto_btn mr25" value="Login"/>
+                    <a href="#" style="display:inline-block;color:#FFF;line-height:20px;text-decoration:none;" target="_blank" class="auto_btn">Registered</a>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+<!--登陆 of End-->
+<!--View Picture-->
+<div class="marking" id="view_pic">
+    <div class="dialog">
+        <div class="dialog_top">
+            <a href="javascript:;" class="dialog_close"></a>
+        </div>
+        <img id="mypic" width="700" height="550" src="images/car.jpg" />
+    </div>
+</div>
+<!--View Picture of End-->
+<!--询价单发送成功-->
+<div class="marking" id="success">
+    <div class="dialog">
+        <div class="dialog_top">
+            <a href="javascript:;" class="dialog_close"></a>
+        </div>
+        <div class="dialog_login_form">
+            <p class="dialog_success"></p>
+            <p class="dialog_tips_txt">Inquiry email has been sent</p>
+        </div>
+    </div>
+</div>
+<!--询价单发送成功 of End-->
+<!--询价单发送失败-->
+<div class="marking" id="fail">
+    <div class="dialog">
+        <div class="dialog_top">
+            <a href="javascript:;" class="dialog_close"></a>
+        </div>
+        <div class="dialog_login_form">
+            <p class="dialog_fail"></p>
+            <p class="dialog_tips_txt">Inquiry single failure<br /><br />Please log in first</p>
+        </div>
+    </div>
+</div>
+<script src="js/jquery-1.12.2.min.js" type="text/javascript"></script>
+<script src="js/index.js" type="text/javascript"></script>
+</body>
+</html>
