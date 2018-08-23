@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <meta name="viewport"
+          content="width=device-width,initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-title" content="">
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta content="telephone=no" name="format-detection">
+    <meta name="Keywords" content="">
+    <meta name="Description" content="">
+    <!--移动web页面自动探测电话号码-->
+    <meta name="format-detection" content="telephone=no">
+    <meta http-equiv="x-rim-auto-match" content="none">
+    <title>加密解密算法</title>
+    <style>[v-cloak] {
+        display: none
+    }
+
+    * {
+        margin: 0
+    }
+    .txt {
+        word-break: break-all;
+    }
+    </style>
+</head>
+<body>
+
+</body>
+</html>
+<div id="app" v-cloak="">
+    <div class="txt">{{text}}</div>
+    <hr>
+    <br>
+    <button @click="copy(text)">复制</button>
+    <br>
+    <br>
+    <br>
+
+    <button @click="encode">加密</button>
+    <button @click="decode">解密</button>
+</div>
+
+<script src="https://cn.vuejs.org/js/vue.js"></script>
+
+<script>
+
+    new Vue({
+        el: '#app',
+        data: {
+            text: '加解密显示区域'
+        }
+        ,
+        methods: {
+            decode: function () {
+                var txt = prompt('请输入密文！');
+                if (txt) {
+                    this.text = decodeURIComponent(atob(txt))
+                }
+
+            },
+            encode: function () {
+                var txt = prompt('请输入明文！');
+                if (txt) {
+                    this.text = btoa(encodeURIComponent(txt))
+                }
+            },
+            copy:function (value) {
+                    const input = document.createElement('input');
+                    document.body.appendChild(input);
+                    input.setAttribute('value', value);
+                    input.select();
+                    if (document.execCommand('copy')) {
+                        document.execCommand('copy');
+                        console.log('复制成功');
+                    }
+                    document.body.removeChild(input);
+
+            }
+        }
+
+    })
+
+</script>
