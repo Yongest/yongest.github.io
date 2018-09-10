@@ -13,12 +13,12 @@
 </head>
 <body>
 <div id="app" v-clock>
-    <h4>若一个人每月定期存2500元，年利率15%，20年后会有多少钱呢？-----约400万</h4>
+    <h4>若一个人每月定期存2500元，年利率15%，20年后会有多少钱呢？-----约300万</h4>
     <label>每月存款（￥）：</label><input v-model='price'   type="number"/><br/>
     <label>利息（%）：</label><input v-model='rate'  type="number"/><br/>
     <label>坚持存多少年：</label><input v-model="year"  type="number"/><br/>
     <label>您将拥有的财富（￥）：<strong>{{allPrice()}}</strong></label>
-    <audio src="https://yongest.github.io/lib/3d/AdeleSomeoneLikeYou.mp3" autoplay='autoplay' >您的浏览器暂时不支持此功能,请升级浏览器吧!</audio>
+ 
 
 </div>
 
@@ -35,12 +35,14 @@
         },
         methods:{
             allPrice: function () {
-                console.log(this.year)
+                //console.log(this.year)
                 var price =0;
-                var rateAll = 0;
-                for (var i = 1; i <= this.year*12; i++) {
-                    rateAll += Math.pow((1+this.rate/1200), i)
-                }
+                //var rateAll = 0;
+                //for (var i = 1; i <= this.year*12; i++) {   //for循环js计算不准确，利用数学方法优化性能
+                    //rateAll += Math.pow((1+this.rate/1200), i)
+                //}
+				var rateAll=this.rate?((Math.pow(1+this.rate/1200,this.year*12+1)-1-this.rate/1200)*1200)/this.year:this.year*12;
+				console.log(rateAll)
                 price = parseInt(this.price*rateAll)
                return price
             }
