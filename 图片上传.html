@@ -1,0 +1,33 @@
+<html>
+<head><meta name="viewport" content="width=device-width,initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no"></head>
+<body>
+<input type='file'>
+<script src="http://m.ufxin.com/f/home/assets/js/jquery.min.js"></script>
+<script src="http://m.ufxin.com/f/home/assets/js/localResizeIMG.js"></script>
+
+-----canval画图-----
+<img src="http://www.w3school.com.cn/i/eg_tulip.jpg" alt="有料生活" title="" id="tulip">
+<p>画布</p>
+<canvas id="myCanvas" width="300" height="200" style="border:1px solid #d3d3d3;background:#ffffff;">
+    Your browser does not support the HTML5 canvas tag.
+</canvas>
+<script>
+   $('input:file').localResizeIMG({
+        width: 100,
+        quality: 0.1,
+        //before: function (that, blob) {},
+        success: function (result) {
+            var img = new Image();
+            img.src = result.base64;
+            $('body').append(img);
+            console.log(result);
+        }
+    });
+
+   var c=document.getElementById("myCanvas");
+   var ctx=c.getContext("2d");
+   var img=document.getElementById("tulip");
+   ctx.drawImage(img,0,0);
+</script>
+</body>
+</html>
