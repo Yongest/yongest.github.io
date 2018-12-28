@@ -1,0 +1,83 @@
+<script>
+    var arr = [{
+            endTime: "12:35",
+            mins: "90mins",
+            price: "$1200.0",
+            productName: "Face & Eye Duo",
+            staffName: "Nicole Wilson",
+            startTime: "11:00",
+            statusCode: "1",
+            therapistIndex: 0,
+            treatmentIndex: 0,
+        },
+        {
+            endTime: "12:35",
+            mins: "90mins",
+            price: "$1200.0",
+            productName: "Face & Eye Duo",
+            staffName: "Nicole Wi",
+            startTime: "11:00",
+            statusCode: "1",
+            therapistIndex: 1,
+            treatmentIndex: 0,
+        },
+        {
+            endTime: "12:50",
+            mins: "105mins",
+            price: "$1380.0",
+            productName: "Ultimate Face & Eyes Duo",
+            staffName: "Emma Kananari",
+            startTime: "11:00",
+            statusCode: "1",
+            therapistIndex: 0,
+            treatmentIndex: 1,
+        },
+        {
+            endTime: "12:50",
+            mins: "105mins",
+            price: "$1380.0",
+            productName: "Ultimate Face & Eyes Duo",
+            staffName: "Emma Kaanari",
+            startTime: "11:00",
+            statusCode: "1",
+            therapistIndex: 1,
+            treatmentIndex: 1,
+        }
+    ]
+
+    let newArr = [];    //生成的新数组
+    let indexArr = [];  //key 索引
+    
+    arr.forEach((v, i) => {
+        // 生成壳
+        let obj = {
+            endTime: v.endTime,
+            mins: v.mins,
+            price: v.price,
+            productName: v.productName,
+            startTime: v.startTime,
+            staff: [
+
+            ]
+        }
+         // 插入
+         let item = {
+            staffName: v.staffName,
+            therapistIndex: v.therapistIndex,
+            treatmentIndex: v.treatmentIndex,
+            statusCode: v.statusCode,
+        }
+        // 1.判断是否有key
+        if(indexArr.includes(v.treatmentIndex)){
+            // 找到存在key的索引
+            let index = indexArr.indexOf(v.treatmentIndex);
+            newArr[index].staff.push(item)
+        }else {
+            indexArr.push(v.treatmentIndex)
+            obj.staff.push(item)
+            newArr.push(obj)
+        }
+    })
+    
+   console.log(newArr)
+</script>
