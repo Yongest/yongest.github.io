@@ -1,71 +1,202 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<base target="_blank" >
+		<link rel="fluid-icon" href="https://github.com/fluidicon.png" title="GitHub">
+		<title>明一的前端之路</title>
 
-<head>
-    <meta charset="UTF-8">
-    <title>原生轮播</title>
-    <link rel="stylesheet" href="css/index.css">
-</head>
-<style>
-    .boxshare {
-       margin: 0 auto;
-       height: 25px;
-        width: 200px;
+		<style type="text/css">
+			* {
+				margin: 0;
+				padding: 0;
+			}
+
+			body {
+				background: #ffebcd57;
+			}
+
+			footer {
+				width: 100%;
+				position: fixed;
+				bottom: 0;
+				height: 50px;
+				background: #000000;
+			}
+
+			footer a {
+				color: #fff;
+				target: _black;
+			}
+
+			.m {
+				width: 1200px;
+				margin: 0 auto;
+			}
+			/* 导航部分 */
+    ul {
+      list-style: none;
     }
-</style>
 
-<body>
-    <div class="boxshare">
-        <div class="bdsharebuttonbox">
-            <a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a>
-            <a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
-            <a href="#" class="bds_tqq" data-cmd="tqq" title="分享到腾讯微博"></a>
-        </div>
-    </div>
-
-    <div id="box" class="all">
-        <div class="ad">
-            <ul id="imgs">
-                <li><img/></li>
-                <li><img/></li>
-                <li><img/></li>
-                <li><img/></li>
-                <li><img/></li>
-            </ul>
-            <ol id="ol"></ol>
-        </div>
-        <div id="arr"><span id="left">&lt;</span><span id="right">&gt;</span></div>
-    </div>
-    <div id="getmore">
-        <a href="ls.html">更多&gt;&gt;</a>
-    </div>
-    <div>
-        <a href="search.html" style="background:green;display:block;width:10px;height:10px;position:fixed;right:58px;top:120px"></a>
-    </div>
-	<div style="margin:0 auto;text-align:center;overflow:hidden">
-		<p><b>如果对你有帮助，打赏给作者。</b></p>
-       <img src="images/pay2.png" style="width:200px;height:300px;margin-top:58px;vertical-align:top" />
-	   <img src="images/pay1.jpg" style="width:200px;height:300px ;" />
-    </div>
+    .nav {
+      width: 800px;
+      height: 42px;
+      margin: 100px auto;
+      /*background-color: red;*/
+      background: #fff url(lib/cloud/images/rss.png) no-repeat right center;
+      border-radius: 10px;
+      position: relative;
+	  margin-bottom: 20px;;
+    }
+    .nav li {
+      width: 83px;
+      height: 42px;
+      /*background-color: red;*/
+      text-align: center;
+      line-height: 42px;
+      float: left;
+      cursor: pointer;
+    }
+    ul {
+      position: relative;
+    }
+    .nav span {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 83px;
+      height: 42px;
+      background: url(lib/cloud/images/cloud.gif) no-repeat;
+    }
+	.nav a {
+		display: block;
+		height: 100%;
+	}
 	
-<script src="js/yonger.js"></script>
-<script src="js/index.js"></script>
-<script>
-    window._bd_share_config = { "common": { "bdSnsKey": {}, "bdText": "welcome to yongest world,yongest.github.io", "bdMini": "1", "bdMiniList": false, "bdPic": "", "bdStyle": "2", "bdSize": "24" }, "share": {} }; with (document) 0[(getElementsByTagName('head')[0] || body).appendChild(createElement('script')).src = 'http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion=' + ~(-new Date() / 36e5)];
+	/* 小游戏部分 */
+	        .fish{
+            /* 有 12条鱼 总高度 1512  每一条的高度是 126 */
+            width: 174px;
+            height: 126px;
+            /*border: 1px solid #000;*/
+            background: url('lib/css3review/img/fish.png') no-repeat ;
+        }
+        /* 使用动画 让鱼 动起来 */
+        /* 定义动画 */
+        @-webkit-keyframes autoSwim{
+            from{}
+            to{
+                /*background-position-y:-1386px;*/
+                background-position-y:-882px;
+            }
+        }
+        @keyframes autoSwim{
+            from{}
+            to{
+                /*background-position-y:-1386px;*/
+                background-position-y:-882px;
+            }
+        }
+        /* 使用动画 */
+        .autoSwim{
+            /*animation: autoSwim 1s steps(11) infinite;*/
+            -webkit-animation: autoSwim  .5s steps(7) infinite;
+                    animation: autoSwim  .5s steps(7) infinite;
+        }
+         .fish{
+             -webkit-transition: all 1s linear;
+             transition: all 1s linear;
+         }
+       .box:hover .fish{
+			cursor: pointer;
+            -webkit-transform:translate(1200px) ;
+                    transform:translate(1200px);
+        }
+		.box {
+			width: 180px;
+		}
 
-</script>
-<script>
-var _hmt = _hmt || [];
-(function() {
-  var hm = document.createElement("script");
-  hm.src = "https://hm.baidu.com/hm.js?cb969f9a93bba2a2f90f94078ed527a6";
-  var s = document.getElementsByTagName("script")[0]; 
-  s.parentNode.insertBefore(hm, s);
-})();
-</script>
-</body>
+
+		</style>
+	</head>
+	<body>
+		<nav class="nav">
+			<span id="cloud"></span>
+			<ul id="navBar">
+				<li><a href="https://github.com/Yongest?tab=repositories">个人github</a></li>
+				<li><a href="lib/people.html">小游戏</a></li>
+				<li><a href="lib/3d/index.html">3D旋转</a></li>
+				<li><a href="lib/swipe360.html">swiper360</a></li>
+				<li><a href="lib/picture2.html">3D相册</a></li>
+				<li>......</li>
+				<li><a href="ls.html">更多demo</a></li>
+				
+				
+				
+			</ul>
+		</nav>
+		
+		<div class="m">
+			<div class="box">
+				<div class="fish autoSwim"></div>
+			</div>
+		</div>
 
 
+		<footer>
+			<div class="m">
+				<a href="https://www.likun666.com/">运维博客</a>
+			</div>
+		</footer>
+		 </style>
+  <script>
+    window.onload = function () {
+      // 思路
+      // 1. span有绝对定位，是相对于nav进行的绝对 定位，因此可以在盒子内部进行移动
+      // 2. 鼠标移入当前li标签的时候，就让筋斗云移动到当前的li标签的位置
+      // 3. 鼠标离开的时候，筋斗云要回到原来鼠标单击的位置，如果没有单击的话，要回到原来默认的位置
 
+      // 1. 获得要操作的对象
+      var cloud = document.getElementById("cloud");
+      var ul = document.getElementById("navBar");
+      var lis = ul.children;
+      var lastPosition = 0;
+      // 2. 给事件源注册事件
+      for (var i = 0; i < lis.length; i++) {
+        // 给li标签注册鼠标移入的事件，当鼠标移入当前li标签的时候，要获取当前li标签距离ul的左侧的位置
+        lis[i].onmouseover = function () {
+          var target = this.offsetLeft; //获取到的当前的li标签距离父元素ul的左侧的距离就是筋斗云要移动到的目标位置
+          animate(cloud, target);
+        }
+        lis[i].onclick = function () {
+          lastPosition = this.offsetLeft;
+        }
+        lis[i].onmouseout = function () {
+          //鼠标离开的时候，筋斗云要回到上次鼠标单击的位置
+          animate(cloud, lastPosition);
+        }
+      }
+      /**
+       * 封装了一个缓动的动画函数
+       * @param obj
+       * @param target
+       */
+      function animate(obj, target) {
+        clearInterval(obj.timerId);
+        obj.timerId = setInterval(function () {
+          var leader = obj.offsetLeft;
+          var step = (target - leader) / 10;  //63.15  0.9  0  1
+          step = step > 0 ? Math.ceil(step) : Math.floor(step);
+          leader = leader + step;
+          obj.style.left = leader + 'px';
+          if (leader == target) {
+            clearInterval(obj.timerId);
+          }
+        }, 15)
+      }
+    }
+  </script>
 
+	</body>
 </html>
