@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        #panorama {
+            width: 768px;
+            height:360px;
+            margin:0 auto;
+            margin-top: 50px;
+        }
+    </style>
+</head>
+<body>
+<div id="panorama">
+
+</div>
+<script src="three.js"></script>
+<script src="orbitcontrols.js"></script>
+
+<script>
+    // <!--https://juejin.im/post/5d57967a6fb9a06b017e4b62-->
+    
+    function init() {
+        const renderer = new THREE.WebGLRenderer();
+        renderer.setPixelRatio(window.devicePixelRatio);
+        renderer.setSize(window.innerWidth/2, window.innerHeight/2);
+        document.getElementById('panorama').appendChild(renderer.domElement);
+
+        const scene = new THREE.Scene();
+        const camera = new THREE.PerspectiveCamera(
+            90,
+            window.innerWidth / window.innerHeight,
+            0.1,
+            100
+        );
+        // camera.position.set(10, 0, 0);
+        camera.position.set(-0.3, 0, 0);
+
+        const controls = new THREE.OrbitControls(camera, renderer.domElement);
+        controls.addEventListener("change", render);
+        controls.minDistance = 1;
+        // controls.maxDistance = 200;
+        controls.maxDistance = 2;
+        controls.enablePan = false;
+
+        // const geometry = new THREE.SphereGeometry(1, 10, 10);
+        // const material = new THREE.MeshBasicMaterial({ color: 0xff0000 });
+        // const mesh = new THREE.Mesh(geometry, material);
+        const mesh = addImg("a.jpg", scene, 1);
+        scene.add(mesh);
+
+        controls.update();
+        controls.target.copy(mesh.position);
+
+        function render() {
+            renderer.render(scene, camera);
+        }
+
+        function r() {
+            render();
+            requestAnimationFrame(r)
+        }
+        scene.add(new THREE.AxisHelper(1000));
+        r()
+    }
+
+    function addImg(url, scene, n = 1) {
+        const texture = THREE.ImageUtils.loadTexture(url);
+        const material = new THREE.MeshBasicMaterial({ map: texture });
+        // const geometry = new THREE.SphereGeometry(1, 10, 10);
+        const geometry = new THREE.SphereGeometry(50, 256, 256);
+        const mesh = new THREE.Mesh(geometry, material);
+        material.side = THREE.DoubleSide;
+        scene.add(mesh);
+        return mesh;
+    }
+
+    init();
+
+
+</script>
+</body>
+</html>
