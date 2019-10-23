@@ -1,0 +1,2303 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>README</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<style type="text/css">
+/* GitHub stylesheet for MarkdownPad (http://markdownpad.com) */
+/* Author: Nicolas Hery - http://nicolashery.com */
+/* Version: b13fe65ca28d2e568c6ed5d7f06581183df8f2ff */
+/* Source: https://github.com/nicolahery/markdownpad-github */
+
+/* RESET
+=============================================================================*/
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+/* BODY
+=============================================================================*/
+
+body {
+  font-family: Helvetica, arial, freesans, clean, sans-serif;
+  font-size: 14px;
+  line-height: 1.6;
+  color: #333;
+  background-color: #fff;
+  padding: 20px;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+body>*:first-child {
+  margin-top: 0 !important;
+}
+
+body>*:last-child {
+  margin-bottom: 0 !important;
+}
+
+/* BLOCKS
+=============================================================================*/
+
+p, blockquote, ul, ol, dl, table, pre {
+  margin: 15px 0;
+}
+
+/* HEADERS
+=============================================================================*/
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 20px 0 10px;
+  padding: 0;
+  font-weight: bold;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1 tt, h1 code, h2 tt, h2 code, h3 tt, h3 code, h4 tt, h4 code, h5 tt, h5 code, h6 tt, h6 code {
+  font-size: inherit;
+}
+
+h1 {
+  font-size: 28px;
+  color: #000;
+}
+
+h2 {
+  font-size: 24px;
+  border-bottom: 1px solid #ccc;
+  color: #000;
+}
+
+h3 {
+  font-size: 18px;
+}
+
+h4 {
+  font-size: 16px;
+}
+
+h5 {
+  font-size: 14px;
+}
+
+h6 {
+  color: #777;
+  font-size: 14px;
+}
+
+body>h2:first-child, body>h1:first-child, body>h1:first-child+h2, body>h3:first-child, body>h4:first-child, body>h5:first-child, body>h6:first-child {
+  margin-top: 0;
+  padding-top: 0;
+}
+
+a:first-child h1, a:first-child h2, a:first-child h3, a:first-child h4, a:first-child h5, a:first-child h6 {
+  margin-top: 0;
+  padding-top: 0;
+}
+
+h1+p, h2+p, h3+p, h4+p, h5+p, h6+p {
+  margin-top: 10px;
+}
+
+/* LINKS
+=============================================================================*/
+
+a {
+  color: #4183C4;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* LISTS
+=============================================================================*/
+
+ul, ol {
+  padding-left: 30px;
+}
+
+ul li > :first-child, 
+ol li > :first-child, 
+ul li ul:first-of-type, 
+ol li ol:first-of-type, 
+ul li ol:first-of-type, 
+ol li ul:first-of-type {
+  margin-top: 0px;
+}
+
+ul ul, ul ol, ol ol, ol ul {
+  margin-bottom: 0;
+}
+
+dl {
+  padding: 0;
+}
+
+dl dt {
+  font-size: 14px;
+  font-weight: bold;
+  font-style: italic;
+  padding: 0;
+  margin: 15px 0 5px;
+}
+
+dl dt:first-child {
+  padding: 0;
+}
+
+dl dt>:first-child {
+  margin-top: 0px;
+}
+
+dl dt>:last-child {
+  margin-bottom: 0px;
+}
+
+dl dd {
+  margin: 0 0 15px;
+  padding: 0 15px;
+}
+
+dl dd>:first-child {
+  margin-top: 0px;
+}
+
+dl dd>:last-child {
+  margin-bottom: 0px;
+}
+
+/* CODE
+=============================================================================*/
+
+pre, code, tt {
+  font-size: 12px;
+  font-family: Consolas, "Liberation Mono", Courier, monospace;
+}
+
+code, tt {
+  margin: 0 0px;
+  padding: 0px 0px;
+  white-space: nowrap;
+  border: 1px solid #eaeaea;
+  background-color: #f8f8f8;
+  border-radius: 3px;
+}
+
+pre>code {
+  margin: 0;
+  padding: 0;
+  white-space: pre;
+  border: none;
+  background: transparent;
+}
+
+pre {
+  background-color: #f8f8f8;
+  border: 1px solid #ccc;
+  font-size: 13px;
+  line-height: 19px;
+  overflow: auto;
+  padding: 6px 10px;
+  border-radius: 3px;
+}
+
+pre code, pre tt {
+  background-color: transparent;
+  border: none;
+}
+
+kbd {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    background-color: #DDDDDD;
+    background-image: linear-gradient(#F1F1F1, #DDDDDD);
+    background-repeat: repeat-x;
+    border-color: #DDDDDD #CCCCCC #CCCCCC #DDDDDD;
+    border-image: none;
+    border-radius: 2px 2px 2px 2px;
+    border-style: solid;
+    border-width: 1px;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    line-height: 10px;
+    padding: 1px 4px;
+}
+
+/* QUOTES
+=============================================================================*/
+
+blockquote {
+  border-left: 4px solid #DDD;
+  padding: 0 15px;
+  color: #777;
+}
+
+blockquote>:first-child {
+  margin-top: 0px;
+}
+
+blockquote>:last-child {
+  margin-bottom: 0px;
+}
+
+/* HORIZONTAL RULES
+=============================================================================*/
+
+hr {
+  clear: both;
+  margin: 15px 0;
+  height: 0px;
+  overflow: hidden;
+  border: none;
+  background: transparent;
+  border-bottom: 4px solid #ddd;
+  padding: 0;
+}
+
+/* TABLES
+=============================================================================*/
+
+table th {
+  font-weight: bold;
+}
+
+table th, table td {
+  border: 1px solid #ccc;
+  padding: 6px 13px;
+}
+
+table tr {
+  border-top: 1px solid #ccc;
+  background-color: #fff;
+}
+
+table tr:nth-child(2n) {
+  background-color: #f8f8f8;
+}
+
+/* IMAGES
+=============================================================================*/
+
+img {
+  max-width: 100%
+}
+</style>
+<style type="text/css">
+.highlight  { background: #ffffff; }
+.highlight .c { color: #999988; font-style: italic } /* Comment */
+.highlight .err { color: #a61717; background-color: #e3d2d2 } /* Error */
+.highlight .k { font-weight: bold } /* Keyword */
+.highlight .o { font-weight: bold } /* Operator */
+.highlight .cm { color: #999988; font-style: italic } /* Comment.Multiline */
+.highlight .cp { color: #999999; font-weight: bold } /* Comment.Preproc */
+.highlight .c1 { color: #999988; font-style: italic } /* Comment.Single */
+.highlight .cs { color: #999999; font-weight: bold; font-style: italic } /* Comment.Special */
+.highlight .gd { color: #000000; background-color: #ffdddd } /* Generic.Deleted */
+.highlight .gd .x { color: #000000; background-color: #ffaaaa } /* Generic.Deleted.Specific */
+.highlight .ge { font-style: italic } /* Generic.Emph */
+.highlight .gr { color: #aa0000 } /* Generic.Error */
+.highlight .gh { color: #999999 } /* Generic.Heading */
+.highlight .gi { color: #000000; background-color: #ddffdd } /* Generic.Inserted */
+.highlight .gi .x { color: #000000; background-color: #aaffaa } /* Generic.Inserted.Specific */
+.highlight .go { color: #888888 } /* Generic.Output */
+.highlight .gp { color: #555555 } /* Generic.Prompt */
+.highlight .gs { font-weight: bold } /* Generic.Strong */
+.highlight .gu { color: #aaaaaa } /* Generic.Subheading */
+.highlight .gt { color: #aa0000 } /* Generic.Traceback */
+.highlight .kc { font-weight: bold } /* Keyword.Constant */
+.highlight .kd { font-weight: bold } /* Keyword.Declaration */
+.highlight .kp { font-weight: bold } /* Keyword.Pseudo */
+.highlight .kr { font-weight: bold } /* Keyword.Reserved */
+.highlight .kt { color: #445588; font-weight: bold } /* Keyword.Type */
+.highlight .m { color: #009999 } /* Literal.Number */
+.highlight .s { color: #d14 } /* Literal.String */
+.highlight .na { color: #008080 } /* Name.Attribute */
+.highlight .nb { color: #0086B3 } /* Name.Builtin */
+.highlight .nc { color: #445588; font-weight: bold } /* Name.Class */
+.highlight .no { color: #008080 } /* Name.Constant */
+.highlight .ni { color: #800080 } /* Name.Entity */
+.highlight .ne { color: #990000; font-weight: bold } /* Name.Exception */
+.highlight .nf { color: #990000; font-weight: bold } /* Name.Function */
+.highlight .nn { color: #555555 } /* Name.Namespace */
+.highlight .nt { color: #000080 } /* Name.Tag */
+.highlight .nv { color: #008080 } /* Name.Variable */
+.highlight .ow { font-weight: bold } /* Operator.Word */
+.highlight .w { color: #bbbbbb } /* Text.Whitespace */
+.highlight .mf { color: #009999 } /* Literal.Number.Float */
+.highlight .mh { color: #009999 } /* Literal.Number.Hex */
+.highlight .mi { color: #009999 } /* Literal.Number.Integer */
+.highlight .mo { color: #009999 } /* Literal.Number.Oct */
+.highlight .sb { color: #d14 } /* Literal.String.Backtick */
+.highlight .sc { color: #d14 } /* Literal.String.Char */
+.highlight .sd { color: #d14 } /* Literal.String.Doc */
+.highlight .s2 { color: #d14 } /* Literal.String.Double */
+.highlight .se { color: #d14 } /* Literal.String.Escape */
+.highlight .sh { color: #d14 } /* Literal.String.Heredoc */
+.highlight .si { color: #d14 } /* Literal.String.Interpol */
+.highlight .sx { color: #d14 } /* Literal.String.Other */
+.highlight .sr { color: #009926 } /* Literal.String.Regex */
+.highlight .s1 { color: #d14 } /* Literal.String.Single */
+.highlight .ss { color: #990073 } /* Literal.String.Symbol */
+.highlight .bp { color: #999999 } /* Name.Builtin.Pseudo */
+.highlight .vc { color: #008080 } /* Name.Variable.Class */
+.highlight .vg { color: #008080 } /* Name.Variable.Global */
+.highlight .vi { color: #008080 } /* Name.Variable.Instance */
+.highlight .il { color: #009999 } /* Literal.Number.Integer.Long */
+.pl-c {
+    color: #969896;
+}
+
+.pl-c1,.pl-mdh,.pl-mm,.pl-mp,.pl-mr,.pl-s1 .pl-v,.pl-s3,.pl-sc,.pl-sv {
+    color: #0086b3;
+}
+
+.pl-e,.pl-en {
+    color: #795da3;
+}
+
+.pl-s1 .pl-s2,.pl-smi,.pl-smp,.pl-stj,.pl-vo,.pl-vpf {
+    color: #333;
+}
+
+.pl-ent {
+    color: #63a35c;
+}
+
+.pl-k,.pl-s,.pl-st {
+    color: #a71d5d;
+}
+
+.pl-pds,.pl-s1,.pl-s1 .pl-pse .pl-s2,.pl-sr,.pl-sr .pl-cce,.pl-sr .pl-sra,.pl-sr .pl-sre,.pl-src,.pl-v {
+    color: #df5000;
+}
+
+.pl-id {
+    color: #b52a1d;
+}
+
+.pl-ii {
+    background-color: #b52a1d;
+    color: #f8f8f8;
+}
+
+.pl-sr .pl-cce {
+    color: #63a35c;
+    font-weight: bold;
+}
+
+.pl-ml {
+    color: #693a17;
+}
+
+.pl-mh,.pl-mh .pl-en,.pl-ms {
+    color: #1d3e81;
+    font-weight: bold;
+}
+
+.pl-mq {
+    color: #008080;
+}
+
+.pl-mi {
+    color: #333;
+    font-style: italic;
+}
+
+.pl-mb {
+    color: #333;
+    font-weight: bold;
+}
+
+.pl-md,.pl-mdhf {
+    background-color: #ffecec;
+    color: #bd2c00;
+}
+
+.pl-mdht,.pl-mi1 {
+    background-color: #eaffea;
+    color: #55a532;
+}
+
+.pl-mdr {
+    color: #795da3;
+    font-weight: bold;
+}
+
+.pl-mo {
+    color: #1d3e81;
+}
+.task-list {
+padding-left:10px;
+margin-bottom:0;
+}
+
+.task-list li {
+    margin-left: 20px;
+}
+
+.task-list-item {
+list-style-type:none;
+padding-left:10px;
+}
+
+.task-list-item label {
+font-weight:400;
+}
+
+.task-list-item.enabled label {
+cursor:pointer;
+}
+
+.task-list-item+.task-list-item {
+margin-top:3px;
+}
+
+.task-list-item-checkbox {
+display:inline-block;
+margin-left:-20px;
+margin-right:3px;
+vertical-align:1px;
+}
+</style>
+<style>body{background:#f5f5d5}</style>
+<script type="text/javascript">
+    function wrapOldContentByDiv() {
+        var oldContentDiv = document.createElement("div");
+        oldContentDiv.style.cssText = "float:right; width:72%; padding-left: 3%; padding-right:3%;border: 2px solid #CACACA;";
+        oldContentDiv.innerHTML = document.body.innerHTML;
+        document.body.style["max-width"] = "100%";
+        document.body.style["margin"] = "20px";
+        document.body.style["padding"] = "0";
+        document.body.innerHTML = '';
+        document.body.appendChild(oldContentDiv);
+    };
+
+    function addDirectorySwitch(directoryDiv) {
+        var directorySwitchP = document.createElement("p");
+        directorySwitchP.style.cssText = "text-align: left; margin: 0;";
+        directoryDiv.appendChild(directorySwitchP);
+
+        var ele_span = document.createElement("span");
+        ele_span.style.cssText = "font-weight: 1000;";
+        var ele_text = document.createTextNode("目录");
+        ele_span.appendChild(ele_text);
+
+        var ele_a = document.createElement("a");
+        ele_a.appendChild(document.createTextNode("[-]"));
+        ele_a.setAttribute("href", "#");
+        ele_a.setAttribute("onclick", "javascript:return switchAllDirectory(this);");
+        ele_a.setAttribute("title", "Click to Open TOC");
+
+        ele_span.appendChild(ele_a);
+        directorySwitchP.appendChild(ele_span);
+    }
+
+    function createTree(parentNode, tags, index, maxLevel) {
+        if (index >= tags.length) {
+            return -1;
+        }
+
+        var lastLevel = -1;
+        for (var i = index; i < tags.length; i++) {
+            var header = tags[i];
+            var level = parseInt(header.tagName.substr(1), 10);
+
+            var childNode = {'tag': header, 'childNodes': [], 'level': level};
+            if (level > parentNode.level) {
+                if (lastLevel > 0 && level > lastLevel) {
+                    // 子子类
+                    index = createTree(parentNode.childNodes[parentNode.childNodes.length - 1], tags, i);
+                    if (index < 0) {
+                        return -1;
+                    } else {
+                        i = index - 1;
+                    }
+                } else {
+                    parentNode.childNodes.push(childNode);
+                    lastLevel = level;
+                }
+            } else if (level <= maxLevel && parentNode.level > maxLevel) {
+                parentNode.childNodes.push(childNode);
+                lastLevel = level;
+            } else {
+                return i;
+            }
+        }
+    }
+
+    function createAElement(tag, index) {
+        var a = document.createElement("a");
+        a.style.cssText = "";
+        a.setAttribute("href", "#" + tag.textContent);
+        a.innerHTML = index.toString() + tag.textContent;
+        return a;
+    }
+
+    function createOlElement() {
+        var ol_el = document.createElement("ol");
+        ol_el.style["line-height"] = "180%";
+        ol_el.style["list-style-type"] = "none";
+        ol_el.style["margin-left"] = "0";
+        return ol_el
+    }
+
+    function createEmptyLiElement() {
+        var emptyLiEle = document.createElement("li");
+        return emptyLiEle
+    }
+
+    function getIndex(parentDirectory, directoryLevel, index) {
+        if (directoryLevel === 0) {
+            return parentDirectory + (index + 1).toString() + "."
+        } else {
+            return parentDirectory + (index + 1).toString() + ".";
+        }
+    }
+
+    function createLeafElement(node, curDirectory) {
+        var liEle = createEmptyLiElement();
+        var aEle = createAElement(node.tag, curDirectory);
+        liEle.appendChild(aEle);
+        return liEle
+    }
+
+    function getArrowDownStyle() {
+        return " width: 0;" +
+            "    height: 0;" +
+            "    position: relative;" +
+            "    margin-right: 8px;" +
+            "    top: 3px;" +
+            "    display: inline-block;" +
+            "    border: 6px outset;" +
+            "    border-color: black transparent transparent transparent;"
+    }
+
+    function getArrowRightStyle() {
+        return " width: 0;" +
+            "    height: 0;" +
+            "    left: 5px;" +
+            "    position: relative;" +
+            "    margin-right: 8px;" +
+            "    display: inline-block;" +
+            "    border: 6px solid;" +
+            "    border-color: transparent transparent transparent black;"
+    }
+
+    /*
+    <ol>
+        <li><a>根节点1</a></li>
+        <li><a>根节点2</a></li>
+        <li>
+            <div>
+                <a><span>[-]</span>根节点3</a>
+                <ol>
+                    <li><a>子节点1</a></li>
+                    <li><a>子节点2</a></li>
+                    <li><a>子节点3</a></li>
+                </ol>
+            </div>
+        </li>
+        <li><a>根节点4</a></li>
+     </ol>
+    * */
+    // node, 1.2.3 4 0
+    function renderTree(node, parentDirectory, directoryLevel, index) {
+        var childNodes = node.childNodes;
+        var tagContent = node.tag.textContent;
+
+        node.tag.setAttribute("id", tagContent);
+
+        var curDirectory = getIndex(parentDirectory, directoryLevel, index);
+        var directoryName = curDirectory + "&nbsp;" + tagContent;
+
+        // 叶子节点
+        if (childNodes.length === 0) {
+            return "<li style='padding-left: 24px;'><a href='#" + tagContent + "'>" + directoryName + "</a></li>"
+    //                return createLeafElement(node, curDirectory)
+        }
+
+        // 非叶子节点
+        var childContent = "";
+        for (var j = 0; j < node.childNodes.length; j++) {
+            childContent += renderTree(node.childNodes[j], curDirectory, directoryLevel + 1, j);
+        }
+
+        return "<li>" +
+            "   <div>" +
+            "      <div>" +
+            "         <div id='" + directoryName + "' class='open' style='" + getArrowDownStyle() + "' onclick='return switchDirectory(this);'></div>" +
+            "         <a href='#" + tagContent + "' ondblclick='return switchByDbClick(this);'>" + directoryName + "</a>" +
+            "      </div>" +
+            "      <ol id='ol-" + directoryName + "' style='line-height: 180%;list-style-type: none; padding-left: 20px;'>" + childContent + "</ol>" +
+            "   </div>" +
+            "</li>";
+
+        /*var liEle = createEmptyLiElement();
+        var aEle = createAElement(node.tag, curDirectory);
+
+        var parentElement = document.createElement("div");
+        parentElement.appendChild(aEle);
+
+        var olElement = createOlElement();
+
+        var tempNode;
+        for (var j = 0; j < node.childNodes.length; j++) {
+            tempNode = node.childNodes[j];
+            var element = renderTree(tempNode, curDirectory, directoryLevel + 1, j);
+            olElement.appendChild(element);
+        }
+        parentElement.appendChild(olElement);
+
+        liEle.appendChild(parentElement);
+        return liEle;*/
+    }
+
+    function switchByDbClick(aEle) {
+        switchDirectory(aEle.parentElement().firstChild)
+    }
+
+    // 开关目录
+    function switchDirectory(ele) {
+        var divEle = ele.parentNode.parentNode;
+        var olEle = divEle.lastElementChild;
+        if (ele.className === "open") {
+            // 关闭
+            olEle.style.cssText = "display:none;line-height: 180%;list-style-type: none; padding-left: 20px";
+            ele.setAttribute("class", "close");
+            ele.style.cssText = getArrowRightStyle();
+        } else if (ele.className === "close") {
+            // 打开
+            olEle.style.cssText = "line-height: 180%;list-style-type: none; padding-left: 20px";
+            ele.setAttribute("class", "open");
+            ele.style.cssText = getArrowDownStyle();
+        }
+    }
+
+    function switchAllDirectory(e) {
+        var rootOlElement = document.getElementById("outline_ol");
+        var ols = rootOlElement.getElementsByTagName("ol");
+        var isOpen = false;
+
+        if (e.innerHTML === '[+]') {
+            e.setAttribute('title', 'collapse');
+            e.innerHTML = '[-]';
+            isOpen = true;
+        } else {
+            e.setAttribute('title', 'expand');
+            e.innerHTML = '[+]';
+        }
+
+
+        for (var i = 0; i < ols.length; i++) {
+            var olEle = ols[i];
+            if (isOpen) {
+                olEle.style.display = "block";
+                olEle.parentNode.firstElementChild.firstElementChild.style.cssText = getArrowDownStyle();
+            } else {
+                olEle.style.display = "none";
+                olEle.parentNode.firstElementChild.firstElementChild.style.cssText = getArrowRightStyle();
+            }
+        }
+
+        e.blur();
+        return false;
+    }
+
+    document.addEventListener("DOMContentLoaded", function () {
+        // 1, 将body内容提取到div标签中
+        wrapOldContentByDiv();
+
+        // 2, 创建左边目录列表Div
+        var directoryDiv = document.createElement("div");
+        directoryDiv.setAttribute("id", "outline-list");
+        directoryDiv.style.cssText = "width:20%;height:100%; float:left;font-size:16px,z-index:1;position: fixed;overflow: hidden;";
+
+        // 3, 目录展开折叠开关
+        addDirectorySwitch(directoryDiv);
+
+        // 4, 创建目录列表
+        var directoryOl = document.createElement("ol");
+        directoryOl.style.cssText = "padding-left:14px;line-height:180%;list-style-type:none;height: 85%;padding-bottom: 30px; overflow: auto;";
+        directoryOl.setAttribute("id", "outline_ol");
+        directoryDiv.appendChild(directoryOl);
+        var div1 = document.createElement("div");
+        div1.style.cssText = "clear:both";
+
+        // 插入目录
+        document.body.insertBefore(directoryDiv, document.body.childNodes[0]);
+
+        // 5, 获取所有的H标签
+        var hTags = document.querySelectorAll('h1,h2,h3,h4,h5,h6');
+        if (hTags.length < 2)
+            return;
+
+        var rootNode = {'tag': directoryOl, 'childNodes': [], 'level': 0};
+        var maxLevel = parseInt(hTags[0].tagName.substr(1), 10);
+        // 6, 创建树形结构
+        createTree(rootNode, hTags, 0, maxLevel);
+
+        // 7, 绘制树结构
+        var htmlContent = "";
+        for (var j = 0; j < rootNode.childNodes.length; j++) {
+    //                var element = renderTree(rootNode.childNodes[j], '', 1, j);
+    //                directoryOl.appendChild(element);
+
+            htmlContent += renderTree(rootNode.childNodes[j], '', 1, j);
+        }
+        directoryOl.innerHTML = htmlContent;
+    });
+</script>
+</head>
+<body>
+<h1 id="linux-">Linux 服务器</h1>
+<p>让防火墙 开发80端口<br>     firewall-cmd --zone-public --add-port=80/tcp --permanent<br><strong>Linux是操作系统：</strong></p>
+<h4 id="-https-www-iteye-com-blog-mark-ztw-1544367-"><a href="https://www.iteye.com/blog/mark-ztw-1544367">命令中英对照</a></h4>
+<p>Linux作为<a href="https://zh.wikipedia.org/wiki/自由软件">自由软件</a>和<a href="https://zh.wikipedia.org/wiki/开放源代码软件">开放源代码软件</a>发展中最著名的例子，背靠社区与商业化的使用，使其得到了广泛的应用与发展。</p>
+<p><strong>Linux无处不在：</strong></p>
+<p>世界上500个最快的超级计算机90％以上运行Linux发行版或变种，包括最快的前10名超级计算机运行的都是基于Linux内核的操作系统。Linux也广泛应用在嵌入式系统上，如手机（Mobile Phone）、平板电脑（Tablet）、路由器（Router）、电视（TV）和电子游戏机等。在移动设备上广泛使用的Android操作系统就是创建在Linux内核之上。</p>
+<p><strong>学习Linux迫在眉睫：</strong></p>
+<ul>
+<li>公司都在用</li><li>小伙伴们都会用</li><li>关键免费啊….</li></ul>
+<p><strong>本课程的主要目标：</strong></p>
+<ul>
+<li>了解Linux操作系统(版本、目录、安装等)</li><li>学会使用Linux常见的命令</li><li>搭建Nginx服务，给你的Web小站一个运行环境吧~~</li><li>介绍HTTP(s)及免费申请SSL证书</li><li>云服务器阿里云、华为云（介绍）、云数据库RDS介绍</li><li>什么是负载均衡？负载均衡有什么用？阿里云SLB介绍</li></ul>
+<p><strong>前置准备【下面的方式任选其一】：</strong></p>
+<ul>
+<li>使用虚拟化软件(本地安装)</li><li>购买云服务器</li></ul>
+<p>版本准备：linux操作系统(Centos 7.6)</p>
+<p>可选：准备一个域名</p>
+<h2 id="linux-">Linux简介</h2>
+<h3 id="-">版本介绍</h3>
+<p><img src="./assets/123-3.png" alt="Linux简版介绍"></p>
+<p>Fedora是基于RHEL，CentOS，Scientific Linux, 和Oracle Linux的社区版本。相比RHEL，Fedora打包了显著的更多的软件包。其中一个原因是，多样化的社区参与Fedora的建设，它不只是一家公司。在这个过程中，CentOS用于活动，演示和实验，因为它是对最终用户免费提供的，并具有比Fedora的一个更长的发布周期(通常每隔半年左右发布一个新版本)。</p>
+<p>Debian是包括Ubuntu在内许多发行版的上游，而Ubuntu又是Linux Mint及其他发行版的上游。Debian在服务器和桌面电脑领域都有着广泛的应用。Debian是一个纯开源计划并着重在一个关键点上，稳定性。它同时也提供了最大的和完整的软件仓库给用户。</p>
+<p>Linux的发行版本可以大体分为两类，一类是商业公司维护的发行版本，如：著名的Redhat(RHEL)，一类是社区组织维护的发行版本，如：Debian。下面介绍一下各个发行版本的特点：</p>
+<h4 id="centos-redhat-">Centos(Redhat)</h4>
+<p>Redhat，应该称为Redhat系列，包括RHEL(Redhat Enterprise Linux，也就是所谓的Redhat Advance Server，收费版本)、Fedora Core(由原来的Redhat桌面版本发展而来，免费版本)、CentOS(RHEL的社区克隆版本，免费)。</p>
+<p>包管理方式：采用的是基于<code>rpm</code>包的<code>yum</code>包管理方式。</p>
+<h4 id="debian">Debian</h4>
+<p>Debian是社区类Linux的典范，是迄今为止最遵循GNU规范 的Linux系统。Debian最早由Ian Murdock于1993年创建，分为三个版本分支(branch)： <code>stable</code>, <code>testing</code> 和 <code>unstable</code>。其中，<code>unstable</code>为最新的测试版本，其中包括最新的软件包，但是也有相对较多的bug，适合桌面用户。<code>testing</code>的版本都经 过<code>unstable</code>中的测试，相对较为稳定，也支持了不少新技术(比如SMP等)。而<code>stable</code>一般只用于服务器，上面的软件包大部分都比较过时，但是稳定和安全性都非常的高。</p>
+<p>包管理方式：采用的是基于是<code>apt-get</code>、<code>dpkg</code>包管理方式。</p>
+<h4 id="ubuntu">Ubuntu</h4>
+<p>Ubuntu严格来说不能算一个独立的发行版本，Ubuntu是基于Debian的<code>unstable</code>版本加强而来，可以这么说，Ubuntu就是 一个拥有Debian所有的优点，以及自己所加强的优点的近乎完美的 Linux桌面系统。根据选择的桌面系统不同，有三个版本可供选择，基于<code>Gnome</code>的Ubuntu，基于<code>KDE</code>的Kubuntu以及基于<code>Xfc</code>的 Xubuntu。特点是界面非常友好，容易上手，对硬件的支持非常全面，是最适合做桌面系统的Linux发行版本。</p>
+<p>包管理方式：采用的是基于是<code>apt-get</code>、<code>dpkg</code>包管理方式。</p>
+<p>总结对比一下：</p>
+<table>
+<thead>
+<tr>
+<th>分类</th>
+<th>Centos</th>
+<th>Debian</th>
+<th>Ubuntu</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>包管理</td>
+<td>yum</td>
+<td>apt-get</td>
+<td>apt-get</td>
+</tr>
+<tr>
+<td>桌面应用</td>
+<td>支持</td>
+<td>需要另装</td>
+<td>支持</td>
+</tr>
+<tr>
+<td>系统资源占用</td>
+<td>小</td>
+<td>非常小</td>
+<td>大</td>
+</tr>
+<tr>
+<td>资料</td>
+<td>最多</td>
+<td>依赖社区</td>
+<td>多</td>
+</tr>
+<tr>
+<td>更新频次</td>
+<td>长达10年</td>
+<td>1-2年</td>
+<td>3-5年</td>
+</tr>
+<tr>
+<td>软件资源</td>
+<td>较新</td>
+<td>最新</td>
+<td>新</td>
+</tr>
+<tr>
+<td>漏洞更新</td>
+<td>慢</td>
+<td>依赖社区</td>
+<td>依赖社区</td>
+</tr>
+<tr>
+<td>默认安装</td>
+<td>非常全</td>
+<td>无</td>
+<td>非常全</td>
+</tr>
+<tr>
+<td>稳定性</td>
+<td>较稳定</td>
+<td>稳定</td>
+<td>相对稳定</td>
+</tr>
+<tr>
+<td>系统操作要求</td>
+<td>较高</td>
+<td>高</td>
+<td>低</td>
+</tr>
+<tr>
+<td>维护要求</td>
+<td>低</td>
+<td>高</td>
+<td>较高</td>
+</tr>
+<tr>
+<td>易用性</td>
+<td>一般</td>
+<td>差</td>
+<td>较好</td>
+</tr>
+<tr>
+<td>定制化</td>
+<td>一般</td>
+<td>高</td>
+<td>差</td>
+</tr>
+</tbody>
+</table>
+<p>CentOS是RHEL发行版对应的开源版本，通常在RedHat的发布后就会很快发行。它既稳定，占用资源又少，在网络上能方便搜索到安装配置的文档，自身的帮助文档也非常强大。所以，新人学习推荐：<strong>Centos</strong></p>
+<blockquote>
+<p>本课程，后续的操作与演示，将会使用Centos 7.6 64-bit版本进行演示</p>
+</blockquote>
+<p>参考资料：<a href="https://upload.wikimedia.org/wikipedia/commons/1/1b/Linux_Distribution_Timeline.svg">Linux发行版及年份</a></p>
+<h3 id="-">应用场景</h3>
+<h4 id="linux-vs-windows">Linux vs Windows</h4>
+<p>下面我们Linux与Windows作一个对比：</p>
+<p>这里Linux是免费的版本，如Centos, Ubuntu，而Windows则是Windows10/8/7</p>
+<table>
+<thead>
+<tr>
+<th>分类</th>
+<th>Linux</th>
+<th>Windows</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>费用</td>
+<td>免费</td>
+<td>付费</td>
+</tr>
+<tr>
+<td>软件支持</td>
+<td>社区，免费</td>
+<td>官方支持，收费</td>
+</tr>
+<tr>
+<td>安全性</td>
+<td>很安全</td>
+<td>各种漏洞</td>
+</tr>
+<tr>
+<td>使用习惯</td>
+<td>命令行与界面操作，需要学习</td>
+<td>图形界面操作，简单</td>
+</tr>
+<tr>
+<td>可定制性</td>
+<td>高</td>
+<td>低</td>
+</tr>
+<tr>
+<td>应用范畴</td>
+<td>服务器</td>
+<td>工作、娱乐</td>
+</tr>
+<tr>
+<td>更新</td>
+<td>依赖社区</td>
+<td>官方更新</td>
+</tr>
+<tr>
+<td>系统内核</td>
+<td>透明</td>
+<td>封闭</td>
+</tr>
+</tbody>
+</table>
+<p>Linux的优势：</p>
+<ul>
+<li><strong>稳定的系统</strong></li><li>安全性和漏洞的快速修补</li><li>多用户</li><li>用户和用户组的规划</li><li><strong>相对较少的系统资源占用</strong></li><li>可定制裁剪，移植到嵌入式平台（如安卓设备）</li><li>可选择的多种图形用户界面（如 GNOME，KDE）</li></ul>
+<p>Windows的优势：</p>
+<ul>
+<li>特定的支持厂商</li><li><strong>足够的游戏娱乐支持度</strong></li><li>足够的专业软件支持度</li></ul>
+<h4 id="linux-gui-">Linux的GUI界面</h4>
+<p>这里我们选择几款比较有代表性的桌面进行简单的介绍：</p>
+<ol>
+<li><p>GNOME<a href="https://www.gnome.org/">[官方地址]</a></p>
+<p><img src="./assets/image-20190602081017634.png" alt="image-20190602081017634"></p>
+<blockquote>
+<p>centos6.x 上默认是gnome2，7.x默认gnome3</p>
+</blockquote>
+<p><img src="./assets/activities-overview.jpg" alt="img"></p>
+<p>上图为：GNOME3</p>
+</li><li><p>KDE <a href="https://kde.org/">[官方地址]</a></p>
+<p><img src="./assets/plasma-5.12.png" alt="Plasma 5.12"></p>
+<p>上图为：Plasma 5.12 LTS</p>
+</li><li><p>Unity</p>
+<p><img src="./assets/v2-c495dceef151f7685d5964a99c970f2b_r.jpg" alt="preview"></p>
+<p><strong>Unity</strong>是<a href="https://zh.wikipedia.org/wiki/Canonical公司">Canonical公司</a>为<a href="https://zh.wikipedia.org/wiki/GNOME">GNOME</a><a href="https://zh.wikipedia.org/wiki/桌面环境">桌面环境</a>所开发的<a href="https://zh.wikipedia.org/wiki/图形用户界面">图形用户界面</a>，用于<a href="https://zh.wikipedia.org/wiki/Ubuntu">Ubuntu</a><a href="https://zh.wikipedia.org/wiki/操作系统">操作系统</a>。</p>
+<blockquote>
+<p>直到Ubuntu16.04LTS，使用的都是Unity，从 Ubuntu 18.04 LTS 开始，默认的 Ubuntu 桌面将重归 GNOME。人事调整，与钱的问题….有兴趣的同学可以看<a href="https://insights.ubuntu.com/2017/04/05/growing-ubuntu-for-cloud-and-iot-rather-than-phone-and-convergence/">这里</a></p>
+</blockquote>
+</li></ol>
+<p>我们来看看<a href="https://trends.google.com/trends/explore?date=today%205-y&amp;q=GNOME,KDE,%2Fm%2F0dsbk0n">Google Trends</a></p>
+<p>参考资料：</p>
+<p><a href="http://www.ubuntu.org.cn/download">Ubuntu官方下载地址：获取 Ubuntu</a></p>
+<p><a href="https://blog.csdn.net/zyqblog/article/details/80152016">Ubuntu18.04（Gnome桌面）主题美化</a></p>
+<p><a href="https://blog.csdn.net/ice__snow/article/details/80152068">Ubuntu 18.04配置及美化</a></p>
+<p><a href="https://heliu.io/2018/12/22/Ubuntu18.04%E5%AE%8C%E7%BE%8E%E9%85%8D%E7%BD%AE/#%E6%95%88%E6%9E%9C%E9%A2%84%E8%A7%88">Ubuntu18.04完美配置优化美化</a></p>
+<h4 id="-">常见软件应用</h4>
+<ul>
+<li>数据库：MySQL、Oracle、 MongoDB、Redis</li><li>web服务器：<code>Nginx</code>、Apache</li><li>浏览器：Chromium(Chrome)、Firefox</li><li>编辑器：Emacs，<code>Vim</code>，Nano，Atom，VScode，IntelliJ IDEA&amp;Webstorm</li><li>文档：WPS Office、LibreOffice、Calligra(Ubuntu/Debian)</li><li>下载工具：<code>Aria2</code>、uGet(Ubuntu/Debian)、XDM、qBittorrent</li><li>虚拟化：VirtualBox、VMWare、</li><li>系统工具：<code>git</code>、rsync、sudo、unzip、tar</li><li>其他：音乐Netease Music、图片GIMP、聊天Wine QQ、播放器VLC</li></ul>
+<h3 id="-">安装方法</h3>
+<h4 id="centos-">Centos安装方法：</h4>
+<ol>
+<li><p>下载镜像</p>
+<p><img src="./assets/image-20190602095157756.png" alt="image-20190602095157756"></p>
+<p>按需选择下载：</p>
+<p>| 类型       | DVD            | Minimal  |<br>| ---------- | -------------- | -------- |<br>| 图形安装   | 支持           | 支持     |<br>| 自带软件包 | 全家桶，可选择 | 无       |<br>| 镜像大小   | 4G+            | 800-900M |</p>
+</li><li><p>制作U盘启动盘</p>
+<p>Windows参考：<a href="#Windows中制作USB启动盘">Windows中制作USB启动盘</a></p>
+<p>Mac/Linux参考：<a href="#MacOS中制作USB启动盘">MacOS中制作USB启动盘</a></p>
+</li><li><p>修改BIOS启动顺序，重启</p>
+</li><li><p>安装配置。€</p>
+</li></ol>
+<p>参考资料</p>
+<ol>
+<li><a href="https://wiki.centos.org/zh/HowTos/InstallFromUSBkey">官方U盘安装说明</a></li><li><a href="https://www.centos.org/download/">镜像下载</a></li><li><a href="https://linux.cn/article-8048-1.html">Centos7安装教程</a></li><li><a href="https://tutorials.ubuntu.com/tutorial/tutorial-install-ubuntu-desktop#0">Ubuntu官方安装教程</a></li></ol>
+<p>常见问题：</p>
+<ol>
+<li><a href="https://blog.jinchuang.org/2062.html">centos7 U盘安装卡在 starting dracut initqueue hook </a></li><li><a href="https://blog.csdn.net/zgrjkflmkyc/article/details/78293504">U盘安装CentOS7遇到：Warning: dracut-initqueue timeout - starting timeout scripts</a></li></ol>
+<h4 id="windows-usb-">Windows中制作USB启动盘</h4>
+<p>操作步骤：</p>
+<ol>
+<li><p>格式化U盘(FAT32格式)</p>
+</li><li><p>下载ISO镜像</p>
+</li><li>下载资源文件中的写入程序</li><li>写入镜像(工具见后文)</li></ol>
+<p><img src="./assets/1559440057311.jpg" alt="1559440057311"></p>
+<p>资源下载：</p>
+<p>Centos官网推荐：</p>
+<p><a href="https://sourceforge.net/projects/usbwriter/">USBwriter</a></p>
+<p><a href="https://sourceforge.net/projects/win32diskimager/">Win32 Disk Imager</a></p>
+<p>Ubuntu官网推荐：</p>
+<p><a href="https://rufus.ie/">rufus</a></p>
+<p><img src="./assets/SouthEast.png" alt="rufus"></p>
+<h4 id="macos-usb-">MacOS中制作USB启动盘</h4>
+<ol>
+<li><p>格式化U盘</p>
+<p><img src="./assets/image-20190602094231784.png" alt="image-20190602094231784"></p>
+</li><li><p>使用 <code>diskutil list</code> 查看U的设备名</p>
+<pre><code>$ diskutil list
+/dev/disk0 (internal):
+   #:                       TYPE NAME                    SIZE       IDENTIFIER
+   0:      GUID_partition_scheme                         500.3 GB   disk0
+   1:                        EFI EFI                     314.6 MB   disk0s1
+   2:                 Apple_APFS Container disk1         500.0 GB   disk0s2
+
+/dev/disk1 (synthesized):
+   #:                       TYPE NAME                    SIZE       IDENTIFIER
+   0:      APFS Container Scheme -                      +500.0 GB   disk1
+                                 Physical Store disk0s2
+   1:                APFS Volume APPLE SSD               342.6 GB   disk1s1
+   2:                APFS Volume Preboot                 47.6 MB    disk1s2
+   3:                APFS Volume Recovery                509.7 MB   disk1s3
+   4:                APFS Volume VM                      4.3 GB     disk1s4
+
+/dev/disk2 (external, physical):
+   #:                       TYPE NAME                    SIZE       IDENTIFIER
+   0:     FDisk_partition_scheme                        *123.0 GB   disk2
+   1:               Windows_NTFS LIWEI                   123.0 GB   disk2s1
+</code></pre><p>上图中，/dev/disk2就是U盘</p>
+</li><li><p>卸载U盘(不是推出) : <code>diskutil umountDisk /dev/disk2</code> (假如U盘是 /dev/disk2)</p>
+<pre><code>$ diskutil umountDisk /dev/disk2
+Unmount of all volumes on disk1 was successful
+</code></pre></li><li><p>镜像DMG写入到U盘: <code>sudo dd if=~/Downloads/ubuntu-16.04-desktop-amd64.iso of=/dev/disk2 bs=1m</code> (假如U盘是 /dev/disk1, 千万别搞错了)</p>
+<pre><code>$ sudo dd if=~/Downloads/ubuntu-17.04-desktop-amd64.iso of=/dev/disk2 bs=1m
+Password:
+2151+1 records in
+2151+1 records out
+2256076800 bytes transferred in 90.277905 secs (24990354 bytes/sec)
+</code></pre></li><li><p>写入完成后会提示:“此电脑不能读取能插入的磁盘”, 这里选择直接推出即可</p>
+</li></ol>
+<h3 id="linux-">Linux目录结构</h3>
+<p><img src="./assets/linux-operation-system.jpeg" alt="Linux目录结构"></p>
+<table>
+<thead>
+<tr>
+<th>目录</th>
+<th>说明</th>
+<th>备注</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>/bin</td>
+<td>常用二进制命令</td>
+<td>ls, cp, rm, mkdir</td>
+</tr>
+<tr>
+<td>/usr</td>
+<td>系统程序目录</td>
+<td>命令、帮助文件、系统配置</td>
+</tr>
+<tr>
+<td>/var</td>
+<td>这个目录中存放着在不断扩充着的东西</td>
+<td>日志</td>
+</tr>
+<tr>
+<td>/lib</td>
+<td>系统最基本的动态连接共享库</td>
+<td>类似于Windows中的DLL</td>
+</tr>
+<tr>
+<td>/srv</td>
+<td>存放一些服务启动之后需要提取的数据</td>
+<td>通常是空的</td>
+</tr>
+<tr>
+<td>/home</td>
+<td>用户主目录</td>
+<td>通常是空的</td>
+</tr>
+<tr>
+<td>/boot</td>
+<td>Linux内核及系统引导文件目录</td>
+</tr>
+<tr>
+<td>/dev</td>
+<td>设备文件的目录</td>
+<td>声卡，磁盘，光驱等</td>
+</tr>
+<tr>
+<td>/etc</td>
+<td>二进制软件包配置文件的默认路径</td>
+<td>系统信息，网络配置</td>
+</tr>
+<tr>
+<td>/lost+found</td>
+<td>系统崩溃时，产生的一些碎片文件</td>
+</tr>
+<tr>
+<td>/mnt</td>
+<td>临时挂载存储设备</td>
+<td>U盘</td>
+</tr>
+<tr>
+<td>/opt</td>
+<td>软件可选的安装目录</td>
+<td>通常是空的</td>
+</tr>
+<tr>
+<td>/proc</td>
+<td>操作系统进程信息目录</td>
+</tr>
+<tr>
+<td>/sbin</td>
+<td>管理员命令，系统级命令</td>
+<td>sudo用户</td>
+</tr>
+<tr>
+<td>/tmp</td>
+<td>临时文件目录</td>
+<td>重启后，被清空</td>
+</tr>
+<tr>
+<td>/run</td>
+<td>临时文件系统，存储系统启动以来的信息</td>
+<td>重启后，被清空</td>
+</tr>
+<tr>
+<td>/sys</td>
+<td>系统中的设备组织成层次结构</td>
+<td>通过文件查看硬件信息</td>
+</tr>
+</tbody>
+</table>
+<p>需要掌握的目录路径知识：</p>
+<ol>
+<li><p>查看系统内核信息</p>
+<pre><code class="lang-bash"># Centos
+$ cat /proc/version
+Linux version 3.10.0-957.10.1.el7.x86_64 (mockbuild@kbuilder.bsys.centos.org) (gcc version 4.8.5 20150623 (Red Hat 4.8.5-36) (GCC) ) #1 SMP Mon Mar 18 15:06:45 UTC 2019
+
+# Ubuntu
+$ cat /proc/version
+Linux version 4.15.7-041507-generic (kernel@gloin) (gcc version 7.2.0 (Ubuntu 7.2.0-8ubuntu3.2)) #201802280530 SMP Wed Feb 28 10:31:47 UTC 2018
+</code></pre>
+</li><li><p>查看网络信息</p>
+<pre><code class="lang-bash"># Centos DHCP
+$ cat /etc/sysconfig/network-scripts/ifcfg-eth0
+DEVICE=eth0
+BOOTPROTO=dhcp
+ONBOOT=yes
+
+# 或者指定IP
+$ cat /etc/sysconfig/network-scripts/ifcfg-em1
+TYPE=Ethernet
+PROXY_METHOD=none
+BROWSER_ONLY=no
+BOOTPROTO=none
+DEFROUTE=yes
+IPV4_FAILURE_FATAL=no
+IPV6INIT=yes
+IPV6_AUTOCONF=yes
+IPV6_DEFROUTE=yes
+IPV6_FAILURE_FATAL=no
+IPV6_ADDR_GEN_MODE=stable-privacy
+NAME=em1
+UUID=fa335568-27db-47fd-a055-424173c42430
+DEVICE=em1
+ONBOOT=yes
+IPADDR=192.168.4.252
+PREFIX=24
+GATEWAY=192.168.4.50
+DNS1=192.168.4.50
+IPV6_PRIVACY=no
+ZONE=public
+
+# Ubuntu
+$ vi /etc/network/interfaces
+# This file describes the network interfaces available on your system
+# and how to activate them. For more information, see interfaces(5).
+
+source /etc/network/interfaces.d/*
+
+# The loopback network interface
+auto lo
+iface lo inet loopback
+
+# The primary network interface
+auto ens3
+iface ens3 inet static
+        address 192.168.4.60
+        netmask 255.255.255.0
+        network 192.168.4.0
+        broadcast 192.168.4.255
+        gateway 192.168.4.50
+        # dns-* options are implemented by the resolvconf package, if installed
+        dns-nameservers 192.168.4.50
+        dns-search itheima
+</code></pre>
+<p>通常使用<code>ifconfig</code>来查看网卡的信息</p>
+</li><li><p>DNS配置</p>
+<pre><code class="lang-bash">$ cat /etc/resolv.conf
+options timeout:2 attempts:3 rotate single-request-reopen
+; generated by /usr/sbin/dhclient-script
+nameserver 100.100.2.136
+nameserver 100.100.2.138
+</code></pre>
+</li><li><p>host文件</p>
+<pre><code class="lang-bash">$ cat /etc/hosts
+127.0.0.1   localhost localhost.localdomain localhost4 localhost4.localdomain4
+::1         localhost localhost.localdomain localhost6 localhost6.localdomain6
+</code></pre>
+</li><li><p>用户/组</p>
+<p>查看用户：</p>
+<pre><code class="lang-bash">$ cat /etc/passwd
+root:x:0:0:root:/root:/bin/bash
+daemon:x:1:1:daemon:/usr/sbin:/usr/sbin/nologin
+bin:x:2:2:bin:/bin:/usr/sbin/nologin
+sys:x:3:3:sys:/dev:/usr/sbin/nologin
+sync:x:4:65534:sync:/bin:/bin/sync
+games:x:5:60:games:/usr/games:/usr/sbin/nologin
+man:x:6:12:man:/var/cache/man:/usr/sbin/nologin
+lp:x:7:7:lp:/var/spool/lpd:/usr/sbin/nologin
+....
+</code></pre>
+<p>查看组：</p>
+<pre><code class="lang-bash">$ cat /etc/group
+root:x:0:
+daemon:x:1:
+bin:x:2:
+sys:x:3:
+adm:x:4:syslog,bttech
+tty:x:5:
+disk:x:6:
+lp:x:7:
+mail:x:8:
+news:x:9:
+uucp:x:10:
+man:x:12:
+proxy:x:13:
+....
+</code></pre>
+</li><li><p>查看内存/CPU</p>
+<pre><code class="lang-bash"># 查看CPU
+$ cat /proc/cpuinfo
+processor    : 0
+vendor_id    : GenuineIntel
+cpu family    : 6
+model        : 45
+model name    : Intel(R) Xeon(R) CPU E5-2670 0 @ 2.60GHz
+stepping    : 7
+microcode    : 0x714
+cpu MHz        : 2117.419
+cache size    : 20480 KB
+...
+
+# 查看内存
+$ cat /proc/meminfo
+MemTotal:       131812048 kB
+MemFree:          460820 kB
+MemAvailable:   36657836 kB
+Buffers:               0 kB
+Cached:         34910784 kB
+SwapCached:      1051944 kB
+Active:         95183532 kB
+Inactive:       32382012 kB
+Active(anon):   77764844 kB
+Inactive(anon): 15015220 kB
+Active(file):   17418688 kB
+...
+</code></pre>
+</li><li><p>其他</p>
+<ul>
+<li>/etc/fstab（开机自动挂载列表）</li><li>/etc/rc.local（开机自启动文件，自启动命令，脚本）</li><li>/etc/init.d(服务启动命令脚本目录)</li><li>/etc/profile(全局环境变量)</li><li>/usr/local(编译安装软件默认安装目录)</li><li>/var/log/message（系统日志）</li><li>/var/log/secure（系统安全日志）</li><li><em>/proc/mounts</em>（系统挂载信息）</li></ul>
+</li></ol>
+<h3 id="linux-">Linux启动过程</h3>
+<p>Linux启动过程：</p>
+<ul>
+<li><p>内核的引导</p>
+<p>首先是BIOS开机自检，按照BIOS中设置的启动设备（通常是硬盘）来启动。</p>
+<p>主要是一些驱动、基本的操作指令，用来接管所有的硬件</p>
+</li><li><p>运行 init</p>
+<p>就跟main函数一样，有一个起点，初始一个服务进程daemon，跟windows中的服务一样。</p>
+</li><li><p>系统初始化</p>
+<p>用户及软件服务自启动</p>
+</li><li><p>建立终端 </p>
+<p>Linux的多用户管理。</p>
+<p>针对对用户，登录方式有三种：</p>
+<ul>
+<li>命令行登录</li><li>ssh登录</li><li>图形界面登录</li></ul>
+</li><li><p>用户登录系统</p>
+</li></ul>
+<p><img src="./assets/bg2013081707.png" alt="img"></p>
+<h3 id="-">常用命令介绍(重点)</h3>
+<h4 id="-">文件相关</h4>
+<ol>
+<li><p>目录相关</p>
+<ul>
+<li><p><code>ls</code>: 列出目录</p>
+<p>-la 可以查看隐藏文件，文件一些基础属性</p>
+</li><li><p><code>cd</code>：切换目录</p>
+<p>使用绝对路径<code>/</code>，也可以使用<code>./</code>相对路径，回到上级目录<code>cd ..</code></p>
+</li><li><p><code>pwd</code>：显示目前的目录</p>
+</li><li><p><code>mkdir</code>：创建一个新的目录</p>
+</li><li><p><code>rmdir</code>：删除一个空的目录</p>
+</li><li><p><code>cp</code>: 复制文件或目录</p>
+<pre><code class="lang-bash">cp source target
+</code></pre>
+</li><li><p><code>rm</code>: 移除文件或目录</p>
+<pre><code class="lang-bash"># 删除目录
+rm -r dirpath
+
+# 强制删除，要特别注意
+rm -rf dirpath€
+</code></pre>
+</li><li><p><code>mv</code>: 移动文件与目录，或修改文件与目录的名称</p>
+<pre><code>mv source target
+</code></pre></li><li><p><code>cat</code>用来查看文件内的内容，<code>touch</code>命令来创建文件，<code>echo</code>命令往文件里面写入内容，<code>more</code>命令来查看显示长文件内容</p>
+</li></ul>
+</li><li><p>基本属性：</p>
+<ul>
+<li><p>权限管理<code>chmod</code></p>
+<p>文件基本属性分为10个字符 <code>drwxrwxrwx</code></p>
+<p><code>r</code> 代表着read读权限</p>
+<p><code>w</code>代表着write写权限</p>
+<p><code>x</code>代表着execute执行权限</p>
+<p><code>d</code>代表着目录</p>
+<p><code>chmod -R</code>递归执行，相当于是把目录下所有的文件都修改对应的权限</p>
+<p><code>chmod +x</code> 给文件一个执行/读/写权限</p>
+</li></ul>
+</li></ol>
+<pre><code> 修改权限的两种方式：
+
+ **方式1： 数字方式**
+
+ `7`-`rwx`
+
+ `6`-`-rw-`
+
+ `4`-`r--`
+
+ `0`-`---` 什么权限都没有，
+
+ 前面的3个是所有者用户的权限，
+
+ 中间的3个是组用户的权限，
+
+ 后面的3个是其他用户的权限。
+
+ 举例说明：
+
+ ```bash
+ # 对所属用户有读写权限
+ chmod 600 ...
+
+ # 对应 -rwxrw-rw-，相当于是取消了组与其他用户的执行权限
+ chmod 755 ...
+ ```
+
+ **方式2：**
+
+ `a`代表all所有，`u`代表user，`g`代表group，`o`代表other。
+
+ `+`代表增加，`-`代表减少
+
+ 举例说明：
+
+ ```bash
+ # 增加所有用户的读的权限
+ chmod a+r ...
+
+ # 增加用户与组的写的权限
+ chmod ug+w ..
+ ```
+
+ &gt; 个人比较推荐数字的方式，比较好记！！
+</code></pre><ul>
+<li><p>用户/组权限管理<code>chown</code></p>
+<p>修改文件/文档所属/所属组</p>
+<pre><code>chown &lt;所属用户&gt;:&lt;所属组&gt; &lt;文件&gt;
+</code></pre><p>目录：</p>
+<pre><code>chown -R &lt;所属用户&gt;:&lt;所属组&gt; &lt;文件&gt;
+</code></pre><p><code>-R</code> 代表着递归</p>
+</li></ul>
+<h3 id="-">文件权限图。</h3>
+<p><img src="./assets/quanxian.png" alt="img"></p>
+<ol>
+<li>查看Linux版本方式一 <code>lsb_release -a</code></li><li>上面命令需要安装 <code>yum install -y redhat-lsb</code></li><li>查看Linux版本方式二  <code>cat proc/ version</code></li><li>查看ssh 配置 文件 <code>cd etc/ ssh</code></li><li><code>vi ssh_config</code></li></ol>
+<h4 id="-">用户管理/登录</h4>
+<ol>
+<li>添加用户<code>useradd</code></li><li>删除用户<code>userdel</code></li><li>用户口令修改 <code>passwd</code></li><li>（扩展）用户组<code>groupadd</code>/<code>groupdel</code>/<code>groupmod</code></li><li><p>（扩展） 向itcast 组中添加用户user3 <code>usermod -a -G itcast user3</code></p>
+<h4 id="-">网络</h4>
+</li><li><p>远程连接<code>ssh</code></p>
+<p>配置文件的路径是在<code>/etc/ssh/sshd_config</code>目录下</p>
+<p>如果需要修改port：</p>
+<ul>
+<li>修改<code>sshd_config</code>中的<code>Port</code>参数</li><li>(Centos)还需要使用<code>semanage port -a -t ssh_port_t -p tcp &lt;Port&gt;</code></li><li><code>service sshd restart</code> (Centos) / <code>service ssh restart</code> (Debian、Ubuntu)</li></ul>
+<blockquote>
+<p>在测试的时候，可以关闭服务器的防火墙，但是生产系统中不推荐这么去做。</p>
+<p>如果提示没有semanage这个命令，则可以使用如下方式来安装：</p>
+<p><code>sudo yum install -y policecoreutils-python</code></p>
+<p>或者使用<code>yum whatprovides semange</code>来反查</p>
+</blockquote>
+</li></ol>
+<p>   ssh登录命令的格式：<code>ssh -p Port &lt;用户名&gt;@&lt;服务器的地址&gt;</code></p>
+<p>   如： </p>
+<pre><code class="lang-bash">   $ ssh -p 10022 root@192.168.0.1
+</code></pre>
+<blockquote>
+<p>window推荐使用<a href="https://www.netsarang.com/zh/xftp/">xftp</a>终端</p>
+</blockquote>
+<p>&gt;</p>
+<blockquote>
+<p>mac推荐使用<a href="https://www.iterm2.com/">iterm</a></p>
+</blockquote>
+<h4 id="xftp-">xftp链接安全警告,点击确认后需要购买</h4>
+<p><img src="./assets/fsdf.png" alt=""></p>
+<ol>
+<li><p>查看网卡配置<code>ifconfig</code></p>
+<p> 如果说没有这个命令，可以使用<code>yum install net-tools</code>进行安装</p>
+<pre><code class="lang-bash">ifconfig eth0 &lt;ip&gt; netmask 255.255.255.0
+</code></pre>
+<p>对网口进行禁用/启用</p>
+<pre><code class="lang-bash">ifconfig eth0 down/up
+</code></pre>
+</li></ol>
+<ol>
+<li><p>查看网络<code>netstat</code></p>
+<ul>
+<li><code>-t</code>：列出TCP协议端口</li><li><code>-u</code>：列出UDP协议端口</li><li><code>-n</code>:不使用域名与服务名，而使用IP地址和端口号</li><li><code>-l</code>：仅列出在监听状态网络服务</li><li><code>-a</code>：列出所有的网络连接</li><li><code>-p</code>：列出所对应的进程信息</li></ul>
+<pre><code class="lang-bash">netstat -anpl | grep ssh
+</code></pre>
+<p>当使用<code>netstat | more</code>进行滚屏，<code>ctrl+f/b</code>进行翻上/下页</p>
+</li><li><p>路由命令<code>route</code></p>
+<p>route查看路由</p>
+<pre><code class="lang-bash"># add/del添加删除路由
+
+route add -net 192.168.0.0 netmask 255.255.0.0 dev etho
+
+# del删除
+route del -net 192.168.0.0 netmask 255.255.0.0
+
+# reject
+route add -net 192.168.0.0 netmask 255.255.0.0 reject
+</code></pre>
+</li></ol>
+<ol>
+<li><p>IP命令<code>ip</code></p>
+<pre><code>ip addr show
+ip route show
+ip link set eth0 up/down
+</code></pre><p><code>ip &lt;命令&gt; help</code>去查看命令的一些参数 </p>
+</li><li><p>DNS解析：<code>nslookup</code></p>
+<p>Centos中如果没有该命令，可以使用如下的方式进行安装</p>
+<pre><code>sudo yum install bind-utils
+</code></pre></li><li><p>查看本机IP</p>
+<pre><code class="lang-bash">curl [链接]
+</code></pre>
+<p>几个网址也非常好记忆</p>
+<ul>
+<li><a href="http://ip.cn/">ip.cn</a> (推荐)</li><li><a href="http://ipinfo.io/">ipinfo.io</a> (推荐)</li><li><a href="http://cip.cc/">cip.cc</a> (推荐)</li><li><a href="http://ifconfig.me/">ifconfig.me</a></li><li><a href="http://myip.ipip.net/">myip.ipip.net</a></li></ul>
+</li></ol>
+<p>GUI网络配置操作（图形化大法好啊）：</p>
+<p><code>nmtui</code></p>
+<blockquote>
+<p>如果提示<code>not found</code>命令的话，可以<code>yum install -y NetworkManager-tui</code>进行安装</p>
+</blockquote>
+<p><img src="./assets/nmtui.png" alt="nmtui"></p>
+<h4 id="-">性能/硬件</h4>
+<ol>
+<li><p><code>top</code>命令：</p>
+<p>top命令替代命令：<a href="https://linux.cn/article-10323-1.html">参考1</a>、<a href="https://tutorials.ubuntu.com/tutorial/tutorial-install-ubuntu-desktop#0">参考2</a></p>
+<pre><code>top
+
+# m切换显示内存信息
+# t切换显示CPU信息
+# M对内存倒序排序显示
+# P根据CPU的使用百分比进行排序
+</code></pre></li></ol>
+<ol>
+<li><p>性能测试</p>
+<ul>
+<li><p>Bench.sh: </p>
+<p>使用方法：</p>
+<pre><code class="lang-bash">wget -qO- bench.sh | bash
+
+# 或者 
+
+curl -Lso- bench.sh | bash
+</code></pre>
+<p>Github地址：<a href="https://github.com/teddysun/across/blob/master/bench.sh">https://github.com/teddysun/across/blob/master/bench.sh</a></p>
+</li><li><p>LemonBench</p>
+<p>使用方法：</p>
+<pre><code class="lang-bash">wget -qO- https://ilemonrain.com/download/shell/LemonBench.sh | bash
+
+# 或者
+
+curl -fsSL https://ilemonrain.com/download/shell/LemonBench.sh | bash
+</code></pre>
+</li></ul>
+</li></ol>
+<h2 id="nginx-">Nginx服务</h2>
+<p>nginx [发音：engine x]是一个HTTP和反向代理服务器，一个邮件代理服务器和一个通用的TCP / UDP代理服务器，最初由<a href="http://sysoev.ru/en/">Igor Sysoev</a>编写。</p>
+<p>据Netcraft称，nginx 在2019年5月服务或代理了 26.43％最繁忙的网站。以下是一些成功案例： Dropbox， Netflix， Wordpress.com， FastMail.FM。</p>
+<blockquote>
+<p>nginx [engine x] is an HTTP and reverse proxy server, a mail proxy server, and a generic TCP/UDP proxy server, originally written by Igor Sysoev. For a long time, it has been running on many heavily loaded Russian sites including Yandex, Mail.Ru, VK, and Rambler. According to Netcraft, nginx served or proxied 26.43% busiest sites in May 2019. Here are some of the success stories: <a href="https://blogs.dropbox.com/tech/2017/09/optimizing-web-servers-for-high-throughput-and-low-latency/">Dropbox</a>, <a href="https://openconnect.netflix.com/en/software/">Netflix</a>,<a href="https://www.nginx.com/case-studies/nginx-wordpress-com/">Wordpress.com</a>, <a href="http://blog.fastmail.fm/2007/01/04/webimappop-frontend-proxies-changed-to-nginx/">FastMail.FM</a>.</p>
+</blockquote>
+<p>从下面的当下技术架构图中，可以看出Nginx在网络中的位置与重要性。Nginx的轻量级、内存占用少、启动极快，高并发能力强的特性，使它在互联网项目中广泛应用。</p>
+<p><img src="./assets/v2-e1826bab1d07df8e97d61aa809b94a10_hd.jpg" alt="img"></p>
+<blockquote>
+<p>Service-Oriented Architecture，<strong>SOA</strong>面向服务的架构</p>
+</blockquote>
+<h3 id="nginx-">Nginx简介</h3>
+<h4 id="-">什么是反向代理</h4>
+<p>正向代理 ：</p>
+<p><img src="./assets/v2-c8ac111c267ae0745f984e326ef0c47f_hd.jpg" alt="img"></p>
+<p>由于防火墙的原因，我们并不能直接访问谷歌，那么我们可以借助VPN来实现，这就是一个简单的正向代理的例子。这里你能够发现，<strong>正向代理“代理”的是客户端</strong>，而且客户端是知道目标的，而目标是不知道客户端是通过VPN访问的。</p>
+<p>反向代理：</p>
+<p><img src="./assets/v2-4787a512240b238ebf928cd0651e1d99_hd.jpg" alt="img"></p>
+<p>当我们在外网访问百度的时候，其实会进行一个转发，代理到内网去，这就是所谓的反向代理，即<strong>反向代理“代理”的是服务器端</strong>，而且这一个过程对于客户端而言是透明的。</p>
+<h4 id="nginx-">Nginx的技术架构</h4>
+<p><img src="./assets/v2-b24eb2b29b48f59883232a58392ddae3_hd.jpg" alt="img"></p>
+<p>Master进程的作用是<strong>读取并验证配置文件nginx.conf；管理worker进程；</strong></p>
+<p>Worker进程的作用:<strong>每一个Worker进程都维护一个线程（避免线程切换），处理连接和请求；</strong></p>
+<blockquote>
+<p>注意Worker进程的个数由配置文件决定，一般和CPU个数相关（有利于进程切换），配置几个就有几个Worker进程。</p>
+</blockquote>
+<p>特点：</p>
+<ul>
+<li><p>主进程Master</p>
+<p><code>Nginx</code> 启动时，会生成两种类型的 <strong>进程*</strong>，一个是 <strong>主进程</strong>（<code>master</code>），<strong>一个</strong>（<code>windows</code> 版本的目前只有一个）或 <strong>多个工作进程</strong>（<code>worker</code>）。<strong>主进程</strong> 并不处理网络请求，主要负责 <strong>调度工作进程</strong>，也就是图示的 <code>3</code> 项：<strong>加载配置</strong>、<strong>启动工作进程</strong> 及 <strong>非停升级</strong>。所以，<code>Nginx</code> 启动以后，查看操作系统的进程列表，我们就能看到 <strong>至少有两个</strong> <code>Nginx</code> 进程。</p>
+</li><li><p>工作进程Worker</p>
+<p>服务器实际 <strong>处理网络请求</strong> 及 <strong>响应</strong> 的是 <strong>工作进程</strong>（<code>worker</code>），在类 <code>unix</code> 系统上，<code>Nginx</code> 可以配置 <strong>多个</strong> <code>worker</code>，而每个 <code>worker</code> <strong>进程</strong> 都可以同时处理 <strong>数以千计</strong> 的 <strong>网络请求</strong>。</p>
+</li><li><p>模块化设计</p>
+<p>标准HTTP模块、可选的HTTP模块(gzip等)、邮件服务、第三方(Lua)</p>
+<p><code>Nginx</code> 的 <code>worker</code> 进程，包括 <strong>核心</strong> 和 <strong>功能性模块</strong>，<strong>核心模块</strong> 负责维持一个 <strong>运行循环</strong>（<code>run-loop</code>），执行网络请求处理的 <strong>不同阶段</strong> 的模块功能，比如：<strong>网络读写</strong>、<strong>存储读写</strong>、<strong>内容传输</strong>、<strong>外出过滤</strong>，以及 <strong>将请求发往上游服务器</strong> 等。而其代码的 <strong>模块化设计</strong>，也使得我们可以根据需要对 <strong>功能模块</strong> 进行适当的 <strong>选择</strong> 和 <strong>修改</strong>，编译成具有 <strong>特定功能</strong> 的服务器。</p>
+</li><li><p>事件驱动模型</p>
+<p>基于 <strong>异步及非阻塞</strong> 的 <strong>事件驱动模型</strong>，可以说是 <code>Nginx</code> 得以获得 <strong>高并发</strong>、<strong>高性能</strong> 的关键因素，同时也得益于对 <code>Linux</code>、<code>Solaris</code> 及类 <code>BSD</code> 等操作系统内核中 <strong>事件通知</strong> 及 <code>I/O</code> <strong>性能增强功能</strong> 的采用，如 <code>kqueue</code>、<code>epoll</code> 及 <code>event ports</code>。</p>
+</li><li><p>代理设计</p>
+</li></ul>
+<p>参考资料：</p>
+<ol>
+<li><p><a href="https://juejin.im/post/5b4bdb54e51d45191e0cd774">浅谈Nginx服务器的内部核心架构设计</a></p>
+</li><li><p><a href="https://nginx.org/en/#architecture_and_scalability">Architecture and scalability</a></p>
+</li></ol>
+<h4 id="nginx-">Nginx高可用</h4>
+<p><img src="./assets/v2-ec3208d1ea659d126fe2a008ec5ae927_hd.jpg" alt="img"></p>
+<p><strong>VRRP（Virtual Router Redundancy Protocol）</strong>，即<a href="https://link.jianshu.com?t=http://en.wikipedia.org/wiki/VRRP">虚拟路由冗余协议</a>。可以认为它是实现路由器高可用的容错协议，即将多台提供相同功能的路由器组成一个路由器组(Router Group)，这个组里面有一个master和多个backup，但在外界看来就像一台一样，构成虚拟路由器，拥有一个虚拟IP（vip，也就是路由器所在局域网内其他机器的默认路由），占有这个IP的master实际负责ARP相应和转发IP数据包，组中的其它路由器作为备份的角色处于待命状态。master会发组播消息，当backup在超时时间内收不到vrrp包时就认为master宕掉了，这时就需要根据VRRP的优先级来选举一个backup当master，保证路由器的高可用。</p>
+<p>Keepalived是一个基于VRRP协议来实现的服务高可用方案，可以利用其来避免IP单点故障，类似的工具还有heartbeat、corosync、pacemaker。但是它一般不会单独出现，而是与其它负载均衡技术（如lvs、haproxy、nginx）一起工作来达到集群的高可用。</p>
+<p>KeepAlived + Nginx来组成高可用的方案：</p>
+<p>第一：请求不要直接打到Nginx上，应该先通过Keepalived（这就是所谓虚拟IP，VIP）</p>
+<p>第二：Keepalived应该能监控Nginx的生命状态（提供一个用户自定义的脚本，定期检查Nginx进程状态，进行权重变化,，从而实现Nginx故障切换）</p>
+<h3 id="nginx-">Nginx服务安装</h3>
+<h4 id="centos-">Centos安装方式</h4>
+<p>推荐使用在线安装方式：</p>
+<table>
+<thead>
+<tr>
+<th>分类</th>
+<th>yum方式</th>
+<th>源码安装</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>网络</td>
+<td>需要</td>
+<td>可以不需要</td>
+</tr>
+<tr>
+<td>安装位置</td>
+<td>/etc/nginx配置文件，/usr/sbin/nginx</td>
+<td>/usr/local/nginx目录</td>
+</tr>
+<tr>
+<td>管理命令</td>
+<td>提供</td>
+<td>不提供</td>
+</tr>
+<tr>
+<td>启动</td>
+<td>service nginx start</td>
+<td>执行绝对路径/usr/local/nginx/sbin/nginx</td>
+</tr>
+<tr>
+<td>删除</td>
+<td>yum remove nginx或者rpm -e nginx</td>
+<td>rm -rf /usr/local/nginx</td>
+</tr>
+</tbody>
+</table>
+<ol>
+<li><p>在线安装</p>
+<p>添加nginx的repo：</p>
+<pre><code class="lang-bash">$ vim /etc/yum.repos.d/nginx.repo
+</code></pre>
+<p>输入以下内容：</p>
+<pre><code class="lang-bash">[nginx]
+name=nginx repo
+baseurl=http://nginx.org/packages/centos/$releasever/$basearch/
+gpgcheck=0
+enabled=1
+</code></pre>
+<p><code>:wq</code>保存后，使用<code>yum update</code>，接下来就是安装了。</p>
+<pre><code class="lang-bash">yum install -y nginx
+
+# 管理命令:
+# 启动/停止/重启
+service nginx start/stop/restart
+
+# 卸载
+yum remove -y nginx
+# 或者强制卸载，不考虑依赖
+rpm -e nginx
+</code></pre>
+</li><li><p>源码安装</p>
+</li></ol>
+<ul>
+<li><p>安装对应的依赖：</p>
+<pre><code>yum -y install gcc gcc-c++ make libtool zlib zlib-devel openssl openssl-devel pcre pcre-devel
+</code></pre></li><li><p>下载源码包：</p>
+<pre><code class="lang-bash">wget -O /tmp/nginx.tar.gz http://nginx.org/download/nginx-&lt;version&gt;.tar.gz
+</code></pre>
+<p>比如：</p>
+<pre><code class="lang-bash">wget -O /tmp/nginx.tar.gz http://nginx.org/download/nginx-1.17.0.tar.gz
+</code></pre>
+</li><li><p>解压</p>
+<pre><code class="lang-bash">cd /tmp/
+tar zxvf nginx.tar.gz
+</code></pre>
+</li><li><p>编译</p>
+<pre><code class="lang-bash">$ ./configure
+Configuration summary
+
+- using system PCRE library
+- OpenSSL library is not used
+- using system zlib library
+
+  nginx path prefix: &quot;/usr/local/nginx&quot;
+  nginx binary file: &quot;/usr/local/nginx/sbin/nginx&quot;
+  nginx modules path: &quot;/usr/local/nginx/modules&quot;
+  nginx configuration prefix: &quot;/usr/local/nginx/conf&quot;
+  nginx configuration file: &quot;/usr/local/nginx/conf/nginx.conf&quot;
+  nginx pid file: &quot;/usr/local/nginx/logs/nginx.pid&quot;
+  nginx error log file: &quot;/usr/local/nginx/logs/error.log&quot;
+  nginx http access log file: &quot;/usr/local/nginx/logs/access.log&quot;
+  nginx http client request body temporary files: &quot;client_body_temp&quot;
+  nginx http proxy temporary files: &quot;proxy_temp&quot;
+  nginx http fastcgi temporary files: &quot;fastcgi_temp&quot;
+  nginx http uwsgi temporary files: &quot;uwsgi_temp&quot;
+  nginx http scgi temporary files: &quot;scgi_temp&quot;
+</code></pre>
+</li><li><p>安装</p>
+<pre><code class="lang-bash">make &amp;&amp; make install
+</code></pre>
+</li><li><p>管理方法：</p>
+<p>直接可以使用可执行文件进行启动/停止/重启</p>
+<pre><code class="lang-bash"># 启动
+/usr/local/nginx/sbin/nginx
+
+# 停止
+/usr/local/nginx/sbin/nginx -s stop
+
+# 重启
+/usr/local/nginx/sbin/nginx -s reload
+</code></pre>
+</li><li><p>管理脚本</p>
+<pre><code class="lang-bash">$ vi /etc/init.d/nginx
+</code></pre>
+<p>输入如下内容:</p>
+<pre><code class="lang-bash">#!/bin/sh
+#
+# nginx - this script starts and stops the nginx daemon
+#
+# chkconfig:   - 85 15
+# description:  NGINX is an HTTP(S) server, HTTP(S) reverse \
+#               proxy and IMAP/POP3 proxy server
+# processname: nginx
+# config:      /usr/local/nginx/conf/nginx.conf
+# config:      /etc/sysconfig/nginx
+# pidfile:     /usr/local/nginx/logs/nginx.pid
+# Source function library.
+. /etc/rc.d/init.d/functions
+# Source networking configuration.
+. /etc/sysconfig/network
+# Check that networking is up.
+[ &quot;$NETWORKING&quot; = &quot;no&quot; ] &amp;&amp; exit 0
+nginx=&quot;/usr/local/nginx/sbin/nginx&quot;
+prog=$(basename $nginx)
+NGINX_CONF_FILE=&quot;/usr/local/nginx/conf/nginx.conf&quot;
+[ -f /etc/sysconfig/nginx ] &amp;&amp; . /etc/sysconfig/nginx
+lockfile=/var/lock/subsys/nginx
+make_dirs() {
+   # make required directories
+   user=`$nginx -V 2&gt;&amp;1 | grep &quot;configure arguments:&quot; | sed &#39;s/[^*]*--user=\([^ ]*\).*/\1/g&#39; -`
+   if [ -z &quot;`grep $user /etc/passwd`&quot; ]; then
+       useradd -M -s /bin/nologin $user
+   fi
+   options=`$nginx -V 2&gt;&amp;1 | grep &#39;configure arguments:&#39;`
+   for opt in $options; do
+       if [ `echo $opt | grep &#39;.*-temp-path&#39;` ]; then
+           value=`echo $opt | cut -d &quot;=&quot; -f 2`
+           if [ ! -d &quot;$value&quot; ]; then
+               # echo &quot;creating&quot; $value
+               mkdir -p $value &amp;&amp; chown -R $user $value
+           fi
+       fi
+   done
+}
+start() {
+    [ -x $nginx ] || exit 5
+    [ -f $NGINX_CONF_FILE ] || exit 6
+    make_dirs
+    echo -n $&quot;Starting $prog: &quot;
+    daemon $nginx -c $NGINX_CONF_FILE
+    retval=$?
+    echo
+    [ $retval -eq 0 ] &amp;&amp; touch $lockfile
+    return $retval
+}
+stop() {
+    echo -n $&quot;Stopping $prog: &quot;
+    killproc $prog -QUIT
+    retval=$?
+    echo
+    [ $retval -eq 0 ] &amp;&amp; rm -f $lockfile
+    return $retval
+}
+restart() {
+    configtest || return $?
+    stop
+    sleep 1
+    start
+}
+reload() {
+    configtest || return $?
+    echo -n $&quot;Reloading $prog: &quot;
+    killproc $nginx -HUP
+    RETVAL=$?
+    echo
+}
+force_reload() {
+    restart
+}
+configtest() {
+  $nginx -t -c $NGINX_CONF_FILE
+}
+rh_status() {
+    status $prog
+}
+rh_status_q() {
+    rh_status &gt;/dev/null 2&gt;&amp;1
+}
+case &quot;$1&quot; in
+    start)
+        rh_status_q &amp;&amp; exit 0
+        $1
+        ;;
+    stop)
+        rh_status_q || exit 0
+        $1
+        ;;
+    restart|configtest)
+        $1
+        ;;
+    reload)
+        rh_status_q || exit 7
+        $1
+        ;;
+    force-reload)
+        force_reload
+        ;;
+    status)
+        rh_status
+        ;;
+    condrestart|try-restart)
+        rh_status_q || exit 0
+            ;;
+    *)
+        echo $&quot;Usage: $0 {start|stop|status|restart|condrestart|try-restart|reload|force-reload|configtest}&quot;
+        exit 2
+esac
+</code></pre>
+<p>添加开机启动：</p>
+<pre><code class="lang-bash"># 给予执行权限
+chmod a+x /etc/init.d/nginx
+
+# 设置开机启动
+chkconfig nginx on
+
+# 启动
+systemctl start nginx
+</code></pre>
+</li></ul>
+<h4 id="ubuntu-">Ubuntu安装方式</h4>
+<ol>
+<li><p>在线方式</p>
+<pre><code class="lang-bash">sudo apt-get install nginx
+</code></pre>
+</li></ol>
+<ol>
+<li><p>源码方式</p>
+<p>安装依赖</p>
+<pre><code class="lang-bash"># 安装gcc g++
+sudo apt-get install build-essential
+sudo apt-get install libtool
+
+# 安装pcre依赖库（http://www.pcre.org/）
+sudo apt-get update
+sudo apt-get install libpcre3 libpcre3-dev
+
+# 安装zlib依赖库（http://www.zlib.net）
+sudo apt-get install zlib1g-dev
+
+# 安装SSL依赖库（16.04默认已经安装了）
+sudo apt-get install openssl
+</code></pre>
+</li></ol>
+<p>   下载源码启动:</p>
+<pre><code class="lang-bash">   # 下载最新版本：
+   # 下面的version可以改为对应的版本
+   # http://nginx.org/download/nginx-1.17.0.tar.gz
+   wget -O /tmp/nginx.tar.gz http://nginx.org/download/nginx-&lt;version&gt;.tar.gz
+
+   # 解压：
+   cd /tmp/
+   tar -zxvf nginx.tar.gz
+
+   # 进入解压目录：
+   cd nginx-1.13.6
+
+   # 配置：
+   ./configure --prefix=/usr/local/nginx 
+
+   # 编译：
+   make
+
+   # 安装：
+   sudo make install
+
+   # 启动：
+   #注意：-c 指定配置文件的路径，不加的话，nginx会自动加载默认路径的配置文件，可以通过-h查看帮助命令。
+   #查看进程：
+   sudo /usr/local/nginx/sbin/nginx -c /usr/local/nginx/conf/nginx.conf
+
+   # 查看进程启动状态
+   ps -ef | grep nginx
+</code></pre>
+<h3 id="nginx-">Nginx配置及优化</h3>
+<ol>
+<li>配置文件结构</li></ol>
+<pre><code class="lang-bash">...              #全局块
+
+events {         #events块
+   ...
+}
+
+http      #http块
+{
+    ...   #http全局块--start
+    server        #server块
+    { 
+        ...       #server全局块
+        location [PATTERN]   #location块
+        {
+            ...
+        }
+        location [PATTERN] 
+        {
+            ...
+        }
+    }
+    server
+    {
+      ...
+    }
+    ...     #http全局块--end
+}
+</code></pre>
+<ul>
+<li><strong>全局块</strong>：配置影响nginx全局的指令。一般有运行nginx服务器的用户组，nginx进程pid存放路径，日志存放路径，配置文件引入，允许生成worker process数等。</li><li><strong>events块</strong>：配置影响nginx服务器或与用户的网络连接。有每个进程的最大连接数，选取哪种事件驱动模型处理连接请求，是否允许同时接受多个网路连接，开启多个网络连接序列化等。</li><li><strong>http块</strong>：可以嵌套多个server，配置代理，缓存，日志定义等绝大多数功能和第三方模块的配置。如文件引入，mime-type定义，日志自定义，是否使用sendfile传输文件，连接超时时间，单连接请求数等。</li><li><strong>server块</strong>：配置虚拟主机的相关参数，一个http中可以有多个server。</li><li><strong>location块</strong>：配置请求的路由，以及各种页面的处理情况。</li></ul>
+<ol>
+<li><p>配置优化</p>
+<p>配置文件：</p>
+<p>```bash<br>user www-data;<br>pid /run/nginx.pid;</p>
+<h1 id="worker_processes-nginx-cpu-cpu-">worker_processes用来设置Nginx服务的进程数。推荐是CPU内核数或者内核数的倍数，推荐使用CPU内核数</h1>
+<p>worker_processes 4;</p>
+<h1 id="-nginx-cpu-cpu-nginx-">默认情况下，Nginx的多个进程有可能跑在某一个CPU或CPU的某一核上，导致Nginx进程使用硬件的资源不均</h1>
+<p>worker_cpu_affinity 0001 0010 0100 1000;</p>
+<h1 id="-worker_rlimit_nofile-">设置一个进程理论允许的最大连接数，理论上越大越好，但不可以超过worker_rlimit_nofile的值</h1>
+<p>worker_rlimit_nofile 65535;</p>
+<p>events {</p>
+<pre><code>            # 设置事件驱动模型，是内核2.6以上支持
+    use epoll;
+    worker_connections 65535;
+    accept_mutex off;
+    multi_accept off;
+</code></pre><p>}</p>
+<p>http {</p>
+<pre><code>    ##
+    # Basic Settings
+    ##
+    sendfile on;
+    tcp_nopush on;
+    tcp_nodelay on;
+    keepalive_timeout 60 50;
+    send_timeout 10s;
+    types_hash_max_size 2048;
+    client_header_buffer_size 4k;
+    client_max_body_size 8m;
+    include /etc/nginx/mime.types;
+    default_type application/octet-stream;
+
+    ##
+    # Logging Settings
+    ##
+    access_log /var/log/nginx/access.log;
+    error_log /var/log/nginx/error.log;
+
+    ##
+    # Gzip Settings
+    ##
+    gzip on;
+    gzip_disable &quot;msie6&quot;;
+    gzip_min_length 1024;
+    gzip_vary on;
+    gzip_comp_level 2;
+    gzip_buffers 32 4k;
+    gzip_types text/plain text/css application/json application/x-javascript text/xml application/xml application/xml+rss text/javascript;
+</code></pre></li></ol>
+<pre><code>       ##
+       # Virtual Host Configs
+       ##
+       include /etc/nginx/conf.d/*.conf;
+       include /etc/nginx/sites-enabled/*;
+</code></pre><p>   }</p>
+<pre><code>
+
+nginxs配置说明：
+
+- `worker_connections`
+
+
+设置一个进程理论允许的最大连接数，理论上越大越好，但不可以超过worker_rlimit_nofile的值。还有个问题，linux系统中有个指令open file resource limit，它设置了进程可以打开的文件句柄数量，可以用下面的指令查看你的linux系统中open file resource limit指令的值，`cat /proc/sys/fs/file-max`
+   可以将该指令设置为23900251
+
+```bash
+   echo &quot;2390251&quot; &gt; /proc/sys/fs/file-max
+
+   sysctl -p
+</code></pre><ol>
+<li><p>压测工具Apache ab</p>
+<p>我们要测试 nginx 的负载能力，需要借助压力测试工具。本博客是使用 Apache 服务器自带的一个 web 压力测试工具 ApacheBench ，简称 ab。ab 是一个命令行工具，即通过 <code>ab</code> 命令行，模拟多个请求同时对某一 URL 地址进行访问，因此可以用来测试目标服务器的负载压力。</p>
+<pre><code class="lang-bash">yum -y install httpd-tools
+
+# 查看安装结果
+ab -V
+
+# 简单的使用
+# -c：一次并发请求的数量；-n：请求总次数
+ab -c 5000 -n 200000 http://10.211.55.6：80/index.html
+</code></pre>
+</li></ol>
+<ol>
+<li><p>其他优化</p>
+<pre><code class="lang-bash">net.ipv4.ip_forward = 0
+net.ipv4.conf.default.rp_filter = 1
+net.ipv4.conf.default.accept_source_route = 0
+kernel.sysrq = 0
+kernel.core_uses_pid = 1
+
+# 开启SYN Cookies，当出现SYN等待队列溢出时，启用cookies来处理。
+net.ipv4.tcp_syncookies = 1
+kernel.msgmnb = 65536
+kernel.msgmax = 65536
+kernel.shmmax = 68719476736
+kernel.shmall = 4294967296
+
+# timewait的数量，默认是180000
+net.ipv4.tcp_max_tw_buckets = 6000
+net.ipv4.tcp_sack = 1
+net.ipv4.tcp_window_scaling = 1
+net.ipv4.tcp_rmem = 4096        87380   4194304
+net.ipv4.tcp_wmem = 4096        16384   4194304
+net.core.wmem_default = 8388608
+net.core.rmem_default = 8388608
+net.core.rmem_max = 16777216
+net.core.wmem_max = 16777216
+
+# # 每个网络接口接收数据包的速率比内核处理这些包的速率快时，允许送到队列的数据包的最大数目。
+net.core.netdev_max_backlog = 262144
+
+# web应用中listen函数的backlog默认会给我们内核参数的net.core.somaxconn限制到128，而nginx定义 的NGX_LISTEN_BACKLOG默认为511，所以有必要调整这个值
+net.core.somaxconn = 262144
+
+# 系统中最多有多少个TCP套接字不被关联到任何一个用户文件句柄上。如果超过这个数字，孤儿连接将即刻被复位并打印出警告信息。这个限制仅仅 是为了防止简单的DoS攻击，不能过分依靠它或者人为地减小这个值，更应该增加这个值(如果增加了内存之后)。
+net.ipv4.tcp_max_orphans = 3276800
+
+# 记录的那些尚未收到客户端确认信息的连接请求的最大值。对于有128M内存的系统而言，缺省值是1024，小内存的系统则是128。
+net.ipv4.tcp_max_syn_backlog = 262144
+
+# 时间戳可以避免序列号的卷绕。一个1Gbps的链路肯定会遇到以前用过的序列号。时间戳能够让内核接受这种“异常”的数据包。这里需要将其关掉。
+net.ipv4.tcp_timestamps = 0
+
+# 为了打开对端的连接，内核需要发送一个SYN并附带一个回应前面一个SYN的ACK。也就是所谓三次握手中的第二次握手。这个设置决定了内核放弃连接之前发送SYN+ACK包的数量。
+net.ipv4.tcp_synack_retries = 1
+
+# 在内核放弃建立连接之前发送SYN包的数量。
+net.ipv4.tcp_syn_retries = 1
+
+# 启用timewait快速回收
+net.ipv4.tcp_tw_recycle = 1
+
+# 开启重用。允许将TIME-WAIT sockets重新用于新的TCP连接。
+net.ipv4.tcp_tw_reuse = 1
+net.ipv4.tcp_mem = 94500000 915000000 927000000
+
+# 如果套接字由本端要求关闭，这个参数决定了它保持在FIN-WAIT-2状态的时间。对端可以出错并永远不关闭连接，甚至意外当机。缺省值是60秒。 2.2 内核的通常值是180秒，你可以按这个设置，但要记住的是，即使你的机器是一个轻载的WEB服务器，也有因为大量的死套接字而内存溢出的风险，FIN- WAIT-2的危险性比FIN-WAIT-1要小，因为它最多只能吃掉1.5K内存，但是它们的生存期长些。
+net.ipv4.tcp_fin_timeout = 1
+
+# 当keepalive起用的时候，TCP发送keepalive消息的频度。缺省是2小时
+net.ipv4.tcp_keepalive_time = 30
+
+# 允许系统打开的端口范围
+net.ipv4.ip_local_port_range = 1024   65000
+</code></pre>
+</li></ol>
+<h3 id="http-s-">HTTP(s)</h3>
+<h4 id="http-https-">HTTP/HTTPS协议</h4>
+<p><strong>超文本传输协议</strong>（英语：<strong>H</strong>yper<strong>T</strong>ext <strong>T</strong>ransfer <strong>P</strong>rotocol，缩写：<strong>HTTP</strong>）是一种用于分布式、协作式和超媒体信息系统的应用层协议，HTTP是万维网的数据通信的基础。</p>
+<p><img src="./assets/HTTP_Request.png" alt="A basic HTTP request"></p>
+<p>请求信息包括：请求行、请求头、空行还有其他消息体</p>
+<p><img src="./assets/image-20190605153656594.png" alt="image-20190605153656594"></p>
+<p>HTTP的特点：</p>
+<ul>
+<li><p>客户端&amp;服务端</p>
+</li><li><p>简单(路径+方法+传递的类型)</p>
+<p>客户向服务器请求服务时，只需传送请求方法和路径。请求方法常用的有GET、HEAD、POST。每种方法规定了客户与服务器联系的类型不同。由于HTTP协议简单，使得HTTP服务器的程序规模小，因而通信速度很快。</p>
+</li><li><p>灵活</p>
+<p>HTTP允许传输任意类型的数据对象。正在传输的类型由Content-Type（Content-Type是HTTP包中用来表示内容类型的标识）加以标记。</p>
+</li><li><p>无连接</p>
+<p>无连接的含义是限制每次连接只处理一个请求。服务器处理完客户的请求，并收到客户的应答后，即断开连接。采用这种方式可以节省传输时间。</p>
+</li><li><p>无状态有会话</p>
+<p>HTTP协议是无状态协议，无状态是指协议对于事务处理没有记忆能力。</p>
+<p>缺少状态意味着如果后续处理需要前面的信息，则它必须重传，这样可能导致每次连接传送的数据量增大。另一方面，在服务器不需要先前信息时它的应答就较快。</p>
+<blockquote>
+<p>注意，HTTP本质是无状态的，使用Cookies可以创建有状态的会话。</p>
+</blockquote>
+</li></ul>
+<p>HTTP 的不足之处</p>
+<ul>
+<li>通信内容使用明文——内容可能被窃听</li><li>不验证通信方的身份——可能遭遇伪装</li><li>无法验证报文的完整性——报文有可能已遭篡改</li></ul>
+<p>HTTPS协议：</p>
+<p><strong>超文本传输安全协议</strong>（英语：<strong>H</strong>yper<strong>T</strong>ext <strong>T</strong>ransfer <strong>P</strong>rotocol <strong>S</strong>ecure，缩写：<strong>HTTPS</strong>；常称为HTTP over TLS、HTTP over SSL或HTTP Secure）是一种通过计算机网络进行安全通信的传输协议。HTTPS经由HTTP进行通信，但利用SSL/TLS来加密数据包。HTTPS开发的主要目的，是提供对网站服务器的身份认证，保护交换数据的隐私与完整性。这个协议由网景公司（Netscape）在1994年首次提出，随后扩展到互联网上。</p>
+<p>主要作用：在不安全的网络上创建一个安全信道。</p>
+<h4 id="https-">HTTPS认证原理</h4>
+<p>认证方式：数字证书</p>
+<p>认证机构：数字证书认证机构（Certificate Authority CA），EV SSL（Extended Validation SSL Certificate）证书，OpenSSL自认证。</p>
+<p>证书信任方式：</p>
+<ul>
+<li>操作系统和浏览器内置</li><li>证书颁发机构</li><li>手动指定证书</li></ul>
+<p>SSL握手过程：</p>
+<p><img src="./assets/1506390796205179.png" alt="SSL"></p>
+<h4 id="-https">如何配置HTTPS</h4>
+<ol>
+<li><p><a href="https://letsencrypt.org/">Let&#39;s Encrypt</a>组织介绍</p>
+<p><img src="./assets/image-20190605160738126.png" alt="image-20190605160738126"></p>
+</li><li><p>acme来自动化申请</p>
+<p><a href="https://github.com/Neilpang/acme.sh">https://github.com/Neilpang/acme.sh</a></p>
+<p>前提：需要域名</p>
+</li></ol>
+<p>前置条件：</p>
+<ol>
+<li><p>域名, 配置DNS解析，支持列表见下方</p>
+<p><a href="https://github.com/Neilpang/acme.sh/wiki/dnsapi">https://github.com/Neilpang/acme.sh/wiki/dnsapi</a></p>
+</li><li><p>有<strong>公网IP</strong>的服务器(可选)</p>
+</li><li><p>安装nginx, acme.sh</p>
+</li></ol>
+<p>配置过程：</p>
+<ol>
+<li><p>安装nginx与acme.sh</p>
+<p>安装很简单, 一个命令:</p>
+<pre><code class="lang-bash">curl  https://get.acme.sh | sh
+</code></pre>
+<blockquote>
+<p>普通用户和 root 用户都可以安装使用. 安装过程进行了以下几步:</p>
+<p>把 acme.sh 安装到你的 <strong>home</strong> 目录下:</p>
+<pre><code>~/.acme.sh/
+</code></pre><p>并创建 一个 bash 的 alias, 方便你的使用: <code>alias acme.sh=~/.acme.sh/acme.sh</code></p>
+<p>自动为你创建 cronjob, 每天 0:00 点自动检测所有的证书, 如果快过期了, 需要更新, 则会自动更新证书</p>
+</blockquote>
+<p>使用<code>source</code>命令，使上面的安装生效</p>
+<pre><code class="lang-bash">source ~/.bashrc
+</code></pre>
+</li><li><p>两种方式，激活SSL证书(推荐DNS)</p>
+<ul>
+<li><p><strong>http 方式</strong></p>
+<p>需要在你的网站根目录下放置一个文件, 来验证你的域名所有权,完成验证. 然后就可以生成证书了</p>
+<pre><code class="lang-bash">acme.sh  --issue  -d mydomain.com -d www.mydomain.com  --webroot  /home/wwwroot/mydomain.com/
+</code></pre>
+<p>只需要指定域名, 并指定域名所在的网站根目录. <strong>acme.sh</strong> 会全自动的生成验证文件, 并放到网站的根目录, 然后自动完成验证. 最后会聪明的删除验证文件. 整个过程没有任何副作用.</p>
+<p>如果你用的 <strong>apache</strong>服务器, <strong>acme.sh</strong> 还可以智能的从 <strong>apache</strong>的配置中自动完成验证, 你不需要指定网站根目录:</p>
+<pre><code class="lang-bash">acme.sh --issue  -d mydomain.com   --apache
+</code></pre>
+<p>如果你用的 <strong>nginx</strong>服务器, 或者反代, <strong>acme.sh</strong> 还可以智能的从 <strong>nginx</strong>的配置中自动完成验证, 你不需要指定网站根目录:</p>
+<pre><code class="lang-bash">acme.sh --issue  -d mydomain.com   --nginx
+</code></pre>
+</li><li><p><strong>dns 方式</strong>(推荐)</p>
+<p>在域名上添加一条 txt 解析记录, 验证域名所有权。</p>
+<p>这种方式的好处是, 你不需要任何服务器, <strong>不需要任何公网 ip, 只需要 dns 的解析记录即可完成验证</strong>. 坏处是，如果不同时配置 Automatic DNS API，使用这种方式 acme.sh 将无法自动更新证书，每次都需要手动再次重新解析验证域名所有权。</p>
+<pre><code class="lang-bash">acme.sh  --issue  --dns   -d mydomain.com
+</code></pre>
+<p>然后, <strong>acme.sh</strong> 会生成相应的解析记录显示出来, 你只需要在你的域名管理面板中添加这条 txt 记录即可.</p>
+<p>等待解析完成之后, 重新生成证书:</p>
+<pre><code>acme.sh  --renew   -d mydomain.com
+</code></pre><p>注意第二次这里用的是 <code>--renew</code></p>
+<p>dns 方式的真正强大之处在于可以使用域名解析商提供的 api 自动添加 txt 记录完成验证.</p>
+<p><strong>acme.sh</strong> 目前支持 cloudflare, dnspod, cloudxns, godaddy 以及 ovh 等数十种解析商的自动集成.</p>
+<p>以 dnspod 为例, 你需要先登录到 dnspod 账号, 生成你的 api id 和 api key, 都是免费的. 然后:</p>
+<pre><code>export DP_Id=&quot;1234&quot;
+
+export DP_Key=&quot;sADDsdasdgdsf&quot;
+
+acme.sh   --issue   --dns dns_dp   -d aa.com  -d www.aa.com
+</code></pre><p>证书就会自动生成了. 这里给出的 api id 和 api key 会被自动记录下来, 将来你在使用 dnspod api 的时候, 就不需要再次指定了. 直接生成就好了:</p>
+<pre><code>acme.sh  --issue   -d  mydomain2.com   --dns  dns_dp
+</code></pre></li></ul>
+</li></ol>
+<ol>
+<li><p>配置nginx配置，设置定时任务</p>
+<p>生成dhparam.pem</p>
+<pre><code class="lang-shell">$ openssl dhparam -out dhparam.pem 2048
+</code></pre>
+<p>nginx中正确的使用方法是使用 <code>--installcert</code> 命令,并指定目标位置, 然后证书文件会被copy到相应的位置, 例如:</p>
+<pre><code class="lang-bash">acme.sh  --installcert  -d  &lt;domain&gt;.com   \
+        --key-file   /etc/nginx/ssl/&lt;domain&gt;.key \
+        --fullchain-file /etc/nginx/ssl/fullchain.cer \
+        --reloadcmd  &quot;service nginx force-reload&quot;
+</code></pre>
+<p>配置文件：</p>
+<pre><code class="lang-bash"># server部分
+    ssl_protocols TLSv1 TLSv1.1 TLSv1.2;
+    ssl_prefer_server_ciphers on;
+    ssl on;
+    ssl_certificate         /etc/nginx/ssl/fullchain.cer;
+    ssl_certificate_key     /etc/nginx/ssl/&lt;domain&gt;.key;
+    # ssl_dhparam
+    ssl_dhparam             /etc/nginx/ssl/dhparam.pem;
+</code></pre>
+</li><li><p>对网站的SSL进行检验</p>
+<p>推荐：<a href="https://ssllabs.com/ssltest/analyze.html">https://ssllabs.com/ssltest/analyze.html</a></p>
+</li><li><p>其他需要注意的地方：</p>
+<ul>
+<li>域名备案</li><li>防火墙</li></ul>
+</li></ol>
+<h2 id="-">云服务器</h2>
+<h3 id="-ecs">阿里云ECS</h3>
+<h4 id="-">虚拟化技术原理</h4>
+<p><strong>虚拟化</strong>：在计算机技术中，虚拟化（技术）或虚拟技术（英语：Virtualization）是一种资源管理技术，是将计算机的各种实体资源（CPU、内存、磁盘空间、网络适配器等），予以抽象、转换后呈现出来并可供分区、组合为一个或多个电脑配置环境。</p>
+<p><img src="./assets/img_adfcd9149ec08e90df41492ecb18b900.png" alt="img"></p>
+<p>主要的目的：降低成本，提高应用兼容性，提高服务可用性，提升资源复用率。</p>
+<p>虚拟化分类：</p>
+<p>主要有全虚拟化和半虚拟化。</p>
+<p>典型的全虚拟化软件有 —— VMWare、Hyper-V、KVM-x86(复杂指令集)。</p>
+<p>典型的半虚拟化软件有——Xen、KVM-PowerPC(简易指令集）</p>
+<p>参考资料：<a href="https://yq.aliyun.com/articles/48867">虚拟化的发展历程和实现原理——图文详解</a>，<a href="http://virtual.51cto.com/art/201803/569228.htm">虚拟化类型</a></p>
+<h4 id="-">如何选择云服务器</h4>
+<ol>
+<li><p>从硬件</p>
+<p>使用阿里云的工具进行筛选，需要登录，链接：<a href="https://ecs-buy.aliyun.com/instanceTypes">ECS 实例规格可购买地域总览</a></p>
+<p><img src="./assets/image-20190604221840417.png" alt="image-20190604221840417"></p>
+</li><li><p>从网络</p>
+<p><img src="./assets/eZZfERlwBRWjZOGtmwVO.png" alt="Explanation"></p>
+</li></ol>
+<p>   云服务器 ECS 的入网带宽和出网带宽皆以服务器角度出发。下表给出了入网带宽和出网带宽的具体内容：</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">带宽类别 （Mbit/s）</th>
+<th style="text-align:left">描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">入网带宽</td>
+<td style="text-align:left">流入云服务器 ECS 的带宽 从云服务器 ECS 内部下载外部网络资源，或者从客户端 FTP 等方式上传资源到云服务器 ECS 都是入网带宽。</td>
+</tr>
+<tr>
+<td style="text-align:left">出网带宽</td>
+<td style="text-align:left">流出云服务器 ECS 的带宽 从云服务器 ECS 对外提供访问，或者从客户端 FTP 等方式下载云服务器 ECS 内部资源都是出网带宽，云服务器 ECS 出网带宽就是购买的带宽值。</td>
+</tr>
+</tbody>
+</table>
+<p>   推荐公司使用固定带宽，对于测试用户或者流量比较小的用户使用按量计费带宽。</p>
+<p>   举例应用场景：公司网站展示类型(按量计费)，视频(固定带宽)</p>
+<p>   后期还可以购买CDN加速，分担静态资源的流量。</p>
+<ol>
+<li><p>从地域</p>
+<p>每个地域完全独立。每个可用区完全隔离，但同一个地域内的可用区之间使用低时延链路相连。地域和可用区之间的关系如下图所示。</p>
+<p><img src="./assets/155788672444660_zh-CN.jpg" alt="img"></p>
+<ul>
+<li><p>中国大陆</p>
+<p>一般情况下建议选择和您目标用户所在地域最为接近的数据中心，可以进一步提升用户访问速度。不过，在基础设施、BGP 网络品质、服务质量、云服务器操作使用与配置等方面，阿里云中国大陆地域没有太大区别。BGP 网络可以保证中国大陆全部地域的快速访问。</p>
+</li><li><p>其他国家及地区</p>
+<p>其他国家及地区提供国际带宽，主要面向非中国大陆地区用户。如果您在中国大陆，使用这些地域会有较长的访问延迟，不建议您使用。</p>
+<ul>
+<li>对香港、东南亚有需求的用户，可以选择香港地域、亚太东南 1 地域、亚太东南 3 地域或亚太东南 5 地域。</li><li>对日、韩有需求的用户，可以选择亚太东北 1 地域。</li><li>对印度有需求的用户，可以选择亚太南部 1 地域。</li><li>对澳大利亚地区有需求的用户，可以选择亚太东南 2 地域。</li><li>对美洲有需求用户，可以选择美国地域。</li><li>对欧洲大陆有需求的用户，可以选择欧洲中部 1 地域。</li><li>对中东地区有需求的用户，可以选择中东东部 1 地域。</li></ul>
+</li></ul>
+</li><li><p>从费用</p>
+</li></ol>
+<h4 id="-">云服务器购买</h4>
+<h4 id="-">认识控制台</h4>
+<h3 id="-rds">云数据库RDS</h3>
+<h4 id="-">云数据库介绍</h4>
+<ol>
+<li><p>基本概念</p>
+<p>阿里云系产品：云数据库RDS（ApsaraDB for RDS，简称RDS）是一种稳定可靠、可弹性伸缩的在线数据库服务。基于飞天分布式系统和全SSD盘高性能存储，支持MySQL、SQL Server、PostgreSQL和PPAS（高度兼容Oracle)引擎，默认部署主备架构且提供了容灾、备份、恢复、监控、迁移等方面的全套解决方案，彻底解决数据库运维的烦恼！</p>
+</li></ol>
+<p>   亚马逊系产品：Amazon Relational Database Service (Amazon RDS) 让您能够在云中轻松设置、操作和扩展关系数据库。它在自动执行耗时的管理任务（如<strong>硬件预置、数据库设置、修补和备份</strong>）的同时，可提供经济实用的可调容量。这使您能够腾出时间专注于应用程序，为它们提供所需的快速性能、高可用性、安全性和兼容性。</p>
+<p>   Amazon RDS 在多种类型的数据库实例（针对内存、性能或 I/O 进行了优化的实例）上均可用，并提供六种常用的数据库引擎供您选择，包括 Amazon Aurora、PostgreSQL、MySQL、MariaDB、Oracle Database 和 SQL Server。您可以使用 AWS Database Migration Service <strong>轻松</strong>将您现有的<strong>数据库迁移或复制到 Amazon RDS</strong>。</p>
+<ol>
+<li><p>特点：</p>
+<p>| 类型     | 特点                          |<br>| -------- | ----------------------------- |<br>| 轻松管理 | GUI页面，从部署到生产数据库   |<br>| 可扩展   | 修改CPU/内存/存储资源         |<br>| 高可用   | 自动备份、快照 、自动主机更换 |<br>| 速度快   | 可选SSD                       |<br>| 安全     | 可建立专网，或者连接到使用VPN |<br>| 经济     | 网络成本、运维成本都低        |</p>
+</li></ol>
+<p><strong>本课程中使用亚马逊的RDS作为演示</strong></p>
+<h4 id="-rds-mysql-">常见RDS-MySQL购买与操作</h4>
+<ol>
+<li><p>购买地址</p>
+<p>阿里云：<a href="https://cn.aliyun.com/product/rds">https://cn.aliyun.com/product/rds</a></p>
+<p><img src="./assets/image-20190605084317131.png" alt="image-20190605084317131"></p>
+<p>亚马逊：<a href="https://aws.amazon.com/cn/rds/">https://aws.amazon.com/cn/rds/</a></p>
+<p><img src="./assets/image-20190605084341568.png" alt="image-20190605084341568"></p>
+</li><li><p>操作面板介绍(以亚马逊为主)</p>
+</li></ol>
+<h4 id="-">备份与快照</h4>
+<h3 id="-slb">负载均衡SLB</h3>
+<h4 id="-">什么是负载均衡</h4>
+<p>负载均衡（Server Load Balancer）是对多台云服务器进行流量<strong>分发</strong>的负载均衡服务。负载均衡可以通过流量分发扩展应用系统对外的服务能力，通过消除单点故障提升应用系统的可用性。</p>
+<h4 id="slb-">SLB功能介绍</h4>
+<p>负载均衡通过设置虚拟服务地址，将添加的ECS实例虚拟成一个高性能、高可用的应用服务池，并根据转发规则，将来自客户端的请求分发给云服务器池中的ECS实例。</p>
+<p>负载均衡默认检查云服务器池中的ECS实例的健康状态，自动隔离异常状态的ECS实例，消除了单台ECS实例的单点故障，提高了应用的整体服务能力。此外，负载均衡还具备抗DDoS攻击的能力，增强了应用服务的防护能力。</p>
+<p>基本的功能：</p>
+<ol>
+<li><p><strong>调度</strong></p>
+<p><strong>负载均衡支持轮询、加权轮询（WRR）、加权最小连接数（WLC）和一致性哈希（CH）调度算法。</strong></p>
+</li><li><p>健康检查 </p>
+<p>负载均衡会检查后端服务器的运行状况。当探测到后端服务器运行状况不佳时，会停止向其发送流量，然后将流量转发给其他正常运行的后端服务器。</p>
+</li><li><p>会话保持</p>
+<p>负载均衡提供会话保持功能。在会话的生命周期内，可以将同一客户端的请求转发到同一台后端服务器上。</p>
+</li><li><p>访问控制</p>
+</li><li><p>高可用</p>
+<p>负载均衡可以将流量转发给多个可用区的后端服务器。并且，负载均衡已经在大部分地域支持了多可用区部署，当主可用区出现故障时，负载均衡可自动切换到备可用区上提供服务。</p>
+<p>业务场景二：</p>
+<p><img src="./assets/1555309011947_zh-CN.png" alt="img"></p>
+</li><li><p>安全防护</p>
+<p>结合云盾，可提供5Gbps的防DDoS攻击能力。</p>
+</li><li><p>监控</p>
+</li><li><p>证书管理</p>
+</li><li><p>重定向</p>
+</li><li><p>WS/WSS支持</p>
+</li><li><p>HTTP/2支持</p>
+<p>HTTP/2（Hypertext Transfer Protocol Version 2）是超文本传输协议的第二版，向下兼容HTTP1.X协议版本，同时带来性能的大幅提升。</p>
+</li></ol>
+<h4 id="slb-">SLB技术架构</h4>
+<p><img src="http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/4091/1551152011936_zh-CN.png" alt="img"></p>
+<h4 id="-slb-">阿里云SLB购买与操作</h4>
+<h2 id="-">扩展知识</h2>
+<h3 id="-">域名解析</h3>
+<p><strong>A记录</strong>： 将域名指向一个IPv4地址（例如：100.100.100.100），需要增加A记录</p>
+<p><strong>CNAME记录</strong>： 如果将域名指向一个域名，实现与被指向域名相同的访问效果，需要增加CNAME记录。这个域名一般是主机服务商提供的一个域名</p>
+<p><strong>MX记录</strong>： 建立电子邮箱服务，将指向邮件服务器地址，需要设置MX记录。建立邮箱时，一般会根据邮箱服务商提供的MX记录填写此记录</p>
+<p><strong>NS记录</strong>： 域名解析服务器记录，如果要将子域名指定某个域名服务器来解析，需要设置NS记录</p>
+<p><strong>TXT记录</strong>： 可任意填写，可为空。一般做一些验证记录时会使用此项，如：做SPF（反垃圾邮件）记录</p>
+<p><strong>AAAA记录</strong>： 将主机名（或域名）指向一个IPv6地址（例如：ff03<img src="https://assets-cdn.github.com/images/icons/emoji/0.png" alt=":0:" title=":0:" class="emoji" align="absmiddle" height="20" width="20">0<img src="https://assets-cdn.github.com/images/icons/emoji/0.png" alt=":0:" title=":0:" class="emoji" align="absmiddle" height="20" width="20">0<img src="https://assets-cdn.github.com/images/icons/emoji/0.png" alt=":0:" title=":0:" class="emoji" align="absmiddle" height="20" width="20">0:c1），需要添加AAAA记录</p>
+<p><strong>SRV记录</strong>： 添加服务记录服务器服务记录时会添加此项，SRV记录了哪台计算机提供了哪个服务。格式为：服务的名字.协议的类型（例如：_example-server._tcp）。</p>
+<p><strong>SOA记录</strong>： SOA叫做起始授权机构记录，NS用于标识多台域名解析服务器，SOA记录用于在众多NS记录中那一台是主服务器</p>
+<p><strong>PTR记录</strong>： PTR记录是A记录的逆向记录，又称做IP反查记录或指针记录，负责将IP反向解析为域名</p>
+<h3 id="dns-">DNS解析中一些问题</h3>
+<h4 id="a-cname-">A记录与CNAME记录</h4>
+<p><code>A记录</code>是把一个域名解析到一个IP地址，而<code>CNAME记录</code>是把域名解析到另外一个域名，而这个域名最终会指向一个A记录，在功能实现在上<code>A记录</code>与<code>CNAME记录</code>没有区别。</p>
+<p><code>CNAME记录</code>在做IP地址变更时要比<code>A记录</code>方便。<code>CNAME记录</code>允许将多个名字映射到同一台计算机，当有多个域名需要指向同一服务器IP，此时可以将一个域名做A记录指向服务器IP，然后将其他的域名做别名(即：CNAME)到A记录的域名上。当服务器IP地址变更时，只需要更改A记录的那个域名到新IP上，其它做别名的域名会自动更改到新的IP地址上，而不必对每个域名做更改。</p>
+<h4 id="a-aaaa-">A记录与AAAA记录</h4>
+<p>二者都是指向一个IP地址，但对应的IP版本不同。<code>A记录</code>指向<code>IPv4</code>地址，<code>AAAA记录</code>指向<code>IPv6</code>地址。<code>AAAA记录</code>是<code>A记录</code>的升级版本。</p>
+<h4 id="ipv4-ipv6">IPv4与IPv6</h4>
+<p><code>IPv4</code>，是互联网协议（Internet Protocol，IP）的第四版，也是第一个被广泛使用的版本，是构成现今互联网技术的基础协议。<code>IPv4</code> 的下一个版本就是<code>IPv6</code>，在将来将取代目前被广泛使用的<code>IPv4</code>。</p>
+<p><code>IPv4</code>中规定IP地址长度为32位（按TCP/IP参考模型划分) ，即有2^32-1个地址。<code>IPv6</code>的提出最早是为了解决，随着互联网的迅速发展<code>IPv4</code>地址空间将被耗尽的问题。为了扩大地址空间，<code>IPv6</code>将IP地址的长度由32位增加到了128位。在<code>IPv6</code>的设计过程中除了一劳永逸地解决了地址短缺问题以外，还解决了<code>IPv4</code>中的其它问题，如：端到端IP连接、服务质量（QoS）、安全性、多播、移动性、即插即用等。</p>
+<h4 id="ttl-">TTL值</h4>
+<p><code>TTL</code>－生存时间（Time To Live），表示解析记录在DNS服务器中的缓存时间，<code>TTL</code>的时间长度单位是秒，一般为3600秒。比如：在访问<code>www.itcast.cn</code>时，如果在DNS服务器的缓存中没有该记录，就会向某个NS服务器发出请求，获得该记录后，该记录会在DNS服务器上保存<code>TTL</code>的时间长度，在<code>TTL</code>有效期内访问<code>www.itcast.cn</code>，DNS服务器会直接缓存中返回刚才的记录。</p>
+<h3 id="shell-">shell脚本入门</h3>
+<p>推荐：<a href="https://www.runoob.com/w3cnote/shell-quick-start.html">https://www.runoob.com/w3cnote/shell-quick-start.html</a></p>
+<h3 id="vim-">vim编辑器入门</h3>
+<p>推荐：<a href="https://zhuanlan.zhihu.com/p/34733089">https://zhuanlan.zhihu.com/p/34733089</a></p>
+
+</body>
+</html>
+<!-- This document was created with MarkdownPad, the Markdown editor for Windows (http://markdownpad.com) -->
