@@ -467,6 +467,7 @@ vertical-align:1px;
 }
 </style>
 <style>body{background:#f5f5d5}</style>
+
 <script type="text/javascript">
     function wrapOldContentByDiv() {
         var oldContentDiv = document.createElement("div");
@@ -752,11 +753,14 @@ vertical-align:1px;
             htmlContent += renderTree(rootNode.childNodes[j], '', 1, j);
         }
         directoryOl.innerHTML = htmlContent;
+         var title = document.querySelector('h1').innerHTML
+    document.title= '明一的前端之路之'+title
     });
+   
 </script>
 </head>
 <body>
-<h1 id="5-1-">5-1 前端性能优化</h1>
+<h1 id="-">前端性能优化</h1>
 <h2 id="-">课程介绍</h2>
 <p>任何小型企业，博主或成长型公司在网上出现时面临的最大挑战之一就是“页面加载时间”问题。除非您能确保尽可能快速无缝地加载每个页面，您才可以拥有世界上最好最引人注目的网站，否则您仍然无法赢得关注者的尊重和忠诚度。</p>
 <p>根据当今网络上的所有主要浏览器公司的说法，如果每个网站都想要排名靠前，表现良好并确保客户满意，那么每个网站都需要快。毕竟，如果您的网页加载速度很慢，那么您会立即增加客户开始在其他地方搜索信息，而不是坚持下去的风险。</p>

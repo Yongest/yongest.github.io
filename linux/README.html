@@ -467,6 +467,7 @@ vertical-align:1px;
 }
 </style>
 <style>body{background:#f5f5d5}</style>
+
 <script type="text/javascript">
     function wrapOldContentByDiv() {
         var oldContentDiv = document.createElement("div");
@@ -752,7 +753,10 @@ vertical-align:1px;
             htmlContent += renderTree(rootNode.childNodes[j], '', 1, j);
         }
         directoryOl.innerHTML = htmlContent;
+         var title = document.querySelector('h1').innerHTML
+    document.title= '明一的前端之路之'+title
     });
+   
 </script>
 </head>
 <body>
